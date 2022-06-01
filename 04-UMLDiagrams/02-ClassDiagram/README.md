@@ -1,3 +1,3 @@
 # TC_BooKify
-Library management system
+UML Diagrams
 Team 06 Codex++

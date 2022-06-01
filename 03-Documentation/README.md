@@ -1,3 +1,3 @@
 # TC_BooKify
-Library management system
+Documentation
 Team 06 Codex++
