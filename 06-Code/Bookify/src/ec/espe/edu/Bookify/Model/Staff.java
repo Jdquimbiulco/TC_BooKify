@@ -13,19 +13,21 @@ public class Staff {
     private int id;
     private int age;
     private int staffPhone;
-    private String staffAdres;
+    private String staffAddress;
     private int pasword;
     private boolean blackList;
 
-    public Staff(String name, int id, int age, int staffPhone, String staffAdres, int pasword, boolean blackList) {
+    public Staff(String name, int id, int age, int staffPhone, String staffAddress, int pasword, boolean blackList) {
         this.name = name;
         this.id = id;
         this.age = age;
         this.staffPhone = staffPhone;
-        this.staffAdres = staffAdres;
+        this.staffAddress = staffAddress;
         this.pasword = pasword;
         this.blackList = blackList;
     }
+
+
 
     /**
      * @return the name
@@ -84,20 +86,6 @@ public class Staff {
     }
 
     /**
-     * @return the staffAdres
-     */
-    public String getStaffAdres() {
-        return staffAdres;
-    }
-
-    /**
-     * @param staffAdres the staffAdres to set
-     */
-    public void setStaffAdres(String staffAdres) {
-        this.staffAdres = staffAdres;
-    }
-
-    /**
      * @return the pasword
      */
     public int getPasword() {
@@ -123,6 +111,20 @@ public class Staff {
      */
     public void setBlackList(boolean blackList) {
         this.blackList = blackList;
+    }
+
+    /**
+     * @return the staffAddress
+     */
+    public String getStaffAddress() {
+        return staffAddress;
+    }
+
+    /**
+     * @param staffAddress the staffAddress to set
+     */
+    public void setStaffAddress(String staffAddress) {
+        this.staffAddress = staffAddress;
     }
     
     
