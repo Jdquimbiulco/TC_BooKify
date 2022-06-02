@@ -10,4 +10,5 @@ package ec.espe.edu.Bookify.Model;
  */
 public class User {
     
+    
 }
