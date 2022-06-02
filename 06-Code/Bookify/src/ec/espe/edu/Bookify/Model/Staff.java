@@ -54,14 +54,21 @@ public class Staff {
         
         if(staffOption.equals("y")){
         
-            System.out.println("Ingrese los datos");
+            System.out.println("Ingrese los datos\n");
             
-            user1.setAge(age=input.nextInt());
-            user1.setId(id=input.nextInt());
+            System.out.println("Ingrese el Nombre:\n");
             user1.setName(name=input.next());
+            System.out.println("Ingrese la edad:\n");
+            user1.setAge(age=input.nextInt());
+            System.out.println("Ingrese el Id:\n");
+            user1.setId(id=input.nextInt());
+            System.out.println("Ingrese la contraseña:\n");
             user1.setPassword(pasword=input.nextInt());
+            System.out.println("Ingrese la direccion:\n");
             user1.setUserAddress(staffAddress=input.next());
+            System.out.println("Ingrese el email:\n");
             user1.setUserEmail(name=input.next());
+            System.out.println("Ingrese el numero de telefono\n");
             user1.setUserPhone(staffPhone=input.nextInt());
             System.out.println("Ingresado Exitosamente");      
             users.add(user1);
@@ -71,7 +78,7 @@ public class Staff {
             
         }
         
-        }while(staffOption.equals("Y"));
+        }while(staffOption.equals("y"));
         
         
         return null;
