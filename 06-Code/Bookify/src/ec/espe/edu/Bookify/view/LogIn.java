@@ -35,9 +35,7 @@ public class LogIn {
         
         
         
-        User user;
-        user= new User();
-        user.readData();
+       
         
        
         
