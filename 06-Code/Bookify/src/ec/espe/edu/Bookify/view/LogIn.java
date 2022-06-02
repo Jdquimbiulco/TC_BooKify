@@ -9,5 +9,9 @@ package ec.espe.edu.Bookify.view;
  * @author QUILUMBAQUIN JAIRO, DCC0-ESPE: CODEX++
  */
 public class LogIn {
+    public static void main(String[] args) {
+        System.out.println("testing versions");
+    }
+          
     
 }
