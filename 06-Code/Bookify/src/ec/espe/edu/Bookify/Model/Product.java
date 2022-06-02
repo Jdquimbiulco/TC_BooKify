@@ -6,8 +6,19 @@ package ec.espe.edu.Bookify.Model;
 
 /**
  *
- * @author QUILUMBAQUIN JAIRO, DCC0-ESPE: CODEX++
+ * @author QUILUMBAQUIN JAIRO,QUIMBIULCO JUAN,RAUL SILVA,CARLOS RIVERA, DCC0-ESPE: CODEX++
  */
 public class Product {
+    Book book;
+    Movie movie;
+    
+    book = new Book();
+    movie = new Movie();
+    
+    public void ProductInformation(){
+    
+        
+        
+    }
     
 }
