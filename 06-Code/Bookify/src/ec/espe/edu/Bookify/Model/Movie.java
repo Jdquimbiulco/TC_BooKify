@@ -7,11 +7,12 @@ package ec.espe.edu.Bookify.Model;
 public class Movie {
     
         String title;
-        int year;
+        
         String gender;
         String clasification;
         String idiom;
         String format;
         boolean available;
         int amount;
+        int year;
 }

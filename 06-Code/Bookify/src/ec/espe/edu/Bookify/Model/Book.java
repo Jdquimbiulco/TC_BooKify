@@ -15,6 +15,5 @@ public class Book {
         int ISBN;
         int amount;   
         boolean available;  
-        
 }
 
