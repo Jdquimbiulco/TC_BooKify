@@ -34,7 +34,18 @@ public class User {
         this.password = password;
     }
 
+<<<<<<< HEAD
      
+=======
+    public User() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public User() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+    
+>>>>>>> c1813e20cd18a53d413935b0da9517ab9d87b827
 
 
     public String getName() {
