@@ -12,11 +12,10 @@ public class Product {
     Book book;
     Movie movie;
     
-    book = new Book();
-    movie = new Movie();
-    
+  
     public void ProductInformation(){
-    
+        
+        
         
         
     }
