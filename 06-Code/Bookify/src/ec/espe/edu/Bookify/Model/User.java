@@ -20,7 +20,7 @@ public class User {
     private int password;
     
    
-    User() {
+    public User() {
         
     }
 
@@ -33,7 +33,8 @@ public class User {
         this.age = age;
         this.password = password;
     }
-    
+
+     
 
 
     public String getName() {
@@ -105,4 +106,5 @@ public class User {
            System.out.println("Ingrse su contraseña:");
            password = teclado.nextInt();
        }
+        
 }

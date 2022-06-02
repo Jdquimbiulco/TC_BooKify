@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author QUILUMBAQUIN JAIRO,QUIMBIULCO JUAN,RAUL SILVA,CARLOS RIVERA, DCC0-ESPE: CODEX++
+ * @author QUILUMBAQUIN JAIRO, DCC0-ESPE: CODEX++
  */
 public class Staff {
     
@@ -39,11 +39,11 @@ public class Staff {
     public User addUser(){
     
         ArrayList<User> users;
-        User user;
+        User user1;
         String staffOption;
         Scanner input;
         
-        user= new User();
+        user1= new User();
         users= new ArrayList<>();
         input= new Scanner(System.in);
             
@@ -55,19 +55,19 @@ public class Staff {
         
             System.out.println("Ingrese los datos");
             
-            user.setAge(age=input.nextInt());
-            user.setId(id=input.nextInt());
-            user.setName(name=input.next());
-            user.setPassword(pasword=input.nextInt());
-            user.setUserAddress(staffAddress=input.next());
-            user.setUserEmail(name=input.next());
-            user.setUserPhone(staffPhone=input.nextInt());
+            user1.setAge(age=input.nextInt());
+            user1.setId(id=input.nextInt());
+            user1.setName(name=input.next());
+            user1.setPassword(pasword=input.nextInt());
+            user1.setUserAddress(staffAddress=input.next());
+            user1.setUserEmail(name=input.next());
+            user1.setUserPhone(staffPhone=input.nextInt());
                                    
-            users.add(user);
+            users.add(user1);
             
             System.out.println(users);
             
-            return user;
+            
             
         }
         
@@ -180,8 +180,4 @@ public class Staff {
         System.out.println("Staff: " + "name:" + name + ", id=" + id + ", age=" + age + ", staffPhone=" + staffPhone + ", staffAddress=" + staffAddress + ", pasword=" + pasword + ", blackList=" + blackList + '\n');
     }
     
-    
-    
-    
-         
 }

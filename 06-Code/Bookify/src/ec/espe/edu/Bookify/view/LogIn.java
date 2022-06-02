@@ -8,6 +8,7 @@ package ec.espe.edu.Bookify.view;
 
 
 import ec.espe.edu.Bookify.Model.Staff;
+import ec.espe.edu.Bookify.Model.User;
 
 
 /**
@@ -20,9 +21,19 @@ public class LogIn {
      
 
     public static void main(String[] args) {
-        Staff staff;
-        staff= new Staff();
-        staff.addUser();
+           Staff staff;
+           User user;
+           staff = new Staff();
+           user = new User();
+           
+           staff.addUser();
+           user.readData();
+           
+           
+           
+           
+        
+        
         
         
 
