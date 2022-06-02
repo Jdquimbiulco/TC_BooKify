@@ -4,11 +4,11 @@
  */
 package ec.espe.edu.Bookify.view;
 
-<<<<<<< HEAD
 
-=======
+
+
 import ec.espe.edu.Bookify.Model.Staff;
->>>>>>> c0d1e592c74f5cac94c7e474bb20c854b504149d
+
 
 /**
  *
@@ -17,18 +17,17 @@ import ec.espe.edu.Bookify.Model.Staff;
  */
 
 public class LogIn {
-<<<<<<< HEAD
-      
-=======
+     
+
     public static void main(String[] args) {
         Staff staff;
         staff= new Staff();
         staff.addUser();
         
         
->>>>>>> c0d1e592c74f5cac94c7e474bb20c854b504149d
-    }
 
+    }
+}
   
           
     
