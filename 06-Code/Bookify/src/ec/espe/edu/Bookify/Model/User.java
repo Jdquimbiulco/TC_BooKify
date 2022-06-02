@@ -105,6 +105,7 @@ public class User {
            id = teclado.nextInt();
            System.out.println("Ingrse su contraseña:");
            password = teclado.nextInt();
+           System.out.println("Ingresado Exitosamente");
        }
         
 }
