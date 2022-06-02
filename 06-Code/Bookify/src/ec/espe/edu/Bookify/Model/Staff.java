@@ -47,8 +47,9 @@ public class Staff {
         users= new ArrayList<>();
         input= new Scanner(System.in);
             
-               
-        System.out.println("Ingresar un nuevo usuario?(Y/N)");
+        do{
+        
+        System.out.println("Ingresar un nuevo usuario?(Y/N)\n");
         staffOption=input.next().toLowerCase();
         
         if(staffOption.equals("y")){
@@ -62,16 +63,15 @@ public class Staff {
             user1.setUserAddress(staffAddress=input.next());
             user1.setUserEmail(name=input.next());
             user1.setUserPhone(staffPhone=input.nextInt());
-                                   
+            System.out.println("Ingresado Exitosamente");      
             users.add(user1);
             
             System.out.println(users);
-            
-            
+                    
             
         }
         
-        
+        }while(staffOption.equals("Y"));
         
         
         return null;

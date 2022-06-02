@@ -26,19 +26,9 @@ public class LogIn {
            staff = new Staff();
            user = new User();
            
-           staff.addUser();
            user.readData();
+           staff.addUser();
            
-           
-           
-           
-        
-        
-        
-       
-        
-       
-        
 
     }
     
