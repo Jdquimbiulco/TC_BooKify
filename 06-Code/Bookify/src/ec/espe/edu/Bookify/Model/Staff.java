@@ -6,9 +6,10 @@ package ec.espe.edu.Bookify.Model;
 
 /**
  *
- * @author QUILUMBAQUIN JAIRO, DCC0-ESPE: CODEX++
+ * @author QUILUMBAQUIN JAIRO,QUIMBIULCO JUAN,RAUL SILVA,CARLOS RIVERA, DCC0-ESPE: CODEX++
  */
 public class Staff {
+    
     private String name;
     private int id;
     private int age;
@@ -125,6 +126,11 @@ public class Staff {
      */
     public void setStaffAddress(String staffAddress) {
         this.staffAddress = staffAddress;
+    }
+
+    @Override
+    public String toString() {
+        return "Staff{" + "name=" + name + ", id=" + id + ", age=" + age + ", staffPhone=" + staffPhone + ", staffAddress=" + staffAddress + ", pasword=" + pasword + ", blackList=" + blackList + '}';
     }
     
     

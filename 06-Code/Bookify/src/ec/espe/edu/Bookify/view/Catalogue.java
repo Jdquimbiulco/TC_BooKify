@@ -6,7 +6,7 @@ package ec.espe.edu.Bookify.view;
 
 /**
  *
- * @author QUILUMBAQUIN JAIRO, DCC0-ESPE: CODEX++
+ * @author QUILUMBAQUIN JAIRO,QUIMBIULCO JUAN,RAUL SILVA,CARLOS RIVERA, DCC0-ESPE: CODEX++
  */
 public class Catalogue {
     public static void main(String[] args) {
