@@ -4,6 +4,8 @@
  */
 package ec.espe.edu.Bookify.Model;
 
+import java.util.Scanner;
+
 /**
  *
  * @author QUILUMBAQUIN JAIRO,QUIMBIULCO JUAN,RAUL SILVA,CARLOS RIVERA, DCC0-ESPE: CODEX++
@@ -93,5 +95,11 @@ public class User {
         return "User{" + "name=" + name + ", id=" + id + ", userEmail=" + userEmail + ", userPhone=" + userPhone + ", userAddress=" + userAddress + ", age=" + age + ", password=" + password + '}';
     }
     
-    
+    public void readData(){
+           Scanner teclado = new Scanner(System.in);
+           System.out.println("Ingrese su ID");
+           id = teclado.nextInt();
+           System.out.println("Ingrse su contraseña:");
+           password = teclado.nextInt();
+       }
 }

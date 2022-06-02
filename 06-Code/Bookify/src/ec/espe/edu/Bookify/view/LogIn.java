@@ -4,14 +4,19 @@
  */
 package ec.espe.edu.Bookify.view;
 
+
+
 /**
  *
  * @author QUILUMBAQUIN JAIRO,QUIMBIULCO JUAN,RAUL SILVA,CARLOS RIVERA, DCC0-ESPE: CODEX++
+ * 
  */
+
 public class LogIn {
-    public static void main(String[] args) {
-        System.out.println("testing versions");
+      
     }
+
+  
           
     
-}
+
