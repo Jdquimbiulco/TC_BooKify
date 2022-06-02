@@ -84,8 +84,10 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" + "name=" + getName() + ", id=" + getId() + ", userEmail=" + getUserEmail() + ", userPhone=" + getUserPhone() + ", userAddress=" + getUserAddress() + ", age=" + getAge() + ", password=" + getPassword() + '}';
+        return "User{" + "name=" + name + ", id=" + id + ", userEmail=" + userEmail + ", userPhone=" + userPhone + ", userAddress=" + userAddress + ", age=" + age + ", password=" + password + '}';
     }
+
+
 
     /**
      * @param userAddress the userAddress to set
