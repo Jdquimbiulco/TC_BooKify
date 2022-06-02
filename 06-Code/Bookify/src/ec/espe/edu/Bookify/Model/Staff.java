@@ -20,8 +20,12 @@ public class Staff {
     private String staffAddress;
     private int pasword;
     private boolean blackList;
-    
 
+    public Staff() {
+    }
+    
+    
+    
     public Staff(String name, int id, int age, int staffPhone, String staffAddress, int pasword, boolean blackList) {
         this.name = name;
         this.id = id;
@@ -45,9 +49,9 @@ public class Staff {
             
                
         System.out.println("Ingresar un nuevo usuario?(Y/N)");
-        staffOption=input.next();
+        staffOption=input.next().toLowerCase();
         
-        if(staffOption.equals("Y")){
+        if(staffOption.equals("y")){
         
             System.out.println("Ingrese los datos");
             
@@ -55,11 +59,15 @@ public class Staff {
             user.setId(id=input.nextInt());
             user.setName(name=input.next());
             user.setPassword(pasword=input.nextInt());
-                        user.setUserEmail(name=input.next());
-            
-            
+            user.setUserAddress(staffAddress=input.next());
+            user.setUserEmail(name=input.next());
+            user.setUserPhone(staffPhone=input.nextInt());
+                                   
             users.add(user);
             
+            System.out.println(users);
+            
+            return user;
             
         }
         
