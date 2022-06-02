@@ -4,6 +4,9 @@
  */
 package ec.espe.edu.Bookify.Model;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 /**
  *
  * @author QUILUMBAQUIN JAIRO,QUIMBIULCO JUAN,RAUL SILVA,CARLOS RIVERA, DCC0-ESPE: CODEX++
@@ -18,6 +21,11 @@ public class Staff {
     private int pasword;
     private boolean blackList;
 
+    public Staff() {
+    }
+    
+    
+    
     public Staff(String name, int id, int age, int staffPhone, String staffAddress, int pasword, boolean blackList) {
         this.name = name;
         this.id = id;
@@ -28,7 +36,46 @@ public class Staff {
         this.blackList = blackList;
     }
 
-
+    public User addUser(){
+    
+        ArrayList<User> users;
+        User user;
+        String staffOption;
+        Scanner input;
+        
+        user= new User();
+        users= new ArrayList<>();
+        input= new Scanner(System.in);
+            
+               
+        System.out.println("Ingresar un nuevo usuario?(Y/N)");
+        staffOption=input.next().toLowerCase();
+        
+        if(staffOption.equals("y")){
+        
+            System.out.println("Ingrese los datos");
+            
+            user.setAge(age=input.nextInt());
+            user.setId(id=input.nextInt());
+            user.setName(name=input.next());
+            user.setPassword(pasword=input.nextInt());
+            user.setUserAddress(staffAddress=input.next());
+            user.setUserEmail(name=input.next());
+            user.setUserPhone(staffPhone=input.nextInt());
+                                   
+            users.add(user);
+            
+            System.out.println(users);
+            
+            return user;
+            
+        }
+        
+        
+        
+        
+        return null;
+    }
 
     /**
      * @return the name
@@ -128,9 +175,9 @@ public class Staff {
         this.staffAddress = staffAddress;
     }
 
-    @Override
-    public String toString() {
-        return "Staff{" + "name=" + name + ", id=" + id + ", age=" + age + ", staffPhone=" + staffPhone + ", staffAddress=" + staffAddress + ", pasword=" + pasword + ", blackList=" + blackList + '}';
+    
+    public void mostrar() {
+        System.out.println("Staff: " + "name:" + name + ", id=" + id + ", age=" + age + ", staffPhone=" + staffPhone + ", staffAddress=" + staffAddress + ", pasword=" + pasword + ", blackList=" + blackList + '\n');
     }
     
     

@@ -12,10 +12,15 @@ public class Product {
     Book book;
     Movie movie;
     
+<<<<<<< HEAD
    
     
+=======
+  
+>>>>>>> c0d1e592c74f5cac94c7e474bb20c854b504149d
     public void ProductInformation(){
-    
+        
+        
         
         
     }

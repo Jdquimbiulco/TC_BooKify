@@ -15,7 +15,7 @@ public class User {
     private int id;
     private String userEmail;
     private int userPhone;
-    private int userAddress; 
+    private String userAddress; 
     private int age;
     private int password;
     
@@ -23,8 +23,8 @@ public class User {
     User() {
         
     }
-    
-    public User(String name, int id, String userEmail, int userPhone, int userAddress, int age, int password) {
+
+    public User(String name, int id, String userEmail, int userPhone, String userAddress, int age, int password) {
         this.name = name;
         this.id = id;
         this.userEmail = userEmail;
@@ -33,6 +33,8 @@ public class User {
         this.age = age;
         this.password = password;
     }
+    
+
 
     public String getName() {
         return name;
@@ -66,14 +68,6 @@ public class User {
         this.userPhone = userPhone;
     }
 
-    public int getUserAddress() {
-        return userAddress;
-    }
-
-    public void setUserAddress(int userAddress) {
-        this.userAddress = userAddress;
-    }
-
     public int getAge() {
         return age;
     }
@@ -93,6 +87,15 @@ public class User {
     @Override
     public String toString() {
         return "User{" + "name=" + name + ", id=" + id + ", userEmail=" + userEmail + ", userPhone=" + userPhone + ", userAddress=" + userAddress + ", age=" + age + ", password=" + password + '}';
+    }
+
+
+
+    /**
+     * @param userAddress the userAddress to set
+     */
+    public void setUserAddress(String userAddress) {
+        this.userAddress = userAddress;
     }
     
     public void readData(){
