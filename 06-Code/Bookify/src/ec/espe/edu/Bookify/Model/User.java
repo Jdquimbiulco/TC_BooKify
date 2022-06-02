@@ -18,6 +18,10 @@ public class User {
     private int password;
     
    
+    User() {
+        
+    }
+    
     public User(String name, int id, String userEmail, int userPhone, int userAddress, int age, int password) {
         this.name = name;
         this.id = id;
