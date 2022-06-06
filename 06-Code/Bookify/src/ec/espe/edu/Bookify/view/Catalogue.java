@@ -10,7 +10,7 @@ package ec.espe.edu.Bookify.view;
  */
 public class Catalogue {
     public static void main(String[] args) {
-        System.out.println("asdasd");
+        System.out.println("catalogue");
                 
     }
 }
