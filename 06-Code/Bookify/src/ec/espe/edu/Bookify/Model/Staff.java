@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package ec.espe.edu.Bookify.Model;
 
 import java.util.ArrayList;
@@ -9,7 +5,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author QUILUMBAQUIN JAIRO, DCC0-ESPE: CODEX++
+ * @author Raul Silva, DCCO-ESPE, CODEX++
  */
 public class Staff {
     
