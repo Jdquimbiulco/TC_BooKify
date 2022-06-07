@@ -34,13 +34,12 @@ public class Staff {
 
     public User addUser(){
     
-        ArrayList<User> users;
+        
         User user1;
         String staffOption;
         Scanner input;
         
         user1= new User();
-        users= new ArrayList<>();
         input= new Scanner(System.in);
             
         do{
@@ -67,9 +66,7 @@ public class Staff {
             System.out.println("Ingrese el numero de telefono\n");
             user1.setUserPhone(staffPhone=input.nextInt());
             System.out.println("Ingresado Exitosamente");      
-            users.add(user1);
-            
-            System.out.println(users);
+            System.out.println(user1);
                     
             
         }
@@ -77,7 +74,7 @@ public class Staff {
         }while(staffOption.equals("y"));
         
         
-        return null;
+        return user1;
     }
 
     /**
