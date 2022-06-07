@@ -9,6 +9,7 @@ package ec.espe.edu.Bookify.view;
 
 import ec.espe.edu.Bookify.Model.Staff;
 import ec.espe.edu.Bookify.Model.User;
+import java.util.Scanner;
 
 
 /**
@@ -21,15 +22,50 @@ public class LogIn {
      
 
     public static void main(String[] args) {
+        Scanner keyboard = new Scanner(System.in);
            Staff staff;
            User user;
            staff = new Staff();
            user = new User();
+            int option;
+            option=0;
            
-           user.readData();
-           staff.addUser();
+           
+           
+           
+        
+        
+        printMenu();
+        
+        System.out.println("Select the operation--->[1|2|3|4|5|6|7|8|9|10], 0 to exit: ");
+        option = keyboard.nextInt();
+        
+        if (option == 1) {
+            user.readData();
+            
+        }else if (option == 2) {
+            staff.addUser();
+        }
+        
            
 
+    }
+
+    private static void printMenu() {
+        System.out.println("========================================================");
+        System.out.println("=========================BOOKIFY========================");
+        System.out.println("========================================================");
+        
+        System.out.println("1.-Log In");
+        System.out.println("2.-Add New User");
+        System.out.println("3.-Add Product");
+        System.out.println("4.-Show Catalogue");
+        System.out.println("5.-Manage Product");
+        System.out.println("6.-Borrow Product");
+        System.out.println("7.-Return Product");
+        System.out.println("8.-Product Information");
+        System.out.println("9.-Pay Fines");
+        System.out.println("10.-Donate");
     }
     
 }
