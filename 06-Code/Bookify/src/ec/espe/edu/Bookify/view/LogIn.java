@@ -7,8 +7,10 @@ package ec.espe.edu.Bookify.view;
 
 
 
+import ec.espe.edu.Bookify.Model.Book;
 import ec.espe.edu.Bookify.Model.Staff;
 import ec.espe.edu.Bookify.Model.User;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 
@@ -25,8 +27,12 @@ public class LogIn {
         Scanner keyboard = new Scanner(System.in);
            Staff staff;
            User user;
+           Catalogue catalogue;
+           
            staff = new Staff();
            user = new User();
+           catalogue = new Catalogue();
+  
             int option;
             option=0;
            
@@ -45,11 +51,12 @@ public class LogIn {
             
         }else if (option == 2) {
             staff.addUser();
-        }
         
-           
-
-    }
+        }else if (option == 4)
+            catalogue.showCatalogue();
+        
+        
+ }
 
     private static void printMenu() {
         System.out.println("========================================================");

@@ -173,7 +173,9 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" + "title=" + title + ", ranking=" + ranking + ", gender=" + gender + ", author=" + author + ", yearOfPublication=" + yearOfPublication + ", publisher=" + publisher + ", numberOfPage=" + numberOfPage + ", ISBN=" + ISBN + ", amount=" + amount + ", available=" + available + '}';
-    }   
+        return "\nTitle = " + title + "\nRanking = " + ranking + "\nGender = " + gender + "\nAuthor = " + author + "\nYearOfPublication = " + yearOfPublication + "\nPublisher = " + publisher + "\nNumberOfPage = " + numberOfPage + "\nISBN = " + ISBN + "\nAmount = " + amount + "\nAvailable = " + available + '\n';
+    }  
+    
+    
 }
 
