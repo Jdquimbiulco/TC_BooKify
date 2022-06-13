@@ -8,9 +8,9 @@ import java.util.Scanner;
  */
 public class Staff {
     
-    private String Staffname;
-    private int Staffid;
-    private int Staffage;
+    private String StaffName;
+    private int StaffId;
+    private int StaffAge;
     private int StaffPhone;
     private String StaffAddress;
     private int StaffPasword;
@@ -20,9 +20,9 @@ public class Staff {
     }
 
     public Staff(String Staffname, int Staffid, int Staffage, int StaffPhone, String StaffAddress, int StaffPasword, boolean StaffBlackList) {
-        this.Staffname = Staffname;
-        this.Staffid = Staffid;
-        this.Staffage = Staffage;
+        this.StaffName = Staffname;
+        this.StaffId = Staffid;
+        this.StaffAge = Staffage;
         this.StaffPhone = StaffPhone;
         this.StaffAddress = StaffAddress;
         this.StaffPasword = StaffPasword;
@@ -96,45 +96,45 @@ public class Staff {
     }
 
     /**
-     * @return the Staffname
+     * @return the StaffName
      */
-    public String getStaffname() {
-        return Staffname;
+    public String getStaffName() {
+        return StaffName;
     }
 
     /**
-     * @param Staffname the Staffname to set
+     * @param StaffName the StaffName to set
      */
-    public void setStaffname(String Staffname) {
-        this.Staffname = Staffname;
+    public void setStaffName(String StaffName) {
+        this.StaffName = StaffName;
     }
 
     /**
-     * @return the Staffid
+     * @return the StaffId
      */
-    public int getStaffid() {
-        return Staffid;
+    public int getStaffId() {
+        return StaffId;
     }
 
     /**
-     * @param Staffid the Staffid to set
+     * @param StaffId the StaffId to set
      */
-    public void setStaffid(int Staffid) {
-        this.Staffid = Staffid;
+    public void setStaffId(int StaffId) {
+        this.StaffId = StaffId;
     }
 
     /**
-     * @return the Staffage
+     * @return the StaffAge
      */
-    public int getStaffage() {
-        return Staffage;
+    public int getStaffAge() {
+        return StaffAge;
     }
 
     /**
-     * @param Staffage the Staffage to set
+     * @param StaffAge the StaffAge to set
      */
-    public void setStaffage(int Staffage) {
-        this.Staffage = Staffage;
+    public void setStaffAge(int StaffAge) {
+        this.StaffAge = StaffAge;
     }
 
     /**
@@ -196,7 +196,7 @@ public class Staff {
     
     public String StaffData() {
         
-        return "Staff:" + "StaffName=" + Staffname + ", Staffid=" + Staffid + ", Staffage=" + Staffage + ", StaffPhone=" + StaffPhone + ", StaffAddress=" + StaffAddress + ", StaffPasword=" + StaffPasword + ", StaffBlackList=" + StaffBlackList + '\n';
+        return "Staff:" + "StaffName=" + StaffName + ", Staffid=" + StaffId + ", Staffage=" + StaffAge + ", StaffPhone=" + StaffPhone + ", StaffAddress=" + StaffAddress + ", StaffPasword=" + StaffPasword + ", StaffBlackList=" + StaffBlackList + '\n';
     }
 
     
