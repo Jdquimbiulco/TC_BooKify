@@ -8,8 +8,9 @@ package ec.espe.edu.Bookify.view;
 
 
 
-import ec.espe.edu.Bookify.Model.Staff;
-import ec.espe.edu.Bookify.Model.User;
+import ec.edu.espe.Bookify.model.Staff;
+import ec.edu.espe.Bookify.model.User;
+
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -53,7 +54,7 @@ public class LogIn {
             staff.RecordUser();break;
         
             case 3:
-            catalogue.showCatalogue();break;
+            //catalogue.showCatalogue();break;
         }
             
         }while(option!=0);

@@ -23,6 +23,7 @@ public class Staff {
     private int StaffPasword;
     private boolean StaffBlackList;
 
+    
     public Staff(String StaffName, int StaffId, int StaffAge, int StaffPhone, String StaffAddress, int StaffPasword, boolean StaffBlackList) {
         this.StaffName = StaffName;
         this.StaffId = StaffId;
@@ -32,7 +33,11 @@ public class Staff {
         this.StaffPasword = StaffPasword;
         this.StaffBlackList = StaffBlackList;
     }
-    public ec.espe.edu.Bookify.Model.User addUser(){
+
+    public Staff() {
+        
+    }
+    public User addUser(){
     
         String UserName;
         String UserEmail;
@@ -43,9 +48,9 @@ public class Staff {
         int UserPhone;
         
         Scanner input;
-        ec.espe.edu.Bookify.Model.User user1;
+        User user1;
         
-        user1= new ec.espe.edu.Bookify.Model.User();
+        user1= new User();
         input= new Scanner(System.in);
             
     
@@ -78,7 +83,7 @@ public class Staff {
         
         return user1;
     }
-<<<<<<< HEAD:06-Code/Bookify/src/ec/espe/edu/Bookify/Model/Staff.java
+
     
     public String StaffData() {
         
@@ -128,19 +133,18 @@ public class Staff {
         if(!VerifyFile.exists()){
             try{
                 VerifyFile.createNewFile();
-            }catch(IOException ex){ex.printStackTrace();}
+            }catch(IOException ex){}
         }
         
         
     }
     
-=======
+
     @Override
     public String toString() {
         return "Staff{" + "StaffName=" + StaffName + ", StaffId=" + StaffId + ", StaffAge=" + StaffAge + ", StaffPhone=" + StaffPhone + ", StaffAddress=" + StaffAddress + ", StaffPasword=" + StaffPasword + ", StaffBlackList=" + StaffBlackList + '}';
     }
 
->>>>>>> d45f23d945992cb1f5a8bb61e4ccabb375b1e5e6:06-Code/Bookify/src/ec/edu/espe/Bookify/model/Staff.java
     /**
      * @return the StaffName
      */
@@ -238,10 +242,5 @@ public class Staff {
     public void setStaffBlackList(boolean StaffBlackList) {
         this.StaffBlackList = StaffBlackList;
     }
-<<<<<<< HEAD:06-Code/Bookify/src/ec/espe/edu/Bookify/Model/Staff.java
 
-    
-    
-=======
->>>>>>> d45f23d945992cb1f5a8bb61e4ccabb375b1e5e6:06-Code/Bookify/src/ec/edu/espe/Bookify/model/Staff.java
 }
