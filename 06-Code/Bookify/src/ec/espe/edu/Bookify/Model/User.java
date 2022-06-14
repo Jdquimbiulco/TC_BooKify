@@ -86,7 +86,11 @@ public class User {
         return "User:" + "name=" + UserName + ", id=" + UserId + ", userEmail=" + UserEmail + ", userPhone=" + UserPhone + ", userAddress=" + UserAddress + ", age=" + UserAge + ", password=" + UserPassword + '\n';
     }
 
-
+    public String RecordUserData() {
+        String UserDataRecord=UserName +";"+ UserId + ";" + UserEmail + ";" + UserPhone + ";" + UserAddress + ";" + UserAge + ";" + UserPassword + "\r\n";
+        return UserDataRecord;
+    }
+    
 
     /**
      * @param UserAddress the UserAddress to set

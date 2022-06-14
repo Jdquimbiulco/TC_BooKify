@@ -7,10 +7,10 @@ package ec.espe.edu.Bookify.view;
 
 
 
-import ec.espe.edu.Bookify.Model.Book;
+
 import ec.espe.edu.Bookify.Model.Staff;
 import ec.espe.edu.Bookify.Model.User;
-import java.util.ArrayList;
+import java.io.IOException;
 import java.util.Scanner;
 
 
@@ -23,7 +23,7 @@ import java.util.Scanner;
 public class LogIn {
      
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Scanner keyboard = new Scanner(System.in);
            Staff staff;
            User user;
@@ -40,21 +40,23 @@ public class LogIn {
            
            
         
-        
+        do{
         printMenu();
         
         System.out.println("Select the operation--->[1|2|3|4|5|6|7|8|9|10], 0 to exit: ");
         option = keyboard.nextInt();
         
-        if (option == 1) {
-            user.readData();
+        switch(option) {
+            case 1:
+                user.readData();break;
+            case 2:
+            staff.RecordUser();break;
+        
+            case 3:
+            catalogue.showCatalogue();break;
+        }
             
-        }else if (option == 2) {
-            staff.addUser();
-        
-        }else if (option == 4)
-            catalogue.showCatalogue();
-        
+        }while(option!=0);
         
  }
 
@@ -73,6 +75,7 @@ public class LogIn {
         System.out.println("8.-Product Information");
         System.out.println("9.-Pay Fines");
         System.out.println("10.-Donate");
+        System.out.println("0.-Exit");
     }
     
 }

@@ -1,5 +1,9 @@
 package ec.espe.edu.Bookify.Model;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 
 /**
@@ -35,13 +39,9 @@ public class Staff {
 
     public User addUser(){
     
-        
-        
-        String staffOption;
         String UserName;
         String UserEmail;
         String UserAddress;
-        
         int UserAge;
         int UserId;
         int UserPasword; 
@@ -53,25 +53,19 @@ public class Staff {
         user1= new User();
         input= new Scanner(System.in);
             
-        do{
-        
-        System.out.println("Ingresar un nuevo usuario?(Y/N)\n");
-        staffOption=input.nextLine();
-        
-        if(staffOption.equalsIgnoreCase("y")){
-        
+    
             System.out.println("Ingrese el Nombre:\n");
             UserName=input.nextLine();
             System.out.println("Ingrese la edad:\n");
             UserAge=input.nextInt();
             System.out.println("Ingrese el Id:\n");
             UserId=input.nextInt();
-            System.out.println("Ingrese la contraseña:\n");
+            System.out.println("Ingrese la contrasenia:\n");
             UserPasword=input.nextInt();
             System.out.println("Ingrese la direccion:\n");
-            UserAddress=input.nextLine();
+            UserAddress=input.next();
             System.out.println("Ingrese el email:\n");
-            UserEmail=input.nextLine();
+            UserEmail=input.next();
             System.out.println("Ingrese el numero de telefono\n");
             UserPhone=input.nextInt();
                        
@@ -86,15 +80,64 @@ public class Staff {
             System.out.println("Ingresado Exitosamente");      
             System.out.println(user1.UserData());
                     
-            
-        }
-        
-        }while(staffOption.equals("y"));
-        
         
         return user1;
     }
-
+    
+    public String StaffData() {
+        
+        return "Staff:" + "StaffName=" + StaffName + ", Staffid=" + StaffId + ", Staffage=" + StaffAge + ", StaffPhone=" + StaffPhone + ", StaffAddress=" + StaffAddress + ", StaffPasword=" + StaffPasword + ", StaffBlackList=" + StaffBlackList + '\n';
+    }
+    
+    
+    public void RecordUser() throws IOException{
+    
+        String StaffOption;
+        User UserRecord;
+        Scanner input;
+        FileWriter RecordUserData;
+        BufferedWriter WriteUserData;
+        
+        input=new Scanner(System.in);
+        
+        
+        do{
+            
+            
+            System.out.println("Ingresar un Nuevo Usuario?(Y/N)\n ");
+            StaffOption=input.next().toLowerCase();
+            
+            if(StaffOption.equals("y")){
+                VerifyDataBase();
+                RecordUserData=new FileWriter("UserDataBase.csv",true);
+                WriteUserData= new BufferedWriter(RecordUserData);
+                
+                UserRecord=addUser();
+                WriteUserData.write(UserRecord.RecordUserData());
+                WriteUserData.flush();
+                RecordUserData.close(); 
+            }
+           
+                
+            
+        }while(StaffOption.equalsIgnoreCase("y"));
+        
+    }
+    
+    public void VerifyDataBase() throws IOException{
+        
+        File VerifyFile;
+        VerifyFile=new File("UserDataBase.csv");
+        
+        if(!VerifyFile.exists()){
+            try{
+                VerifyFile.createNewFile();
+            }catch(IOException ex){ex.printStackTrace();}
+        }
+        
+        
+    }
+    
     /**
      * @return the StaffName
      */
@@ -193,15 +236,6 @@ public class Staff {
         this.StaffBlackList = StaffBlackList;
     }
 
-    
-    public String StaffData() {
-        
-        return "Staff:" + "StaffName=" + StaffName + ", Staffid=" + StaffId + ", Staffage=" + StaffAge + ", StaffPhone=" + StaffPhone + ", StaffAddress=" + StaffAddress + ", StaffPasword=" + StaffPasword + ", StaffBlackList=" + StaffBlackList + '\n';
-    }
-
-    
-
-    
     
     
 }
