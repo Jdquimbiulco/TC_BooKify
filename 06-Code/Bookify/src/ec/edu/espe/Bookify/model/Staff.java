@@ -39,7 +39,7 @@ public class Staff {
     }
     public User addUser(){
     
-        String UserName;
+        String userName;
         String UserEmail;
         String UserAddress;
         int UserAge;
@@ -55,7 +55,7 @@ public class Staff {
             
     
             System.out.println("Ingrese el Nombre:\n");
-            UserName=input.nextLine();
+            userName=input.nextLine();
             System.out.println("Ingrese la edad:\n");
             UserAge=input.nextInt();
             System.out.println("Ingrese el Id:\n");
@@ -69,7 +69,7 @@ public class Staff {
             System.out.println("Ingrese el numero de telefono\n");
             UserPhone=input.nextInt();
                        
-            user1.setUserName(UserName);
+            user1.setUserName(userName);
             user1.setUserAge(UserAge);
             user1.setUserId(UserId);
             user1.setUserPassword(UserPasword);
@@ -110,6 +110,7 @@ public class Staff {
             
             if(StaffOption.equals("y")){
                 VerifyDataBase();
+                
                 RecordUserData=new FileWriter("UserDataBase.csv",true);
                 WriteUserData= new BufferedWriter(RecordUserData);
                 
@@ -135,8 +136,6 @@ public class Staff {
                 VerifyFile.createNewFile();
             }catch(IOException ex){}
         }
-        
-        
     }
     
 

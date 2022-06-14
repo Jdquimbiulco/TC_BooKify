@@ -21,18 +21,18 @@ import java.util.Scanner;
  * 
  */
 
-public class LogIn {
+public class Bookify {
      
 
     public static void main(String[] args) throws IOException {
         Scanner keyboard = new Scanner(System.in);
            Staff staff;
            User user;
-           Catalogue catalogue;
+           
            
            staff = new Staff();
            user = new User();
-           catalogue = new Catalogue();
+           
   
             int option;
             option=0;
@@ -51,10 +51,7 @@ public class LogIn {
             case 1:
                 user.readData();break;
             case 2:
-            staff.RecordUser();break;
-        
-            case 3:
-            //catalogue.showCatalogue();break;
+                staff.RecordUser();break;
         }
             
         }while(option!=0);
