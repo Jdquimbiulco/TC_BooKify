@@ -1,4 +1,8 @@
-package ec.espe.edu.Bookify.Model;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package ec.edu.espe.Bookify.model;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -11,7 +15,6 @@ import java.util.Scanner;
  * @author Raul Silva, DCCO-ESPE, CODEX++
  */
 public class Staff {
-    
     private String StaffName;
     private int StaffId;
     private int StaffAge;
@@ -20,24 +23,16 @@ public class Staff {
     private int StaffPasword;
     private boolean StaffBlackList;
 
-    public Staff() {
-    }
-
-    public Staff(String Staffname, int Staffid, int Staffage, int StaffPhone, String StaffAddress, int StaffPasword, boolean StaffBlackList) {
-        this.StaffName = Staffname;
-        this.StaffId = Staffid;
-        this.StaffAge = Staffage;
+    public Staff(String StaffName, int StaffId, int StaffAge, int StaffPhone, String StaffAddress, int StaffPasword, boolean StaffBlackList) {
+        this.StaffName = StaffName;
+        this.StaffId = StaffId;
+        this.StaffAge = StaffAge;
         this.StaffPhone = StaffPhone;
         this.StaffAddress = StaffAddress;
         this.StaffPasword = StaffPasword;
         this.StaffBlackList = StaffBlackList;
     }
-    
-    
-    
-    
-
-    public User addUser(){
+    public ec.espe.edu.Bookify.Model.User addUser(){
     
         String UserName;
         String UserEmail;
@@ -48,9 +43,9 @@ public class Staff {
         int UserPhone;
         
         Scanner input;
-        User user1;
+        ec.espe.edu.Bookify.Model.User user1;
         
-        user1= new User();
+        user1= new ec.espe.edu.Bookify.Model.User();
         input= new Scanner(System.in);
             
     
@@ -83,6 +78,7 @@ public class Staff {
         
         return user1;
     }
+<<<<<<< HEAD:06-Code/Bookify/src/ec/espe/edu/Bookify/Model/Staff.java
     
     public String StaffData() {
         
@@ -138,6 +134,13 @@ public class Staff {
         
     }
     
+=======
+    @Override
+    public String toString() {
+        return "Staff{" + "StaffName=" + StaffName + ", StaffId=" + StaffId + ", StaffAge=" + StaffAge + ", StaffPhone=" + StaffPhone + ", StaffAddress=" + StaffAddress + ", StaffPasword=" + StaffPasword + ", StaffBlackList=" + StaffBlackList + '}';
+    }
+
+>>>>>>> d45f23d945992cb1f5a8bb61e4ccabb375b1e5e6:06-Code/Bookify/src/ec/edu/espe/Bookify/model/Staff.java
     /**
      * @return the StaffName
      */
@@ -235,7 +238,10 @@ public class Staff {
     public void setStaffBlackList(boolean StaffBlackList) {
         this.StaffBlackList = StaffBlackList;
     }
+<<<<<<< HEAD:06-Code/Bookify/src/ec/espe/edu/Bookify/Model/Staff.java
 
     
     
+=======
+>>>>>>> d45f23d945992cb1f5a8bb61e4ccabb375b1e5e6:06-Code/Bookify/src/ec/edu/espe/Bookify/model/Staff.java
 }
