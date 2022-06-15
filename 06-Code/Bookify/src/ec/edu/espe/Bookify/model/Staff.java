@@ -4,8 +4,11 @@
  */
 package ec.edu.espe.Bookify.model;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
@@ -138,6 +141,20 @@ public class Staff {
         }
     }
     
+    public void ShowUsers() throws FileNotFoundException, IOException{
+    
+        File dataBase;
+        Scanner readDataBase;
+        
+        dataBase=new File("UserDataBase.csv");
+        readDataBase= new Scanner(dataBase);
+        
+        VerifyDataBase();
+        while(readDataBase.hasNextLine()){
+            System.out.println(readDataBase.nextLine());
+        }
+    
+    }
 
     @Override
     public String toString() {
