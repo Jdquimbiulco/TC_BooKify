@@ -14,6 +14,9 @@ public class User {
     private String UserAddress; 
     private int UserAge;
     private int UserPassword;
+    int Pasuwu;
+    int Password = 1945;
+    
     
    
     public User() {
@@ -87,7 +90,7 @@ public class User {
     }
 
     public String RecordUserData() {
-        String UserDataRecord=UserName +";"+ UserId + ";" + UserEmail + ";" + UserPhone + ";" + UserAddress + ";" + UserAge + ";" + UserPassword + "\r\n";
+        String UserDataRecord=UserName +";"+ UserId + ";" + UserEmail + ";" + UserPhone + ";" + UserAddress + ";" + UserAge + ";" + UserPassword  + "\r\n";
         return UserDataRecord;
     }
     
@@ -105,7 +108,13 @@ public class User {
            UserId = teclado.nextInt();
            System.out.println("Ingrse su contraseña:");
            UserPassword = teclado.nextInt();
-           System.out.println("Ingresado Exitosamente");
+           //System.out.println("Ingresado Exitosamente");
+           if(UserPassword == Password){
+                System.out.println("Contraseña Correcta");
+            }
+            else{
+                System.out.println("Contraseña incorercta");
+            }
        }
         
 }
