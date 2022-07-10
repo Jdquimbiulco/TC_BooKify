@@ -6,6 +6,7 @@ package ec.edu.espe.Bookify.model;
 
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
@@ -39,7 +40,7 @@ public class Staff {
     }
     public User addUser(){
     
-        String UserName;
+        String userName;
         String UserEmail;
         String UserAddress;
         int UserAge;
@@ -55,7 +56,7 @@ public class Staff {
             
     
             System.out.println("Ingrese el Nombre:\n");
-            UserName=input.nextLine();
+            userName=input.nextLine();
             System.out.println("Ingrese la edad:\n");
             UserAge=input.nextInt();
             System.out.println("Ingrese el Id:\n");
@@ -69,7 +70,7 @@ public class Staff {
             System.out.println("Ingrese el numero de telefono\n");
             UserPhone=input.nextInt();
                        
-            user1.setUserName(UserName);
+            user1.setUserName(userName);
             user1.setUserAge(UserAge);
             user1.setUserId(UserId);
             user1.setUserPassword(UserPasword);
@@ -110,6 +111,7 @@ public class Staff {
             
             if(StaffOption.equals("y")){
                 VerifyDataBase();
+                
                 RecordUserData=new FileWriter("UserDataBase.csv",true);
                 WriteUserData= new BufferedWriter(RecordUserData);
                 
@@ -135,10 +137,22 @@ public class Staff {
                 VerifyFile.createNewFile();
             }catch(IOException ex){}
         }
-        
-        
     }
     
+    public void ShowUsers() throws FileNotFoundException, IOException{
+    
+        File dataBase;
+        Scanner readDataBase;
+        
+        dataBase=new File("UserDataBase.csv");
+        readDataBase= new Scanner(dataBase);
+        
+        VerifyDataBase();
+        while(readDataBase.hasNextLine()){
+            System.out.println(readDataBase.nextLine());
+        }
+    
+    }
 
     @Override
     public String toString() {

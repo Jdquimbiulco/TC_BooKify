@@ -51,10 +51,9 @@ public class Bookify {
             case 1:
                 user.readData();break;
             case 2:
-            staff.RecordUser();break;
-        
+                staff.RecordUser();break;
             case 3:
-            //catalogue.showCatalogue();break;
+                staff.ShowUsers();break;
         }
             
         }while(option!=0);
