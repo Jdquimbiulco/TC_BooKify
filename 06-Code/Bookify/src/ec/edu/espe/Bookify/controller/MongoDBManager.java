@@ -8,6 +8,7 @@ import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import ec.edu.espe.Bookify.model.Book;
 import ec.edu.espe.Bookify.model.User;
 import org.bson.Document;
 
@@ -62,7 +63,27 @@ public class MongoDBManager {
 
     }
 
-    
+    public void CreateBook(Book book) {
+
+        MongoDatabase userDB;
+        MongoCollection userCollection;
+        Document document;
+        
+        userDB = EstablishConnection();
+        userCollection = userDB.getCollection("Books");
+
+        document = new Document();
+        
+        document.append("Title", book.getTitle());
+        document.append("Author", book.getAuthor());
+        document.append("Publisher", book.getPublisher());
+        document.append("ISBN", book.getISBN());
+        document.append("Avaliable", book.isAvailable());
+
+
+        userCollection.insertOne(document);
+
+    }
     
 
 }

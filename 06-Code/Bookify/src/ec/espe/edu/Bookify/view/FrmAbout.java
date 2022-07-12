@@ -92,7 +92,7 @@ public class FrmAbout extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
-        FormsHandler.goToMainScreen(this);
+        //FormsHandler.goToMainScreen(this);
     }//GEN-LAST:event_btnReturnActionPerformed
 
     /**

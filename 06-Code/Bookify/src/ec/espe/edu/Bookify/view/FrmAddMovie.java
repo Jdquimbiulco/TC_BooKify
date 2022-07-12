@@ -158,8 +158,15 @@ public class FrmAddMovie extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+<<<<<<< HEAD
         FormsHandler.goToMainScreen(this);
 
+=======
+//        FrmBookiFi frmBookiFi;
+//        frmBookiFi = new FrmBookiFi();
+//        frmBookiFi.setVisible(true);
+//        this.setVisible(false);
+>>>>>>> 4ef2fd4b5267cdec1a10f7d14bd1cb4ce563e7ef
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
