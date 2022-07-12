@@ -4,7 +4,6 @@
  */
 package ec.espe.edu.Bookify.view;
 
-<<<<<<< HEAD
 import ec.edu.espe.Bookify.model.User;
 import ec.espe.edu.Bookify.Controller.InputNumbersValidation;
 import ec.espe.edu.Bookify.Controller.MongoDBManager;
@@ -204,7 +203,7 @@ public class FrmUser extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-<<<<<<< HEAD
+
     private void addUserBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addUserBActionPerformed
         User user;
         MongoDBManager saveUserdata;
@@ -225,8 +224,7 @@ public class FrmUser extends javax.swing.JFrame {
         
     }//GEN-LAST:event_addUserBActionPerformed
 
-=======
->>>>>>> 4e7b592f81d36040e8d3534f907c9aa38dc46947
+
     /**
      * @param args the command line arguments
      */
@@ -260,11 +258,10 @@ public class FrmUser extends javax.swing.JFrame {
                 new FrmUser().setVisible(true);
             }
         });
-<<<<<<< HEAD
 
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Variables declaration - do not modify                     
     private javax.swing.JTextField TFUserName;
     private javax.swing.JTextField TFuserAddres;
     private javax.swing.JTextField TFuserAge;
@@ -281,7 +278,7 @@ public class FrmUser extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    // End of variables declaration//GEN-END:variables
+    // End of variables declaration                   
 
     public int AgeValidation(String Age){
     
@@ -332,11 +329,11 @@ public class FrmUser extends javax.swing.JFrame {
         
     }
 
-=======
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
->>>>>>> 4e7b592f81d36040e8d3534f907c9aa38dc46947
+
 }

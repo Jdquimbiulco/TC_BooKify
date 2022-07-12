@@ -135,13 +135,12 @@ public class FrmBookiFi extends javax.swing.JFrame {
         
     }//GEN-LAST:event_itmAddBookActionPerformed
 
-<<<<<<< HEAD
-=======
+
     private void itmAddStaffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmAddStaffActionPerformed
 
     }//GEN-LAST:event_itmAddStaffActionPerformed
 
->>>>>>> 614185519aaec584d984f44d1fbf980919470f32
+
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         FrmAbout frmAbout = new FrmAbout();
         frmAbout.setVisible(true);
