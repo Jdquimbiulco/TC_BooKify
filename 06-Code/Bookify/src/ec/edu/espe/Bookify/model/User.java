@@ -14,6 +14,9 @@ public class User {
     private String UserAddress; 
     private int UserAge;
     private int UserPassword;
+    int Pasuwu;
+    int Password = 1945;
+    
     
    
     public User() {
@@ -87,7 +90,11 @@ public class User {
     }
 
     public String RecordUserData() {
+<<<<<<< HEAD
         String UserDataRecord=getUserName() +";"+ getUserId() + ";" + getUserEmail() + ";" + getUserPhone() + ";" + getUserAddress() + ";" + getUserAge() + ";" + getUserPassword() + "\r\n";
+=======
+        String UserDataRecord=UserName +";"+ UserId + ";" + UserEmail + ";" + UserPhone + ";" + UserAddress + ";" + UserAge + ";" + UserPassword  + "\r\n";
+>>>>>>> 4e7b592f81d36040e8d3534f907c9aa38dc46947
         return UserDataRecord;
     }
     
@@ -104,8 +111,19 @@ public class User {
            System.out.println("Ingrese su ID");
            setUserId(teclado.nextInt());
            System.out.println("Ingrse su contraseña:");
+<<<<<<< HEAD
            setUserPassword(teclado.nextInt());
            System.out.println("Ingresado Exitosamente");
+=======
+           UserPassword = teclado.nextInt();
+           //System.out.println("Ingresado Exitosamente");
+           if(UserPassword == Password){
+                System.out.println("Contraseña Correcta");
+            }
+            else{
+                System.out.println("Contraseña incorercta");
+            }
+>>>>>>> 4e7b592f81d36040e8d3534f907c9aa38dc46947
        }
 
     /**
