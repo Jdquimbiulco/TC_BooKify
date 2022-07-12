@@ -1,13 +1,11 @@
-package ec.espe.edu.Bookify.view;
+package ec.edu.espe.Bookify.view;
 
-<<<<<<< HEAD
+
 import ec.edu.espe.Bookify.controller.MongoDBManager;
 import ec.edu.espe.Bookify.model.Movie;
-import java.lang.module.ModuleDescriptor;
-=======
 import ec.edu.espe.Bookify.controller.FormsHandler;
->>>>>>> d16aaf9827283e6f2e2f1efa509223c580ca2a8e
-import javax.swing.JOptionPane;
+import javax.swing.JFrame;
+
 
 /**
  *
@@ -20,6 +18,7 @@ public class FrmAddMovie extends javax.swing.JFrame {
      */
     public FrmAddMovie() {
         initComponents();
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
     }
 
     /**
@@ -159,18 +158,16 @@ public class FrmAddMovie extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-<<<<<<< HEAD
         FormsHandler.goToMainScreen(this);
 
-=======
 //        FrmBookiFi frmBookiFi;
 //        frmBookiFi = new FrmBookiFi();
 //        frmBookiFi.setVisible(true);
 //        this.setVisible(false);
->>>>>>> 4ef2fd4b5267cdec1a10f7d14bd1cb4ce563e7ef
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        
         Movie movie;
         MongoDBManager addMovie;
         addMovie = new MongoDBManager();
@@ -178,7 +175,10 @@ public class FrmAddMovie extends javax.swing.JFrame {
         movie.setTitle(txtMovieTitle.getText());
         movie.setGenre(txtMovieGender.getText());
         movie.setIdiom(txtMovieIdiom.getText());
+        movie.setAvailable(AvailableMovie(cmbAvailable.getSelectedItem().toString()));
         addMovie.CreateMovie(movie);
+        
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     
@@ -235,4 +235,13 @@ public class FrmAddMovie extends javax.swing.JFrame {
     private javax.swing.JTextField txtMovieIdiom;
     private javax.swing.JTextField txtMovieTitle;
     // End of variables declaration//GEN-END:variables
+
+public boolean AvailableMovie(String option){
+
+        return option.toLowerCase().equals("yes");
+
+
+}
+
+
 }

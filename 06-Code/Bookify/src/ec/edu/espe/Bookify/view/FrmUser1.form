@@ -23,59 +23,60 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
+          </Group>
           <Group type="102" attributes="0">
               <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="TFuserId" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="TFuserName" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
                       <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="31" max="32767" attributes="0"/>
-                      <Component id="TFpassword" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="TFemail" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="TFphone" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="TFaddres" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                      <Component id="TFpassword" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="TFage" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                      <Component id="TFage" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                      <Component id="TFaddres" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                      <Component id="TFphone" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                      <Component id="TFemail" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
+                      <Component id="TFuserId" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                      <Component id="TFuserName" min="-2" pref="83" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="47" max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="lblErrorName" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="44" max="32767" attributes="0"/>
           </Group>
-          <Group type="102" alignment="1" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
+              <Component id="jToggleButton1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -88,6 +89,7 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="TFuserName" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblErrorName" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -120,7 +122,10 @@
                   <Component id="TFpassword" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jToggleButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace pref="34" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -168,39 +173,21 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="TFuserName">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jTextField1"/>
-      </Properties>
+      <Events>
+        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="TFuserNameKeyPressed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="TFuserId">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jTextField2"/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="TFemail">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jTextField3"/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="TFphone">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jTextField4"/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="TFaddres">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jTextField5"/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="TFage">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jTextField6"/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="TFpassword">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jTextField7"/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
@@ -209,6 +196,19 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JToggleButton" name="jToggleButton1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Return"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jToggleButton1ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblErrorName">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="_"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

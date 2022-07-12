@@ -2,7 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package ec.espe.edu.Bookify.view;
+package ec.edu.espe.Bookify.view;
+
+import javax.swing.JFrame;
 
 /**
  *
@@ -16,6 +18,7 @@ public class FrmHelp extends javax.swing.JFrame {
     public FrmHelp() {
         initComponents();
         this.setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 
     }
 
@@ -109,13 +112,11 @@ public class FrmHelp extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
-<<<<<<< HEAD
+
         FrmBookify frmBookiFi = new FrmBookify();
         frmBookiFi.setVisible(true);
-=======
 //        FrmBookiFi frmBookiFi = new FrmBookiFi();
 //        frmBookiFi.setVisible(true);
->>>>>>> 4ef2fd4b5267cdec1a10f7d14bd1cb4ce563e7ef
         this.setVisible(false);        this.setVisible(false);    }//GEN-LAST:event_btnReturnActionPerformed
 
     /**

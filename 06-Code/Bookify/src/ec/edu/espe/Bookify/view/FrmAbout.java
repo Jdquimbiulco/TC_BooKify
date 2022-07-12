@@ -1,6 +1,7 @@
-package ec.espe.edu.Bookify.view;
+package ec.edu.espe.Bookify.view;
 
 import ec.edu.espe.Bookify.controller.FormsHandler;
+import javax.swing.JFrame;
 
 /**
  *
@@ -14,6 +15,7 @@ public class FrmAbout extends javax.swing.JFrame {
     public FrmAbout() {
         initComponents();
         this.setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
     }
 
     /**
@@ -92,7 +94,7 @@ public class FrmAbout extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
-        //FormsHandler.goToMainScreen(this);
+        FormsHandler.goToMainScreen(this);
     }//GEN-LAST:event_btnReturnActionPerformed
 
     /**
