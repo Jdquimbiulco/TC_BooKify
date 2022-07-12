@@ -4,6 +4,7 @@
  */
 package ec.espe.edu.Bookify.view;
 
+import ec.edu.espe.Bookify.controller.FormsHandler;
 import javax.swing.JOptionPane;
 
 /**
@@ -182,10 +183,8 @@ public class FrmAddBook extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        FrmBookiFi frmBookiFi;
-        frmBookiFi = new FrmBookiFi();
-        frmBookiFi.setVisible(true);
-        this.setVisible(false);
+        FormsHandler.goToMainScreen(this);
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
