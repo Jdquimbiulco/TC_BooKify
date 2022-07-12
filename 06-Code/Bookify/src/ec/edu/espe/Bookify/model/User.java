@@ -83,11 +83,11 @@ public class User {
 
     
     public String UserData() {
-        return "User:" + "name=" + UserName + ", id=" + UserId + ", userEmail=" + UserEmail + ", userPhone=" + UserPhone + ", userAddress=" + UserAddress + ", age=" + UserAge + ", password=" + UserPassword + '\n';
+        return "User:" + "name=" + getUserName() + ", id=" + getUserId() + ", userEmail=" + getUserEmail() + ", userPhone=" + getUserPhone() + ", userAddress=" + getUserAddress() + ", age=" + getUserAge() + ", password=" + getUserPassword() + '\n';
     }
 
     public String RecordUserData() {
-        String UserDataRecord=UserName +";"+ UserId + ";" + UserEmail + ";" + UserPhone + ";" + UserAddress + ";" + UserAge + ";" + UserPassword + "\r\n";
+        String UserDataRecord=getUserName() +";"+ getUserId() + ";" + getUserEmail() + ";" + getUserPhone() + ";" + getUserAddress() + ";" + getUserAge() + ";" + getUserPassword() + "\r\n";
         return UserDataRecord;
     }
     
@@ -102,10 +102,17 @@ public class User {
     public void readData(){
            Scanner teclado = new Scanner(System.in);
            System.out.println("Ingrese su ID");
-           UserId = teclado.nextInt();
+           setUserId(teclado.nextInt());
            System.out.println("Ingrse su contraseña:");
-           UserPassword = teclado.nextInt();
+           setUserPassword(teclado.nextInt());
            System.out.println("Ingresado Exitosamente");
        }
+
+    /**
+     * @return the UserAddress
+     */
+    public String getUserAddress() {
+        return UserAddress;
+    }
         
 }
