@@ -1,7 +1,7 @@
 package ec.edu.espe.Bookify.controller;
 
 import ec.espe.edu.Bookify.view.FrmAbout;
-import ec.espe.edu.Bookify.view.FrmBookiFi;
+//import ec.espe.edu.Bookify.view.FrmBookiFi;
 import javax.swing.JFrame;
 
 /**
@@ -10,10 +10,10 @@ import javax.swing.JFrame;
  */
 public class FormsHandler {
 
-        public static void goToMainScreen(JFrame jFrameToClose){
-        FrmBookiFi frmBookiFi  = new FrmBookiFi ();
-        jFrameToClose.setVisible(false);
-        frmBookiFi .setVisible(true);
-        }
+//        public static void goToMainScreen(JFrame jFrameToClose){
+//        FrmBookiFi frmBookiFi  = new FrmBookiFi ();
+//        jFrameToClose.setVisible(false);
+//        frmBookiFi .setVisible(true);
+//        }
     
 }

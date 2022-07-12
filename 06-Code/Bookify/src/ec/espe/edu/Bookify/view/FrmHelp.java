@@ -109,8 +109,8 @@ public class FrmHelp extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
-        FrmBookiFi frmBookiFi = new FrmBookiFi();
-        frmBookiFi.setVisible(true);
+//        FrmBookiFi frmBookiFi = new FrmBookiFi();
+//        frmBookiFi.setVisible(true);
         this.setVisible(false);        this.setVisible(false);    }//GEN-LAST:event_btnReturnActionPerformed
 
     /**
