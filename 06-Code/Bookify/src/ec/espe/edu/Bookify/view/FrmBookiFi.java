@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package ec.espe.edu.Bookify.view;
 
 /**
@@ -136,9 +132,7 @@ public class FrmBookiFi extends javax.swing.JFrame {
     }//GEN-LAST:event_itmAddBookActionPerformed
 
     private void itmAddStaffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmAddStaffActionPerformed
-        FrmStaff frmStaff;
-        frmStaff = new FrmStaff();
-        frmStaff.setVisible(true);
+        
         this.setVisible(false);
     }//GEN-LAST:event_itmAddStaffActionPerformed
 
