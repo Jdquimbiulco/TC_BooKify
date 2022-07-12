@@ -86,11 +86,15 @@ public class User {
 
     
     public String UserData() {
-        return "User:" + "name=" + UserName + ", id=" + UserId + ", userEmail=" + UserEmail + ", userPhone=" + UserPhone + ", userAddress=" + UserAddress + ", age=" + UserAge + ", password=" + UserPassword + '\n';
+        return "User:" + "name=" + getUserName() + ", id=" + getUserId() + ", userEmail=" + getUserEmail() + ", userPhone=" + getUserPhone() + ", userAddress=" + getUserAddress() + ", age=" + getUserAge() + ", password=" + getUserPassword() + '\n';
     }
 
     public String RecordUserData() {
+<<<<<<< HEAD
+        String UserDataRecord=getUserName() +";"+ getUserId() + ";" + getUserEmail() + ";" + getUserPhone() + ";" + getUserAddress() + ";" + getUserAge() + ";" + getUserPassword() + "\r\n";
+=======
         String UserDataRecord=UserName +";"+ UserId + ";" + UserEmail + ";" + UserPhone + ";" + UserAddress + ";" + UserAge + ";" + UserPassword  + "\r\n";
+>>>>>>> 4e7b592f81d36040e8d3534f907c9aa38dc46947
         return UserDataRecord;
     }
     
@@ -105,8 +109,12 @@ public class User {
     public void readData(){
            Scanner teclado = new Scanner(System.in);
            System.out.println("Ingrese su ID");
-           UserId = teclado.nextInt();
+           setUserId(teclado.nextInt());
            System.out.println("Ingrse su contraseña:");
+<<<<<<< HEAD
+           setUserPassword(teclado.nextInt());
+           System.out.println("Ingresado Exitosamente");
+=======
            UserPassword = teclado.nextInt();
            //System.out.println("Ingresado Exitosamente");
            if(UserPassword == Password){
@@ -115,6 +123,14 @@ public class User {
             else{
                 System.out.println("Contraseña incorercta");
             }
+>>>>>>> 4e7b592f81d36040e8d3534f907c9aa38dc46947
        }
+
+    /**
+     * @return the UserAddress
+     */
+    public String getUserAddress() {
+        return UserAddress;
+    }
         
 }

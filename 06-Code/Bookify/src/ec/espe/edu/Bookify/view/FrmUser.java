@@ -4,9 +4,20 @@
  */
 package ec.espe.edu.Bookify.view;
 
+<<<<<<< HEAD
+import ec.edu.espe.Bookify.model.User;
+import ec.espe.edu.Bookify.Controller.InputNumbersValidation;
+import ec.espe.edu.Bookify.Controller.MongoDBManager;
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author QUILUMBAQUIN JAIRO, DCC0-ESPE: CODEX++
+=======
 /**
  *
  * @author Raul Silva, DCCO-ESPE, CODEX++
+>>>>>>> 4e7b592f81d36040e8d3534f907c9aa38dc46947
  */
 public class FrmUser extends javax.swing.JFrame {
 
@@ -26,6 +37,63 @@ public class FrmUser extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+<<<<<<< HEAD
+        TFUserName = new javax.swing.JTextField();
+        TFuserId = new javax.swing.JTextField();
+        TFuserEmail = new javax.swing.JTextField();
+        TFuserAddres = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        TFuserPhone = new javax.swing.JTextField();
+        TFuserAge = new javax.swing.JTextField();
+        TFuserPasword = new javax.swing.JTextField();
+        addUserB = new javax.swing.JButton();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        TFUserName.setText("jTextField1");
+
+        TFuserId.setText("jTextField2");
+
+        TFuserEmail.setText("jTextField3");
+
+        TFuserAddres.setText("jTextField4");
+
+        jLabel1.setText("New User");
+
+        jLabel2.setText("Nombre:");
+
+        jLabel3.setText("Id:");
+
+        jLabel4.setText("Email");
+
+        jLabel5.setText("Addres");
+
+        jLabel6.setText("Phone");
+
+        jLabel7.setText("Age");
+
+        jLabel8.setText("Pasword");
+
+        TFuserPhone.setText("jTextField5");
+
+        TFuserAge.setText("jTextField6");
+
+        TFuserPasword.setText("jTextField7");
+
+        addUserB.setText("Add User");
+        addUserB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addUserBActionPerformed(evt);
+            }
+        });
+=======
         jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -40,21 +108,125 @@ public class FrmUser extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 300, Short.MAX_VALUE)
         );
+>>>>>>> 4e7b592f81d36040e8d3534f907c9aa38dc46947
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(44, 44, 44)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel8)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(TFuserPasword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(TFuserId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                                .addComponent(TFUserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel7)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(TFuserAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(TFuserEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(TFuserAddres, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel6)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(TFuserPhone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(97, 97, 97)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(72, 72, 72)
+                        .addComponent(addUserB)))
+                .addContainerGap(42, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(8, 8, 8)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(TFUserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(TFuserId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(TFuserEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(TFuserAddres, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(TFuserPhone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(TFuserAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(TFuserPasword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(addUserB)
+                .addContainerGap(13, Short.MAX_VALUE))
+=======
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+>>>>>>> 4e7b592f81d36040e8d3534f907c9aa38dc46947
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+<<<<<<< HEAD
+    private void addUserBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addUserBActionPerformed
+        User user;
+        MongoDBManager saveUserdata;
+        
+        user= new User();
+        saveUserdata = new MongoDBManager();
+        
+        user.setUserName(TFUserName.getText());
+        user.setUserId(JTValidation(TFuserId.getText()));
+        user.setUserEmail(TFuserEmail.getText());
+        user.setUserAddress(TFuserAddres.getText());
+        user.setUserPhone(JTValidation(TFuserPhone.getText()));
+        user.setUserAge(AgeValidation(TFuserAge.getText()));
+        user.setUserPassword(JTValidation(TFuserPasword.getText()));
+        
+        saveUserdata.CreateUser(user);
+        
+        
+    }//GEN-LAST:event_addUserBActionPerformed
+
+=======
+>>>>>>> 4e7b592f81d36040e8d3534f907c9aa38dc46947
     /**
      * @param args the command line arguments
      */
@@ -88,9 +260,83 @@ public class FrmUser extends javax.swing.JFrame {
                 new FrmUser().setVisible(true);
             }
         });
+<<<<<<< HEAD
+
+    }
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField TFUserName;
+    private javax.swing.JTextField TFuserAddres;
+    private javax.swing.JTextField TFuserAge;
+    private javax.swing.JTextField TFuserEmail;
+    private javax.swing.JTextField TFuserId;
+    private javax.swing.JTextField TFuserPasword;
+    private javax.swing.JTextField TFuserPhone;
+    private javax.swing.JButton addUserB;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    // End of variables declaration//GEN-END:variables
+
+    public int AgeValidation(String Age){
+    
+        InputNumbersValidation input;
+        input= new InputNumbersValidation();
+        int validateInput;
+        int validateInput2 = 0;
+        boolean inputJT;
+        inputJT= input.ValidationNumbers(Age);
+        
+        if(inputJT!=false){
+            
+            validateInput= Integer.parseInt(Age);
+            if(validateInput>100){
+                JOptionPane.showMessageDialog(null, "La edad debe ser menor que 100");
+            }else{
+            validateInput2=validateInput;
+            }
+        
+        }else{
+            JOptionPane.showMessageDialog(null, "La edad debe ser un numero");
+        }
+        return validateInput2;
+        
+        
+        
+    }
+    
+    public int JTValidation(String Age){
+    
+        InputNumbersValidation input;
+        input= new InputNumbersValidation();
+        int validateInput = 0;
+        
+        boolean inputJT;
+        inputJT= input.ValidationNumbers(Age);
+        
+        if(inputJT!=false){
+            
+            validateInput= Integer.parseInt(Age);
+                    
+        }else{
+            JOptionPane.showMessageDialog(null, "La edad debe ser un numero");
+        }
+        return validateInput;
+        
+        
+        
+    }
+
+=======
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
+>>>>>>> 4e7b592f81d36040e8d3534f907c9aa38dc46947
 }
