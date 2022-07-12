@@ -20,6 +20,8 @@ public class FrmUser1 extends javax.swing.JFrame {
      */
     public FrmUser1() {
         initComponents();
+        this.setLocationRelativeTo(null);
+
     }
 
     /**

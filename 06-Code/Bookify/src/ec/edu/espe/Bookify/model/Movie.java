@@ -17,6 +17,10 @@ public class Movie {
         this.available = available;
     }
 
+    public Movie() {
+      
+    }
+
     /**
      * @return the title
      */
@@ -75,6 +79,6 @@ public class Movie {
 
     @Override
     public String toString() {
-        return "Movie{" + "title=" + title + ", genre=" + genre + ", idiom=" + idiom + ", available=" + available + '}';
+        return "Movie{" + "title=" + getTitle() + ", genre=" + getGenre() + ", idiom=" + getIdiom() + ", available=" + isAvailable() + '}';
     }    
 }
