@@ -52,6 +52,8 @@ public class FrmAddBook extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("Title:");
 
+        jTextField1.setToolTipText("Enter the title of the book");
+
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setText("Author:");
 

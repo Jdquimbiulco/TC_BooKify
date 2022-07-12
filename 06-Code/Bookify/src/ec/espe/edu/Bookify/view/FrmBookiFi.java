@@ -46,8 +46,6 @@ public class FrmBookiFi extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 51, 51));
         jLabel1.setText("BooKiFi");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("D:\\Descargas\\BooKResize.png")); // NOI18N
-
         jMenu1.setText("BooKiFi");
 
         jMenuItem1.setText("About");
@@ -111,7 +109,7 @@ public class FrmBookiFi extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(118, Short.MAX_VALUE))
         );
 
         pack();
