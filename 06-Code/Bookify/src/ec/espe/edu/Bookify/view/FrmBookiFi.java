@@ -33,13 +33,12 @@ public class FrmBookiFi extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
         jMenu5 = new javax.swing.JMenu();
-        jMenu4 = new javax.swing.JMenu();
-        itmAddStaff = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         itmAddBook = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
-        jMenu6 = new javax.swing.JMenu();
 
         jLabel3.setText("jLabel3");
 
@@ -59,22 +58,26 @@ public class FrmBookiFi extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem1);
 
+        jMenuItem2.setText("Help");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem2);
+
+        jMenuItem3.setText("Exit");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem3);
+
         jMenuBar1.add(jMenu1);
 
         jMenu5.setText("User");
         jMenuBar1.add(jMenu5);
-
-        jMenu4.setText("Staff");
-
-        itmAddStaff.setText("Add Staff");
-        itmAddStaff.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itmAddStaffActionPerformed(evt);
-            }
-        });
-        jMenu4.add(itmAddStaff);
-
-        jMenuBar1.add(jMenu4);
 
         jMenu2.setText("Book");
 
@@ -90,9 +93,6 @@ public class FrmBookiFi extends javax.swing.JFrame {
 
         jMenu3.setText("Movie");
         jMenuBar1.add(jMenu3);
-
-        jMenu6.setText("Help");
-        jMenuBar1.add(jMenu6);
 
         setJMenuBar(jMenuBar1);
 
@@ -131,17 +131,20 @@ public class FrmBookiFi extends javax.swing.JFrame {
         
     }//GEN-LAST:event_itmAddBookActionPerformed
 
-    private void itmAddStaffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmAddStaffActionPerformed
-        FrmStaff frmStaff;
-        frmStaff = new FrmStaff();
-        frmStaff.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_itmAddStaffActionPerformed
-
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         FrmAbout frmAbout = new FrmAbout();
         frmAbout.setVisible(true);
         this.setVisible(false);    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        FrmHelp frmHelp;
+        frmHelp = new FrmHelp();
+        frmHelp.setVisible(true);
+        this.setVisible(false);    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+       this.dispose();
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -181,17 +184,16 @@ public class FrmBookiFi extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem itmAddBook;
-    private javax.swing.JMenuItem itmAddStaff;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
-    private javax.swing.JMenu jMenu6;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
     // End of variables declaration//GEN-END:variables
 }
