@@ -9,8 +9,8 @@ import com.mongodb.MongoClientURI;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import ec.edu.espe.Bookify.model.User;
-import java.util.Scanner;
 import org.bson.Document;
+
 
 
 /**
