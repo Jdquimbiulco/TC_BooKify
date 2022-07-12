@@ -1,13 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package ec.edu.espe.Bookify.controller;
 
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import ec.edu.espe.Bookify.model.Movie;
 import ec.edu.espe.Bookify.model.User;
 import org.bson.Document;
 
@@ -62,7 +59,25 @@ public class MongoDBManager {
 
     }
 
-    
+      public void CreateMovie(Movie movie) {
+
+        MongoDatabase movieDB;
+        MongoCollection movieCollection;
+        Document document;
+        
+        movieDB = EstablishConnection();
+        movieCollection = movieDB.getCollection("Movies");
+
+        document = new Document();
+        
+        document.append("Title", movie.getTitle());
+        document.append("Genre", movie.getGenre());
+        document.append("Idiom", movie.getIdiom());
+        document.append("Available", movie.isAvailable());
+
+        movieCollection.insertOne(document);
+
+    }  
     
 
 }
