@@ -173,6 +173,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField4">
+      <Properties>
+        <Property name="toolTipText" type="java.lang.String" value="Only 13 digits of the product"/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel7">
       <Properties>
@@ -185,11 +188,13 @@
     <Component class="javax.swing.JRadioButton" name="jRadioButton1">
       <Properties>
         <Property name="text" type="java.lang.String" value="YES"/>
+        <Property name="toolTipText" type="java.lang.String" value="Only select one option"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="jRadioButton2">
       <Properties>
         <Property name="text" type="java.lang.String" value="NO"/>
+        <Property name="toolTipText" type="java.lang.String" value="Only select one option"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButton1">
@@ -198,6 +203,7 @@
           <Font name="Segoe UI Emoji" size="18" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Return"/>
+        <Property name="toolTipText" type="java.lang.String" value="Return to main menu"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
@@ -209,7 +215,7 @@
           <Font name="Segoe UI Emoji" size="18" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Add"/>
-        <Property name="toolTipText" type="java.lang.String" value=""/>
+        <Property name="toolTipText" type="java.lang.String" value="Click to add product"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>

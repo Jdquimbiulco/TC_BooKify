@@ -136,10 +136,7 @@ public class FrmBookiFi extends javax.swing.JFrame {
     }//GEN-LAST:event_itmAddBookActionPerformed
 
     private void itmAddStaffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmAddStaffActionPerformed
-        FrmStaff frmStaff;
-        frmStaff = new FrmStaff();
-        frmStaff.setVisible(true);
-        this.setVisible(false);
+
     }//GEN-LAST:event_itmAddStaffActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed

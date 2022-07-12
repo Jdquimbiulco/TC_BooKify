@@ -69,15 +69,20 @@ public class FrmAddBook extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel6.setText("ISBN:");
 
+        jTextField4.setToolTipText("Only 13 digits of the product");
+
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel7.setText("Avaliable:");
 
         jRadioButton1.setText("YES");
+        jRadioButton1.setToolTipText("Only select one option");
 
         jRadioButton2.setText("NO");
+        jRadioButton2.setToolTipText("Only select one option");
 
         jButton1.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
         jButton1.setText("Return");
+        jButton1.setToolTipText("Return to main menu");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -86,7 +91,7 @@ public class FrmAddBook extends javax.swing.JFrame {
 
         jButton2.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
         jButton2.setText("Add");
-        jButton2.setToolTipText("");
+        jButton2.setToolTipText("Click to add product");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
