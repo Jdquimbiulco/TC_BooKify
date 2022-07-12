@@ -113,7 +113,11 @@
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+<<<<<<< HEAD
+              <EmptySpace pref="118" max="32767" attributes="0"/>
+=======
               <EmptySpace pref="198" max="32767" attributes="0"/>
+>>>>>>> d39439c3663de5499ef0a2de8cb89b4a8c230b02
           </Group>
       </Group>
     </DimensionLayout>

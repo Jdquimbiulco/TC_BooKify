@@ -117,7 +117,11 @@ public class FrmBookiFi extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2)
+<<<<<<< HEAD
+                .addContainerGap(118, Short.MAX_VALUE))
+=======
                 .addContainerGap(198, Short.MAX_VALUE))
+>>>>>>> d39439c3663de5499ef0a2de8cb89b4a8c230b02
         );
 
         pack();
@@ -131,6 +135,13 @@ public class FrmBookiFi extends javax.swing.JFrame {
         
     }//GEN-LAST:event_itmAddBookActionPerformed
 
+<<<<<<< HEAD
+=======
+    private void itmAddStaffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmAddStaffActionPerformed
+
+    }//GEN-LAST:event_itmAddStaffActionPerformed
+
+>>>>>>> 614185519aaec584d984f44d1fbf980919470f32
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         FrmAbout frmAbout = new FrmAbout();
         frmAbout.setVisible(true);
