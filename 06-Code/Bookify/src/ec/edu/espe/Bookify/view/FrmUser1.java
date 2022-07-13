@@ -55,7 +55,9 @@ public class FrmUser1 extends javax.swing.JFrame {
         TFpassword = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jToggleButton1 = new javax.swing.JToggleButton();
-        lblErrorName = new javax.swing.JLabel();
+        lblErrorId = new javax.swing.JLabel();
+        lblErrorPhone = new javax.swing.JLabel();
+        lblErrorAge = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -81,6 +83,24 @@ public class FrmUser1 extends javax.swing.JFrame {
             }
         });
 
+        TFuserId.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                TFuserIdKeyPressed(evt);
+            }
+        });
+
+        TFphone.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                TFphoneKeyPressed(evt);
+            }
+        });
+
+        TFage.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                TFageKeyPressed(evt);
+            }
+        });
+
         jButton1.setText("Save User");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,7 +115,11 @@ public class FrmUser1 extends javax.swing.JFrame {
             }
         });
 
-        lblErrorName.setText("_");
+        lblErrorId.setText("_");
+
+        lblErrorPhone.setText("_");
+
+        lblErrorAge.setText("_");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -137,7 +161,10 @@ public class FrmUser1 extends javax.swing.JFrame {
                         .addGap(49, 49, 49)
                         .addComponent(TFuserName, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addComponent(lblErrorName)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblErrorId)
+                    .addComponent(lblErrorPhone)
+                    .addComponent(lblErrorAge))
                 .addContainerGap(44, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(48, 48, 48)
@@ -154,12 +181,12 @@ public class FrmUser1 extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(TFuserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblErrorName))
+                    .addComponent(TFuserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(TFuserId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(TFuserId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblErrorId))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
@@ -167,7 +194,8 @@ public class FrmUser1 extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(TFphone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(TFphone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblErrorPhone))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
@@ -175,7 +203,8 @@ public class FrmUser1 extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(TFage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(TFage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblErrorAge))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel8)
@@ -213,17 +242,34 @@ public class FrmUser1 extends javax.swing.JFrame {
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void TFuserNameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFuserNameKeyPressed
-        String text= TFuserName.getText();
-        int length=text.length();
         
-        if(evt.getKeyChar()>='0' && evt.getKeyChar()<='9'){
-            TFuserName.setEditable(true);
-        }else{
-            TFuserName.setEditable(false);
-            lblErrorName.setText("Error");
-        }
+        
         
     }//GEN-LAST:event_TFuserNameKeyPressed
+
+    private void TFuserIdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFuserIdKeyPressed
+        InputNumbersValidation input;
+        input= new InputNumbersValidation();
+        input.NumberandLengthValidation(TFuserId, evt, lblErrorId, 9);
+        
+    }//GEN-LAST:event_TFuserIdKeyPressed
+
+    private void TFphoneKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFphoneKeyPressed
+        InputNumbersValidation input;
+        input= new InputNumbersValidation();
+        
+        input.NumberandLengthValidation(TFphone, evt, lblErrorPhone, 9);
+        
+    }//GEN-LAST:event_TFphoneKeyPressed
+
+    private void TFageKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFageKeyPressed
+        InputNumbersValidation input;
+        input= new InputNumbersValidation();
+        
+        input.NumberandLengthValidation(TFage, evt, lblErrorAge, 1);
+        
+        
+    }//GEN-LAST:event_TFageKeyPressed
 
     /**
      * @param args the command line arguments
@@ -278,7 +324,9 @@ public class FrmUser1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JToggleButton jToggleButton1;
-    private javax.swing.JLabel lblErrorName;
+    private javax.swing.JLabel lblErrorAge;
+    private javax.swing.JLabel lblErrorId;
+    private javax.swing.JLabel lblErrorPhone;
     // End of variables declaration//GEN-END:variables
 public int AgeValidation(String Age){
     

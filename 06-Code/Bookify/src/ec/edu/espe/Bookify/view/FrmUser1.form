@@ -68,7 +68,11 @@
                   </Group>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="lblErrorName" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="lblErrorId" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblErrorPhone" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblErrorAge" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace pref="44" max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
@@ -89,12 +93,12 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="TFuserName" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblErrorName" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="TFuserId" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblErrorId" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -105,6 +109,7 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="TFphone" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblErrorPhone" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -115,6 +120,7 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="TFage" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblErrorAge" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
@@ -178,14 +184,23 @@
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="TFuserId">
+      <Events>
+        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="TFuserIdKeyPressed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="TFemail">
     </Component>
     <Component class="javax.swing.JTextField" name="TFphone">
+      <Events>
+        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="TFphoneKeyPressed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="TFaddres">
     </Component>
     <Component class="javax.swing.JTextField" name="TFage">
+      <Events>
+        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="TFageKeyPressed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="TFpassword">
     </Component>
@@ -205,7 +220,17 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jToggleButton1ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="lblErrorName">
+    <Component class="javax.swing.JLabel" name="lblErrorId">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="_"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblErrorPhone">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="_"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblErrorAge">
       <Properties>
         <Property name="text" type="java.lang.String" value="_"/>
       </Properties>

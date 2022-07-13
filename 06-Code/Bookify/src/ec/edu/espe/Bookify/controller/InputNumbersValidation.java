@@ -4,6 +4,9 @@
  */
 package ec.edu.espe.Bookify.controller;
 
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
 /**
  *
  * @author QUILUMBAQUIN JAIRO, DCC0-ESPE: CODEX++
@@ -24,4 +27,36 @@ public class InputNumbersValidation {
      }
     
     }
+    
+    public void NumberValidation(JTextField txtField, java.awt.event.KeyEvent evt,JLabel lblfield){
+        
+        String text= txtField.getText();
+        
+        if(evt.getKeyChar()>='0' && evt.getKeyChar()<='9'){
+            txtField.setEditable(true);
+            lblfield.setText("");
+        }else{
+            txtField.setEditable(false);
+            
+            lblfield.setText("Error");
+        }
+        
+    
+    }
+    
+    public void NumberandLengthValidation(JTextField txtField, java.awt.event.KeyEvent evt,JLabel lblfield,int length){
+        
+        String text= txtField.getText();
+        
+        if(text.length()<=length){
+            NumberValidation(txtField, evt, lblfield);
+            txtField.setEditable(true);
+        }else{
+            txtField.setEditable(false);
+        }
+        
+        
+    }
+    
+    
 }
