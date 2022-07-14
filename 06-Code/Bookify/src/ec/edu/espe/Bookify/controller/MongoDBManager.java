@@ -23,7 +23,7 @@ public class MongoDBManager {
         MongoClientURI clientURI;
         MongoClient client;
         MongoDatabase userdatabase;
-
+            
         String uri = "mongodb+srv://jairo:jairo@jqdatabase.0xyetay.mongodb.net/?retryWrites=true&w=majority";
 
         clientURI = new MongoClientURI(uri);
