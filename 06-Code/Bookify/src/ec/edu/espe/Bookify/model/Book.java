@@ -12,6 +12,9 @@ public class Book {
     private String ISBN;
     private boolean available;
 
+ public Book(){
+ }
+    
     public Book(String title, String author, String publisher, String yearOfPúblication, String ISBN, boolean available) {
         this.title = title;
         this.author = author;
@@ -110,6 +113,5 @@ public class Book {
         return "Book{" + "title=" + title + ", author=" + author + ", publisher=" + publisher + ", yearOfP\u00fablication=" + yearOfPúblication + ", ISBN=" + ISBN + ", available=" + available + '}';
     }
 
-    public Book() {
-    }
+    
 }

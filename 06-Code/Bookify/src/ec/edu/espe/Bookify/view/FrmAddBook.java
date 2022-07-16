@@ -2,8 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package ec.espe.edu.Bookify.view;
+package ec.edu.espe.Bookify.view;
 
+
+<<<<<<< HEAD:06-Code/Bookify/src/ec/espe/edu/Bookify/view/FrmAddBook.java
 
 import ec.edu.espe.Bookify.controller.FormsHandler;
 
@@ -11,6 +13,12 @@ import ec.edu.espe.Bookify.controller.MongoDBManager;
 import ec.edu.espe.Bookify.model.Book;
 import ec.edu.espe.Bookify.model.User;
 
+=======
+import ec.edu.espe.Bookify.controller.FormsHandler;
+import ec.edu.espe.Bookify.controller.MongoDBManager;
+import ec.edu.espe.Bookify.model.Book;
+import javax.swing.JFrame;
+>>>>>>> 9dcaeecab8bb2b5a68cb9e48644c540393a594bf:06-Code/Bookify/src/ec/edu/espe/Bookify/view/FrmAddBook.java
 import javax.swing.JOptionPane;
 
 /**
@@ -25,6 +33,7 @@ public class FrmAddBook extends javax.swing.JFrame {
     public FrmAddBook() {
         initComponents();
         this.setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
     }
 
     /**
@@ -177,15 +186,23 @@ public class FrmAddBook extends javax.swing.JFrame {
     }//GEN-LAST:event_txtPublisherActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+<<<<<<< HEAD:06-Code/Bookify/src/ec/espe/edu/Bookify/view/FrmAddBook.java
 
         FormsHandler.goToMainScreen(this);
 
 
+=======
+        FormsHandler.goToMainScreen(this);
+
+>>>>>>> 9dcaeecab8bb2b5a68cb9e48644c540393a594bf:06-Code/Bookify/src/ec/edu/espe/Bookify/view/FrmAddBook.java
 //        FrmBookiFi frmBookiFi;
 //        frmBookiFi = new FrmBookiFi();
 //        frmBookiFi.setVisible(true);
 //        this.setVisible(false);
+<<<<<<< HEAD:06-Code/Bookify/src/ec/espe/edu/Bookify/view/FrmAddBook.java
 
+=======
+>>>>>>> 9dcaeecab8bb2b5a68cb9e48644c540393a594bf:06-Code/Bookify/src/ec/edu/espe/Bookify/view/FrmAddBook.java
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -200,7 +217,7 @@ public class FrmAddBook extends javax.swing.JFrame {
         book.setAuthor(txtAuthor.getText());
         book.setPublisher(txtPublisher.getText());
         book.setISBN(txtIsbn.getText());
-        //book.setAvailable(cmboBool);
+        book.setAvailable(AvailableBook(cmboBool.getSelectedItem().toString()));
         
         saveBook.CreateBook(book);
        JOptionPane.showMessageDialog(null, "Book added succesfull");
@@ -257,4 +274,13 @@ public class FrmAddBook extends javax.swing.JFrame {
     private javax.swing.JTextField txtPublisher;
     private javax.swing.JTextField txtTitle;
     // End of variables declaration//GEN-END:variables
+
+public boolean AvailableBook(String option){
+
+        return option.toLowerCase().equals("yes");
+
+
+}
+
+
 }

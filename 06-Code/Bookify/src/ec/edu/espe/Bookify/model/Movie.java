@@ -10,6 +10,11 @@ public class Movie {
     private String idiom;
     private boolean available;
 
+    public Movie() {
+      
+    }
+    
+    
     public Movie(String title, String genre, String idiom, boolean available) {
         this.title = title;
         this.genre = genre;
@@ -17,9 +22,7 @@ public class Movie {
         this.available = available;
     }
 
-    public Movie() {
-      
-    }
+    
 
     /**
      * @return the title

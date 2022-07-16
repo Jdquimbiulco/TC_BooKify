@@ -4,11 +4,16 @@ import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+<<<<<<< HEAD
 
 import ec.edu.espe.Bookify.model.Movie;
 
 import ec.edu.espe.Bookify.model.Book;
 
+=======
+import ec.edu.espe.Bookify.model.Movie;
+import ec.edu.espe.Bookify.model.Book;
+>>>>>>> 9dcaeecab8bb2b5a68cb9e48644c540393a594bf
 import ec.edu.espe.Bookify.model.User;
 import org.bson.Document;
 
@@ -26,7 +31,7 @@ public class MongoDBManager {
         MongoClientURI clientURI;
         MongoClient client;
         MongoDatabase userdatabase;
-
+            
         String uri = "mongodb+srv://jairo:jairo@jqdatabase.0xyetay.mongodb.net/?retryWrites=true&w=majority";
 
         clientURI = new MongoClientURI(uri);
@@ -83,7 +88,10 @@ public class MongoDBManager {
         movieCollection.insertOne(document);
 
     }  
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9dcaeecab8bb2b5a68cb9e48644c540393a594bf
     public void CreateBook(Book book) {
 
         MongoDatabase userDB;
