@@ -113,17 +113,17 @@ public class FrmHelp extends javax.swing.JFrame {
 
     private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
 
-        FrmBookify frmBookiFi = new FrmBookify();
+        FrmBookifyMainMenu frmBookiFi = new FrmBookifyMainMenu();
         frmBookiFi.setVisible(true);
-<<<<<<< HEAD:06-Code/Bookify/src/ec/espe/edu/Bookify/view/FrmHelp.java
+
 
 //        FrmBookiFi frmBookiFi = new FrmBookiFi();
 //        frmBookiFi.setVisible(true);
 
-=======
+
 //        FrmBookiFi frmBookiFi = new FrmBookiFi();
 //        frmBookiFi.setVisible(true);
->>>>>>> 9dcaeecab8bb2b5a68cb9e48644c540393a594bf:06-Code/Bookify/src/ec/edu/espe/Bookify/view/FrmHelp.java
+
         this.setVisible(false);        this.setVisible(false);    }//GEN-LAST:event_btnReturnActionPerformed
 
     /**

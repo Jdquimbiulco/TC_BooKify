@@ -1,7 +1,7 @@
 package ec.edu.espe.Bookify.view;
 
 
-<<<<<<< HEAD:06-Code/Bookify/src/ec/espe/edu/Bookify/view/FrmAddMovie.java
+
 
 import ec.edu.espe.Bookify.controller.MongoDBManager;
 import ec.edu.espe.Bookify.model.Movie;
@@ -10,13 +10,13 @@ import java.lang.module.ModuleDescriptor;
 import ec.edu.espe.Bookify.controller.FormsHandler;
 
 import javax.swing.JOptionPane;
-=======
+
 import ec.edu.espe.Bookify.controller.MongoDBManager;
 import ec.edu.espe.Bookify.model.Movie;
 import ec.edu.espe.Bookify.controller.FormsHandler;
 import javax.swing.JFrame;
 
->>>>>>> 9dcaeecab8bb2b5a68cb9e48644c540393a594bf:06-Code/Bookify/src/ec/edu/espe/Bookify/view/FrmAddMovie.java
+
 
 /**
  *
@@ -29,6 +29,7 @@ public class FrmAddMovie extends javax.swing.JFrame {
      */
     public FrmAddMovie() {
         initComponents();
+        this.setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
     }
 
@@ -169,23 +170,22 @@ public class FrmAddMovie extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-<<<<<<< HEAD:06-Code/Bookify/src/ec/espe/edu/Bookify/view/FrmAddMovie.java
+
 
         FormsHandler.goToMainScreen(this);
 
 
-=======
-        FormsHandler.goToMainScreen(this);
 
->>>>>>> 9dcaeecab8bb2b5a68cb9e48644c540393a594bf:06-Code/Bookify/src/ec/edu/espe/Bookify/view/FrmAddMovie.java
+      
+
+
 //        FrmBookiFi frmBookiFi;
 //        frmBookiFi = new FrmBookiFi();
 //        frmBookiFi.setVisible(true);
 //        this.setVisible(false);
-<<<<<<< HEAD:06-Code/Bookify/src/ec/espe/edu/Bookify/view/FrmAddMovie.java
 
-=======
->>>>>>> 9dcaeecab8bb2b5a68cb9e48644c540393a594bf:06-Code/Bookify/src/ec/edu/espe/Bookify/view/FrmAddMovie.java
+
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

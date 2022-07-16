@@ -5,7 +5,7 @@
 package ec.edu.espe.Bookify.view;
 
 
-<<<<<<< HEAD:06-Code/Bookify/src/ec/espe/edu/Bookify/view/FrmAddBook.java
+
 
 import ec.edu.espe.Bookify.controller.FormsHandler;
 
@@ -13,12 +13,12 @@ import ec.edu.espe.Bookify.controller.MongoDBManager;
 import ec.edu.espe.Bookify.model.Book;
 import ec.edu.espe.Bookify.model.User;
 
-=======
+
 import ec.edu.espe.Bookify.controller.FormsHandler;
 import ec.edu.espe.Bookify.controller.MongoDBManager;
 import ec.edu.espe.Bookify.model.Book;
 import javax.swing.JFrame;
->>>>>>> 9dcaeecab8bb2b5a68cb9e48644c540393a594bf:06-Code/Bookify/src/ec/edu/espe/Bookify/view/FrmAddBook.java
+
 import javax.swing.JOptionPane;
 
 /**
@@ -186,23 +186,22 @@ public class FrmAddBook extends javax.swing.JFrame {
     }//GEN-LAST:event_txtPublisherActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-<<<<<<< HEAD:06-Code/Bookify/src/ec/espe/edu/Bookify/view/FrmAddBook.java
+
 
         FormsHandler.goToMainScreen(this);
 
 
-=======
+
         FormsHandler.goToMainScreen(this);
 
->>>>>>> 9dcaeecab8bb2b5a68cb9e48644c540393a594bf:06-Code/Bookify/src/ec/edu/espe/Bookify/view/FrmAddBook.java
+
 //        FrmBookiFi frmBookiFi;
 //        frmBookiFi = new FrmBookiFi();
 //        frmBookiFi.setVisible(true);
 //        this.setVisible(false);
-<<<<<<< HEAD:06-Code/Bookify/src/ec/espe/edu/Bookify/view/FrmAddBook.java
 
-=======
->>>>>>> 9dcaeecab8bb2b5a68cb9e48644c540393a594bf:06-Code/Bookify/src/ec/edu/espe/Bookify/view/FrmAddBook.java
+
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

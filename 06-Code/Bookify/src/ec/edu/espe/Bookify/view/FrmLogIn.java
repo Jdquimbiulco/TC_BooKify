@@ -151,7 +151,7 @@ public class FrmLogIn extends javax.swing.JFrame {
       
       if(txtUsername.getText().equals(Username)&&Pass.equals(Password)){
           
-      FrmBookify EP=new FrmBookify();
+      FrmBookifyMainMenu EP=new FrmBookifyMainMenu();
       EP.setVisible(true);
       dispose();
       
