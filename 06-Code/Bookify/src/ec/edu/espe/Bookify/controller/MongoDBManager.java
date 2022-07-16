@@ -4,11 +4,11 @@ import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
-<<<<<<< HEAD
+
 import ec.edu.espe.Bookify.model.Movie;
-=======
+
 import ec.edu.espe.Bookify.model.Book;
->>>>>>> d16aaf9827283e6f2e2f1efa509223c580ca2a8e
+
 import ec.edu.espe.Bookify.model.User;
 import org.bson.Document;
 
@@ -63,7 +63,7 @@ public class MongoDBManager {
 
     }
 
-<<<<<<< HEAD
+
       public void CreateMovie(Movie movie) {
 
         MongoDatabase movieDB;
@@ -83,7 +83,7 @@ public class MongoDBManager {
         movieCollection.insertOne(document);
 
     }  
-=======
+
     public void CreateBook(Book book) {
 
         MongoDatabase userDB;
@@ -105,7 +105,7 @@ public class MongoDBManager {
         userCollection.insertOne(document);
 
     }
->>>>>>> d16aaf9827283e6f2e2f1efa509223c580ca2a8e
+
     
 
 }

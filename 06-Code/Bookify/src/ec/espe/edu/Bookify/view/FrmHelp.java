@@ -109,13 +109,13 @@ public class FrmHelp extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
-<<<<<<< HEAD
+
         FrmBookify frmBookiFi = new FrmBookify();
         frmBookiFi.setVisible(true);
-=======
+
 //        FrmBookiFi frmBookiFi = new FrmBookiFi();
 //        frmBookiFi.setVisible(true);
->>>>>>> 4ef2fd4b5267cdec1a10f7d14bd1cb4ce563e7ef
+
         this.setVisible(false);        this.setVisible(false);    }//GEN-LAST:event_btnReturnActionPerformed
 
     /**
