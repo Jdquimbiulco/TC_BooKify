@@ -8,13 +8,6 @@ package ec.edu.espe.Bookify.view;
 
 
 import ec.edu.espe.Bookify.controller.FormsHandler;
-
-import ec.edu.espe.Bookify.controller.MongoDBManager;
-import ec.edu.espe.Bookify.model.Book;
-import ec.edu.espe.Bookify.model.User;
-
-
-import ec.edu.espe.Bookify.controller.FormsHandler;
 import ec.edu.espe.Bookify.controller.MongoDBManager;
 import ec.edu.espe.Bookify.model.Book;
 import javax.swing.JFrame;

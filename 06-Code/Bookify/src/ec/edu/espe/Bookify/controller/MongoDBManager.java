@@ -5,12 +5,6 @@ import com.mongodb.MongoClientURI;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 
-
-import ec.edu.espe.Bookify.model.Movie;
-
-import ec.edu.espe.Bookify.model.Book;
-
-
 import ec.edu.espe.Bookify.model.Movie;
 import ec.edu.espe.Bookify.model.Book;
 

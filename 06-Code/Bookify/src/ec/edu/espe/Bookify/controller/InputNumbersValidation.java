@@ -32,7 +32,8 @@ public class InputNumbersValidation {
         
         String text= txtField.getText();
         
-        if(evt.getKeyChar()>='0' && evt.getKeyChar()<='9'){
+        
+        if(evt.getKeyChar()>='0' && evt.getKeyChar()<='9'|| text.length()<='9'){
             txtField.setEditable(true);
             lblfield.setText("");
         }else{
@@ -56,6 +57,21 @@ public class InputNumbersValidation {
         }
         
         
+    }
+    
+    public void StringValidation(JTextField txtField, java.awt.event.KeyEvent evt,JLabel lblfield){
+    
+        if(evt.getKeyChar()>='0' && evt.getKeyChar()<='9'){
+            txtField.setEditable(true);
+            lblfield.setText("");
+        }else{
+            txtField.setEditable(false);
+            
+            lblfield.setText("Error");
+        }
+        
+    
+    
     }
     
     

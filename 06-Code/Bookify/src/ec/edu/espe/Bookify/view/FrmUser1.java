@@ -9,7 +9,6 @@ import ec.edu.espe.Bookify.controller.InputNumbersValidation;
 import ec.edu.espe.Bookify.controller.MongoDBManager;
 import ec.edu.espe.Bookify.model.User;
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -20,8 +19,14 @@ public class FrmUser1 extends javax.swing.JFrame {
     /**
      * Creates new form FrmUser1
      */
+    
+    InputNumbersValidation input;
+    
+        
     public FrmUser1() {
         initComponents();
+        input= new InputNumbersValidation();
+        
         this.setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         
@@ -227,12 +232,12 @@ public class FrmUser1 extends javax.swing.JFrame {
         saveUserdata = new MongoDBManager();
         
         user.setUserName(TFuserName.getText());
-        user.setUserId(JTValidation(TFuserId.getText()));
+        user.setUserId(Integer.parseInt(TFuserId.getText()));
         user.setUserEmail(TFemail.getText());
         user.setUserAddress(TFaddres.getText());
-        user.setUserPhone(JTValidation(TFphone.getText()));
-        user.setUserAge(AgeValidation(TFage.getText()));
-        user.setUserPassword(JTValidation(TFpassword.getText()));
+        user.setUserPhone(Integer.parseInt(TFphone.getText()));
+        user.setUserAge(Integer.parseInt(TFage.getText()));
+        user.setUserPassword(Integer.parseInt(TFpassword.getText()));
         
         saveUserdata.CreateUser(user);
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -248,26 +253,20 @@ public class FrmUser1 extends javax.swing.JFrame {
     }//GEN-LAST:event_TFuserNameKeyPressed
 
     private void TFuserIdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFuserIdKeyPressed
-        InputNumbersValidation input;
-        input= new InputNumbersValidation();
+        
         input.NumberandLengthValidation(TFuserId, evt, lblErrorId, 9);
         
     }//GEN-LAST:event_TFuserIdKeyPressed
 
     private void TFphoneKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFphoneKeyPressed
-        InputNumbersValidation input;
-        input= new InputNumbersValidation();
         
         input.NumberandLengthValidation(TFphone, evt, lblErrorPhone, 9);
         
     }//GEN-LAST:event_TFphoneKeyPressed
 
     private void TFageKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFageKeyPressed
-        InputNumbersValidation input;
-        input= new InputNumbersValidation();
         
         input.NumberandLengthValidation(TFage, evt, lblErrorAge, 1);
-        
         
     }//GEN-LAST:event_TFageKeyPressed
 
@@ -328,55 +327,5 @@ public class FrmUser1 extends javax.swing.JFrame {
     private javax.swing.JLabel lblErrorId;
     private javax.swing.JLabel lblErrorPhone;
     // End of variables declaration//GEN-END:variables
-public int AgeValidation(String Age){
-    
-        InputNumbersValidation input;
-        input= new InputNumbersValidation();
-        int validateInput;
-        int validateInput2 = 0;
-        boolean inputJT;
-        inputJT= input.ValidationNumbers(Age);
-        
-        if(inputJT!=false){
-            
-            validateInput= Integer.parseInt(Age);
-            if(validateInput>100){
-                JOptionPane.showMessageDialog(null, "La edad debe ser menor que 100");
-            }else{
-            validateInput2=validateInput;
-            }
-        
-        }else{
-            JOptionPane.showMessageDialog(null, "La edad debe ser un numero");
-        }
-        return validateInput2;
-        
-        
-        
-    }
-    
-    public int JTValidation(String Age){
-    
-        InputNumbersValidation input;
-        input= new InputNumbersValidation();
-        int validateInput = 0;
-        
-        boolean inputJT;
-        inputJT= input.ValidationNumbers(Age);
-        
-        if(inputJT!=false){
-            
-            validateInput= Integer.parseInt(Age);
-                    
-        }else{
-            JOptionPane.showMessageDialog(null, "La edad debe ser un numero");
-        }
-        return validateInput;
-        
-        
-        
-    }
-
-
     
 }
