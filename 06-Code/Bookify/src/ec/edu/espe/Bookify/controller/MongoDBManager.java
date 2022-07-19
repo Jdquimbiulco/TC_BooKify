@@ -20,7 +20,10 @@ import org.bson.Document;
 public class MongoDBManager {
 
     String collection;
-
+    MongoDatabase bookifyDB;
+    MongoCollection bookifyCollection;
+    Document document;
+    
     public MongoDatabase EstablishConnection() {
         MongoClientURI clientURI;
         MongoClient client;
@@ -41,12 +44,9 @@ public class MongoDBManager {
     
     public void CreateUser(User user) {
 
-        MongoDatabase userDB;
-        MongoCollection userCollection;
-        Document document;
         
-        userDB = EstablishConnection();
-        userCollection = userDB.getCollection("Users");
+        bookifyDB = EstablishConnection();
+        bookifyCollection = bookifyDB.getCollection("Users");
 
         document = new Document();
         
@@ -58,19 +58,16 @@ public class MongoDBManager {
         document.append("Age", user.getUserAge());
         document.append("Password", user.getUserPassword());
 
-        userCollection.insertOne(document);
+        bookifyCollection.insertOne(document);
 
     }
 
 
       public void CreateMovie(Movie movie) {
 
-        MongoDatabase movieDB;
-        MongoCollection movieCollection;
-        Document document;
         
-        movieDB = EstablishConnection();
-        movieCollection = movieDB.getCollection("Movies");
+        bookifyDB = EstablishConnection();
+        bookifyCollection = bookifyDB.getCollection("Movies");
 
         document = new Document();
         
@@ -78,6 +75,8 @@ public class MongoDBManager {
         document.append("Genre", movie.getGenre());
         document.append("Idiom", movie.getIdiom());
         document.append("Available", movie.isAvailable());
+        
+        bookifyCollection.insertOne(document);
 
 
 
@@ -88,12 +87,9 @@ public class MongoDBManager {
 
     public void CreateBook(Book book) {
 
-        MongoDatabase userDB;
-        MongoCollection userCollection;
-        Document document;
         
-        userDB = EstablishConnection();
-        userCollection = userDB.getCollection("Books");
+        bookifyDB = EstablishConnection();
+        bookifyCollection = bookifyDB.getCollection("Books");
 
         document = new Document();
         
@@ -104,7 +100,7 @@ public class MongoDBManager {
         document.append("Avaliable", book.isAvailable());
 
 
-        userCollection.insertOne(document);
+        bookifyCollection.insertOne(document);
 
     }
 
