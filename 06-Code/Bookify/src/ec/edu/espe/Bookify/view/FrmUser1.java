@@ -8,6 +8,7 @@ import ec.edu.espe.Bookify.controller.FormsHandler;
 import ec.edu.espe.Bookify.controller.InputValidation;
 import ec.edu.espe.Bookify.controller.MongoDBManager;
 import ec.edu.espe.Bookify.model.User;
+import java.awt.Color;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -28,8 +29,12 @@ public class FrmUser1 extends javax.swing.JFrame {
     public FrmUser1() {
         initComponents();
         input= new InputValidation();
-        this.setLocationRelativeTo(null);
+        setLocationRelativeTo(null);
+        
+        getContentPane().setBackground(Color.white);
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        
+        
         
         
 
@@ -46,6 +51,8 @@ public class FrmUser1 extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList<>();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jList2 = new javax.swing.JList<>();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -78,7 +85,15 @@ public class FrmUser1 extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jList1);
 
+        jList2.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane2.setViewportView(jList2);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setText("New User");
 
@@ -176,34 +191,41 @@ public class FrmUser1 extends javax.swing.JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(btnAddUser)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel8)
-                                .addGap(31, 31, 31)
-                                .addComponent(TFpassword))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel7)
-                                .addGap(60, 60, 60)
-                                .addComponent(TFage))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addGap(49, 49, 49)
-                                .addComponent(TFuserName, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel4))
-                                .addGap(52, 52, 52)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabel2)
+                                        .addGap(31, 31, 31))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addComponent(jLabel8)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(TFuserId)
-                                    .addComponent(TFemail)))
+                                    .addComponent(TFpassword)
+                                    .addComponent(TFuserName, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGap(19, 19, 19)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jLabel6))
-                                .addGap(44, 44, 44)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(TFphone)
-                                    .addComponent(TFAddres))))))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel7)
+                                        .addGap(41, 41, 41)
+                                        .addComponent(TFage))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel6)
+                                            .addComponent(jLabel5))
+                                        .addGap(28, 28, 28)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(TFphone)
+                                            .addComponent(TFAddres)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel3)
+                                            .addComponent(jLabel4))
+                                        .addGap(33, 33, 33)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(TFuserId)
+                                            .addComponent(TFemail))))))))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
@@ -257,11 +279,10 @@ public class FrmUser1 extends javax.swing.JFrame {
                     .addComponent(TFage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblErrorAge))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel8)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(TFpassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lblErrorPassword)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(TFpassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblErrorPassword)
+                    .addComponent(jLabel8))
                 .addContainerGap(74, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -301,7 +322,7 @@ public class FrmUser1 extends javax.swing.JFrame {
     }//GEN-LAST:event_TFageKeyPressed
 
     private void cmbxEmailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbxEmailsActionPerformed
-        cmbxEmails.getSelectedItem();
+       
     }//GEN-LAST:event_cmbxEmailsActionPerformed
 
     private void TFAddresKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFAddresKeyPressed
@@ -312,9 +333,10 @@ public class FrmUser1 extends javax.swing.JFrame {
 
     private void btnAddUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddUserActionPerformed
         
-        if(!TFuserName.getText().isEmpty()&&!TFuserId.getText().isEmpty()&&!TFemail.getText().isEmpty()&&!TFphone.getText().isEmpty()&&!TFAddres.getText().isEmpty()&&!TFage.getText().isEmpty()&&!TFpassword.getText().isEmpty()){
+        if(!TFuserName.getText().isBlank()&&!TFuserId.getText().isBlank()&&!TFemail.getText().isBlank()&&!TFphone.getText().isBlank()&&!TFAddres.getText().isBlank()&&!TFage.getText().isBlank()&&!TFpassword.getText().isBlank()){
             
             AddUserData();
+            JOptionPane.showMessageDialog(this, "successfully added");
             CleanTxtFields();
             
         }else{
@@ -383,7 +405,9 @@ public class FrmUser1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JList<String> jList1;
+    private javax.swing.JList<String> jList2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JLabel lblErrorAddres;
     private javax.swing.JLabel lblErrorAge;
@@ -401,7 +425,7 @@ public class FrmUser1 extends javax.swing.JFrame {
         
         user.setUserName(TFuserName.getText());
         user.setUserId(Integer.parseInt(TFuserId.getText()));
-        user.setUserEmail(TFemail.getText());
+        user.setUserEmail(TFemail.getText()+ cmbxEmails.getSelectedItem());
         user.setUserAddress(TFAddres.getText());
         user.setUserPhone(Integer.parseInt(TFphone.getText()));
         user.setUserAge(Integer.parseInt(TFage.getText()));
