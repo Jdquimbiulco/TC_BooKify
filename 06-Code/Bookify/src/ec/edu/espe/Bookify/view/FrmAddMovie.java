@@ -192,15 +192,16 @@ public class FrmAddMovie extends javax.swing.JFrame {
         
         Movie movie;
         MongoDBManager addMovie;
+        
         addMovie = new MongoDBManager();
         movie = new Movie();
         movie.setTitle(txtMovieTitle.getText());
         movie.setGenre(txtMovieGender.getText());
         movie.setIdiom(txtMovieIdiom.getText());
         movie.setAvailable(AvailableMovie(cmbAvailable.getSelectedItem().toString()));
+        
         addMovie.CreateMovie(movie);
-        
-        
+        JOptionPane.showMessageDialog(null, "Movie added succesfull");    
     }//GEN-LAST:event_jButton2ActionPerformed
 
     
