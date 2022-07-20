@@ -2,6 +2,7 @@ package ec.edu.espe.Bookify.controller;
 
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
+import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 
@@ -9,6 +10,7 @@ import ec.edu.espe.Bookify.model.Movie;
 import ec.edu.espe.Bookify.model.Book;
 
 import ec.edu.espe.Bookify.model.User;
+import java.util.Iterator;
 import org.bson.Document;
 
 
@@ -101,6 +103,22 @@ public class MongoDBManager {
 
 
         bookifyCollection.insertOne(document);
+
+    }
+    
+    public void Read() {
+        
+        bookifyDB = EstablishConnection();
+        FindIterable<Document> iterDoc;
+                
+        bookifyCollection= bookifyDB.getCollection("Bills");
+        iterDoc = bookifyCollection.find();
+
+        
+        Iterator it = iterDoc.iterator();
+        while (it.hasNext()) {
+            System.out.println(it.next());
+        }
 
     }
 

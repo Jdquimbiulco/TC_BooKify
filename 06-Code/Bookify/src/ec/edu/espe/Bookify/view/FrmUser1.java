@@ -30,8 +30,6 @@ public class FrmUser1 extends javax.swing.JFrame {
         initComponents();
         input= new InputValidation();
         setLocationRelativeTo(null);
-        
-        getContentPane().setBackground(Color.white);
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         
         
