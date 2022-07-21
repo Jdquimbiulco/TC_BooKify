@@ -34,13 +34,13 @@ public class MongoDBManager {
         MongoClient client;
         MongoDatabase userdatabase;
             
-        String uri = "mongodb+srv://jairo:jairo@jqdatabase.0xyetay.mongodb.net/?retryWrites=true&w=majority";
+        String uri = "mongodb+srv://jdquimbiulco:jdquimbiulco@cluster0.vv6hc.mongodb.net/?retryWrites=true&w=majority";
 
         clientURI = new MongoClientURI(uri);
         client = new MongoClient(clientURI);
         System.out.println("Conexion Exitosa");
 
-        userdatabase = client.getDatabase("JAIRO");
+        userdatabase = client.getDatabase("BooKiFi");
 
         return userdatabase;
 
