@@ -9,6 +9,8 @@ import ec.edu.espe.Bookify.controller.InputValidation;
 import ec.edu.espe.Bookify.controller.MongoDBManager;
 import ec.edu.espe.Bookify.model.User;
 import java.awt.Color;
+import java.awt.Image;
+import java.awt.Toolkit;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -30,6 +32,9 @@ public class FrmUser1 extends javax.swing.JFrame {
         input= new InputValidation();
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        Toolkit miPantalla = Toolkit.getDefaultToolkit();
+        Image miIcono = miPantalla.getImage("src/Images/Icon02.png");
+        setIconImage(miIcono);
         
         
         
@@ -292,7 +297,9 @@ public class FrmUser1 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        FormsHandler.goToMainScreen(this);
+        FrmStaffMain frmStaffMain = new FrmStaffMain();
+        frmStaffMain.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void TFuserNameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFuserNameKeyPressed

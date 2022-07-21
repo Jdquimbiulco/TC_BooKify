@@ -4,11 +4,18 @@
  */
 package ec.edu.espe.Bookify.view;
 
+<<<<<<< HEAD:06-Code/Bookify/src/ec/edu/espe/Bookify/view/FrmBills.java
 import ec.edu.espe.Bookify.controller.FormsHandler;
 import ec.edu.espe.Bookify.controller.MongoDBManager;
 import ec.edu.espe.Bookify.model.User;
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
+=======
+import java.awt.Image;
+import java.awt.Toolkit;
+import javax.swing.JFrame;
+import javax.swing.JTable;
+>>>>>>> ab5d09c52c94bf418fd65091ff53ca63ca774a9e:06-Code/Bookify/src/ec/edu/espe/Bookify/view/FrmPayBills.java
 
 /**
  *
@@ -25,8 +32,18 @@ public class FrmBills extends javax.swing.JFrame {
 
     public FrmBills() {
         initComponents();
+<<<<<<< HEAD:06-Code/Bookify/src/ec/edu/espe/Bookify/view/FrmBills.java
         user = new User();
         ChargeData();
+=======
+        this.setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        Toolkit miPantalla = Toolkit.getDefaultToolkit();
+        Image miIcono = miPantalla.getImage("src/Images/Icon02.png");
+        setIconImage(miIcono);
+        
+        
+>>>>>>> ab5d09c52c94bf418fd65091ff53ca63ca774a9e:06-Code/Bookify/src/ec/edu/espe/Bookify/view/FrmPayBills.java
         
     }
 
