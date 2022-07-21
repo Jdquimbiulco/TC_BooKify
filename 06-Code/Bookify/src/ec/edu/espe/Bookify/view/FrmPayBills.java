@@ -4,6 +4,9 @@
  */
 package ec.edu.espe.Bookify.view;
 
+import java.awt.Image;
+import java.awt.Toolkit;
+import javax.swing.JFrame;
 import javax.swing.JTable;
 
 /**
@@ -17,6 +20,11 @@ public class FrmPayBills extends javax.swing.JFrame {
      */
     public FrmPayBills() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        Toolkit miPantalla = Toolkit.getDefaultToolkit();
+        Image miIcono = miPantalla.getImage("src/Images/Icon02.png");
+        setIconImage(miIcono);
         
         
         
