@@ -24,13 +24,14 @@ public class FrmUser1 extends javax.swing.JFrame {
     
     InputValidation input;
     User user;
-    
-        
+            
     public FrmUser1() {
         initComponents();
         input= new InputValidation();
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        
+        
         
         
         
