@@ -72,6 +72,11 @@ public class FrmUserMain extends javax.swing.JFrame {
         jButton3.setFont(new java.awt.Font("Bookman Old Style", 1, 24)); // NOI18N
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/RetrunMovie.png"))); // NOI18N
         jButton3.setText("Return Movie");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 190, -1, -1));
 
         jButton4.setBackground(new java.awt.Color(255, 102, 102));
@@ -97,12 +102,22 @@ public class FrmUserMain extends javax.swing.JFrame {
         jButton5.setFont(new java.awt.Font("Bookman Old Style", 1, 24)); // NOI18N
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/BookBorrow (1).png"))); // NOI18N
         jButton5.setText("Borrow Book");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 310, -1));
 
         jButton6.setBackground(new java.awt.Color(255, 102, 102));
         jButton6.setFont(new java.awt.Font("Bookman Old Style", 1, 24)); // NOI18N
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/BorrowMovie_1.png"))); // NOI18N
         jButton6.setText("Borrow Movie");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/UserMain.gif"))); // NOI18N
@@ -112,7 +127,9 @@ public class FrmUserMain extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        FrmReturnBook frmReturnBook = new FrmReturnBook();
+        frmReturnBook.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
@@ -120,10 +137,28 @@ public class FrmUserMain extends javax.swing.JFrame {
     }//GEN-LAST:event_btnReturnActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        FrmPayBills frmPayBills = new FrmPayBills();
-        frmPayBills.setVisible(true);
+        FrmBills frmBills = new FrmBills();
+        frmBills.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        FrmReturnMovie frmReturnMovie = new FrmReturnMovie();
+        frmReturnMovie.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        FrmRentBook frmRentBook = new FrmRentBook();
+        frmRentBook.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        FrmRentMovie frmRentMovie = new FrmRentMovie();
+        frmRentMovie.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments

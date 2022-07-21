@@ -26,8 +26,7 @@ public class FrmUser1 extends javax.swing.JFrame {
     
     InputValidation input;
     User user;
-    
-        
+            
     public FrmUser1() {
         initComponents();
         input= new InputValidation();
@@ -36,6 +35,8 @@ public class FrmUser1 extends javax.swing.JFrame {
         Toolkit miPantalla = Toolkit.getDefaultToolkit();
         Image miIcono = miPantalla.getImage("src/Images/Icon02.png");
         setIconImage(miIcono);
+        
+        
         
         
         

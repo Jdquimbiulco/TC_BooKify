@@ -1,16 +1,19 @@
 package ec.edu.espe.Bookify.controller;
 
+import com.google.gson.Gson;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
 
 import ec.edu.espe.Bookify.model.Movie;
 import ec.edu.espe.Bookify.model.Book;
 
 import ec.edu.espe.Bookify.model.User;
-import java.util.Iterator;
+import java.util.ArrayList;
+import java.util.Arrays;
 import org.bson.Document;
 
 
@@ -31,13 +34,13 @@ public class MongoDBManager {
         MongoClient client;
         MongoDatabase userdatabase;
             
-        String uri = "mongodb+srv://jairo:jairo@jqdatabase.0xyetay.mongodb.net/?retryWrites=true&w=majority";
+        String uri = "mongodb+srv://jdquimbiulco:jdquimbiulco@cluster0.vv6hc.mongodb.net/?retryWrites=true&w=majority";
 
         clientURI = new MongoClientURI(uri);
         client = new MongoClient(clientURI);
         System.out.println("Conexion Exitosa");
 
-        userdatabase = client.getDatabase("JAIRO");
+        userdatabase = client.getDatabase("BooKiFi");
 
         return userdatabase;
 
@@ -106,22 +109,24 @@ public class MongoDBManager {
 
     }
     
-    public void Read() {
+       
+    public void CreateBill(User user,Book book, int bill) {
+
         
         bookifyDB = EstablishConnection();
-        FindIterable<Document> iterDoc;
-                
-        bookifyCollection= bookifyDB.getCollection("Bills");
-        iterDoc = bookifyCollection.find();
+        bookifyCollection = bookifyDB.getCollection("Bills");
 
+        document = new Document();
         
-        Iterator it = iterDoc.iterator();
-        while (it.hasNext()) {
-            System.out.println(it.next());
-        }
+        document.append("Name", user.getUserName());
+        document.append("Id", user.getUserId());
+        document.append("Bill", bill);
+        document.append("Book", book.getTitle());
+        
+        bookifyCollection.insertOne(document);
 
     }
-
     
+      
 
 }
