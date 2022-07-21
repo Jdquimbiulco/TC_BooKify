@@ -67,7 +67,7 @@ public class FrmReturnMovie extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 270, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/returnMovieFondo.gif"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 310));
@@ -82,7 +82,7 @@ public class FrmReturnMovie extends javax.swing.JFrame {
     }//GEN-LAST:event_btnReturnActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-     JOptionPane.showMessageDialog(this,"Successfully returned film");
+     JOptionPane.showMessageDialog(this,"Successfully returned movie");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

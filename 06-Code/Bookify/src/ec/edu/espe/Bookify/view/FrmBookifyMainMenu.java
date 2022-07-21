@@ -121,13 +121,12 @@ public class FrmBookifyMainMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-<<<<<<< HEAD
+
         /*FrmHelp frmHelp = new FrmHelp();
         frmHelp.setVisible(true);*/
-=======
+
         //FrmHelp frmHelp = new FrmHelp();
         //frmHelp.setVisible(true);
->>>>>>> ab5d09c52c94bf418fd65091ff53ca63ca774a9e
         this.setVisible(false);    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed

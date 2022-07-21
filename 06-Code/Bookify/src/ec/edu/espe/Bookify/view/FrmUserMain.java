@@ -125,8 +125,8 @@ public class FrmUserMain extends javax.swing.JFrame {
     }//GEN-LAST:event_btnReturnActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        FrmPayBills frmPayBills = new FrmPayBills();
-        frmPayBills.setVisible(true);
+        FrmBills frmBills = new FrmBills();
+        frmBills.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton4ActionPerformed
 
