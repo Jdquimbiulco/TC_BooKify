@@ -31,6 +31,10 @@ public class FrmBills extends javax.swing.JFrame {
         initComponents();
         user = new User();
         ChargeData();
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7333a81f29a133284246dd1457ea4af4b155bff0
         this.setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         Toolkit miPantalla = Toolkit.getDefaultToolkit();
