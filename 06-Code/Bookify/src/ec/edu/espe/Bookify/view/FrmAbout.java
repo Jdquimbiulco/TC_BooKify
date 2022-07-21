@@ -1,6 +1,8 @@
 package ec.edu.espe.Bookify.view;
 
 import ec.edu.espe.Bookify.controller.FormsHandler;
+import java.awt.Image;
+import java.awt.Toolkit;
 import javax.swing.JFrame;
 
 /**
@@ -16,6 +18,10 @@ public class FrmAbout extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        Toolkit miPantalla = Toolkit.getDefaultToolkit();
+        Image miIcono = miPantalla.getImage("src/Images/Icon02.png");
+        setIconImage(miIcono);
+        
     }
 
     /**
