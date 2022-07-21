@@ -120,7 +120,6 @@ public class FrmBookifyMainMenu extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-<<<<<<< HEAD
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
 
         /*FrmHelp frmHelp = new FrmHelp();
@@ -130,8 +129,6 @@ public class FrmBookifyMainMenu extends javax.swing.JFrame {
         //frmHelp.setVisible(true);
         this.setVisible(false);    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
-=======
->>>>>>> 7333a81f29a133284246dd1457ea4af4b155bff0
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
        this.dispose();
     }//GEN-LAST:event_jMenuItem3ActionPerformed
