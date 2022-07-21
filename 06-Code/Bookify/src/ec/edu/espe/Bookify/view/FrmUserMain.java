@@ -72,6 +72,11 @@ public class FrmUserMain extends javax.swing.JFrame {
         jButton3.setFont(new java.awt.Font("Bookman Old Style", 1, 24)); // NOI18N
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/RetrunMovie.png"))); // NOI18N
         jButton3.setText("Return Movie");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 190, -1, -1));
 
         jButton4.setBackground(new java.awt.Color(255, 102, 102));
@@ -124,6 +129,12 @@ public class FrmUserMain extends javax.swing.JFrame {
         frmPayBills.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        FrmReturnMovie frmReturnMovie = new FrmReturnMovie();
+        frmReturnMovie.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
