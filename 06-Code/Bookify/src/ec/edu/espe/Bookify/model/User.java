@@ -1,7 +1,4 @@
 package ec.edu.espe.Bookify.model;
-
-import java.util.Scanner;
-
 /**
  *
  * @author QUILUMBAQUIN JAIRO,QUIMBIULCO JUAN,RAUL SILVA,CARLOS RIVERA, DCC0-ESPE: CODEX++
@@ -89,14 +86,7 @@ public class User {
         return "User:" + "name=" + getUserName() + ", id=" + getUserId() + ", userEmail=" + getUserEmail() + ", userPhone=" + getUserPhone() + ", userAddress=" + getUserAddress() + ", age=" + getUserAge() + ", password=" + getUserPassword() + '\n';
     }
 
-    public String RecordUserData() {
-
-        String UserDataRecord=getUserName() +";"+ getUserId() + ";" + getUserEmail() + ";" + getUserPhone() + ";" + getUserAddress() + ";" + getUserAge() + ";" + getUserPassword() + "\r\n";
-
-        return UserDataRecord;
-    }
     
-
     /**
      * @param UserAddress the UserAddress to set
      */
@@ -104,24 +94,6 @@ public class User {
         this.UserAddress = UserAddress;
     }
     
-    public void readData(){
-           Scanner teclado = new Scanner(System.in);
-           System.out.println("Ingrese su ID");
-           setUserId(teclado.nextInt());
-           System.out.println("Ingrse su contraseña:");
-
-           setUserPassword(teclado.nextInt());
-           System.out.println("Ingresado Exitosamente");
-           UserPassword = teclado.nextInt();
-           //System.out.println("Ingresado Exitosamente");
-           if(UserPassword == Password){
-                System.out.println("Contraseña Correcta");
-            }
-            else{
-                System.out.println("Contraseña incorercta");
-            }
-       }
-
     /**
      * @return the UserAddress
      */

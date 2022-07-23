@@ -1,19 +1,13 @@
 package ec.edu.espe.Bookify.controller;
 
-import com.google.gson.Gson;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
-import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
-
 import ec.edu.espe.Bookify.model.Movie;
 import ec.edu.espe.Bookify.model.Book;
 
 import ec.edu.espe.Bookify.model.User;
-import java.util.ArrayList;
-import java.util.Arrays;
 import org.bson.Document;
 
 
