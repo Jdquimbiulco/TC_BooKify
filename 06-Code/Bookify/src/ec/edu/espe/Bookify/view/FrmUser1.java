@@ -4,11 +4,9 @@
  */
 package ec.edu.espe.Bookify.view;
 
-import ec.edu.espe.Bookify.controller.FormsHandler;
 import ec.edu.espe.Bookify.controller.InputValidation;
 import ec.edu.espe.Bookify.controller.MongoDBManager;
 import ec.edu.espe.Bookify.model.User;
-import java.awt.Color;
 import java.awt.Image;
 import java.awt.Toolkit;
 import javax.swing.JFrame;
@@ -57,30 +55,32 @@ public class FrmUser1 extends javax.swing.JFrame {
         jList1 = new javax.swing.JList<>();
         jScrollPane2 = new javax.swing.JScrollPane();
         jList2 = new javax.swing.JList<>();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        TFuserName = new javax.swing.JTextField();
         TFuserId = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        TFuserName = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        TFemail = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
         TFphone = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        TFAddres = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
         TFage = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
         TFpassword = new javax.swing.JTextField();
+        btnAddUser = new javax.swing.JButton();
+        cmbxEmails = new javax.swing.JComboBox<>();
         jToggleButton1 = new javax.swing.JToggleButton();
+        lblErrorName = new javax.swing.JLabel();
         lblErrorId = new javax.swing.JLabel();
         lblErrorPhone = new javax.swing.JLabel();
-        lblErrorAge = new javax.swing.JLabel();
-        cmbxEmails = new javax.swing.JComboBox<>();
-        lblErrorName = new javax.swing.JLabel();
         lblErrorAddres = new javax.swing.JLabel();
-        TFemail = new javax.swing.JTextField();
-        TFAddres = new javax.swing.JTextField();
-        btnAddUser = new javax.swing.JButton();
         lblErrorPassword = new javax.swing.JLabel();
+        lblErrorAge = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         jList1.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -99,11 +99,10 @@ public class FrmUser1 extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel1.setText("New User");
-
-        jLabel2.setText("Name");
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setText("Id");
+<<<<<<< HEAD
 
         jLabel4.setText("Email");
 
@@ -125,60 +124,74 @@ public class FrmUser1 extends javax.swing.JFrame {
                 TFuserNameKeyPressed(evt);
             }
         });
+=======
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, -1, -1));
+>>>>>>> 00c294ffa36f2ed6ca9209182446338793d5b0ca
 
         TFuserId.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 TFuserIdKeyPressed(evt);
             }
         });
+        jPanel1.add(TFuserId, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 104, 190, -1));
+
+        jLabel1.setFont(new java.awt.Font("Wide Latin", 0, 24)); // NOI18N
+        jLabel1.setText("New User");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, -1, -1));
+
+        TFuserName.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                TFuserNameKeyPressed(evt);
+            }
+        });
+        jPanel1.add(TFuserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 64, 316, -1));
+
+        jLabel2.setText("Name");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, -1, -1));
+
+        jLabel4.setText("Email");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, -1, -1));
+        jPanel1.add(TFemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 144, 190, -1));
+
+        jLabel5.setText("Phone");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 190, -1, -1));
 
         TFphone.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 TFphoneKeyPressed(evt);
             }
         });
+        jPanel1.add(TFphone, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 184, 190, -1));
 
-        TFage.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                TFageKeyPressed(evt);
-            }
-        });
-
-        TFpassword.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                TFpasswordKeyPressed(evt);
-            }
-        });
-
-        jToggleButton1.setText("Return");
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
-            }
-        });
-
-        lblErrorId.setText("_");
-
-        lblErrorPhone.setText("_");
-
-        lblErrorAge.setText("_");
-
-        cmbxEmails.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "@gmail.com", "@yahoo.com", "@hotmail.com", "@outlook.com" }));
-        cmbxEmails.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmbxEmailsActionPerformed(evt);
-            }
-        });
-
-        lblErrorName.setText("_");
-
-        lblErrorAddres.setText("-");
+        jLabel6.setText("Addres");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, -1, -1));
 
         TFAddres.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 TFAddresKeyPressed(evt);
             }
         });
+        jPanel1.add(TFAddres, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 224, 190, -1));
+
+        jLabel7.setText("Age");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, -1, -1));
+
+        TFage.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                TFageKeyPressed(evt);
+            }
+        });
+        jPanel1.add(TFage, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 264, 190, -1));
+
+        jLabel8.setText("Password");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 310, -1, -1));
+
+        TFpassword.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                TFpasswordKeyPressed(evt);
+            }
+        });
+        jPanel1.add(TFpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 304, 190, -1));
 
         btnAddUser.setText("Add User");
         btnAddUser.addActionListener(new java.awt.event.ActionListener() {
@@ -186,117 +199,46 @@ public class FrmUser1 extends javax.swing.JFrame {
                 btnAddUserActionPerformed(evt);
             }
         });
+        jPanel1.add(btnAddUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 340, -1, -1));
+
+        cmbxEmails.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "@gmail.com", "@yahoo.com", "@hotmail.com", "@outlook.com" }));
+        cmbxEmails.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbxEmailsActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cmbxEmails, new org.netbeans.lib.awtextra.AbsoluteConstraints(368, 144, 108, -1));
+
+        jToggleButton1.setText("Return");
+        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 340, -1, -1));
+
+        lblErrorName.setText("_");
+        jPanel1.add(lblErrorName, new org.netbeans.lib.awtextra.AbsoluteConstraints(494, 67, -1, -1));
+
+        lblErrorId.setText("_");
+        jPanel1.add(lblErrorId, new org.netbeans.lib.awtextra.AbsoluteConstraints(368, 107, -1, -1));
+
+        lblErrorPhone.setText("_");
+        jPanel1.add(lblErrorPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(368, 187, -1, -1));
+
+        lblErrorAddres.setText("-");
+        jPanel1.add(lblErrorAddres, new org.netbeans.lib.awtextra.AbsoluteConstraints(368, 227, -1, -1));
 
         lblErrorPassword.setText("-");
+        jPanel1.add(lblErrorPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(368, 267, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jToggleButton1)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel1)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(btnAddUser)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGap(18, 18, 18)
-                                                .addComponent(jLabel2)
-                                                .addGap(31, 31, 31))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                .addComponent(jLabel8)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(TFpassword)
-                                            .addComponent(TFuserName, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addGap(19, 19, 19)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(jLabel7)
-                                                .addGap(41, 41, 41)
-                                                .addComponent(TFage))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(jLabel6)
-                                                    .addComponent(jLabel5))
-                                                .addGap(28, 28, 28)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(TFphone)
-                                                    .addComponent(TFAddres)))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(jLabel3)
-                                                    .addComponent(jLabel4))
-                                                .addGap(33, 33, 33)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(TFuserId)
-                                                    .addComponent(TFemail))))))))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblErrorId)
-                            .addComponent(lblErrorPhone)
-                            .addComponent(lblErrorAge)
-                            .addComponent(cmbxEmails, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblErrorName)
-                            .addComponent(lblErrorAddres)
-                            .addComponent(lblErrorPassword))))
-                .addContainerGap(28, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(TFuserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblErrorName))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(TFuserId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblErrorId))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(cmbxEmails, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(TFemail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(TFphone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblErrorPhone))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(lblErrorAddres)
-                    .addComponent(TFAddres, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(TFage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblErrorAge))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TFpassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblErrorPassword)
-                    .addComponent(jLabel8))
-                .addContainerGap(74, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jToggleButton1)
-                    .addComponent(btnAddUser))
-                .addGap(26, 26, 26))
-        );
+        lblErrorAge.setText("_");
+        jPanel1.add(lblErrorAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(368, 300, -1, -1));
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/RegisterBakcgroundImage.jpg"))); // NOI18N
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1, 3, 560, 370));
+
+        getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -416,8 +358,10 @@ public class FrmUser1 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JList<String> jList1;
     private javax.swing.JList<String> jList2;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JToggleButton jToggleButton1;
