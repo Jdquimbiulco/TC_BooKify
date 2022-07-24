@@ -399,7 +399,6 @@ public class FrmUser1 extends javax.swing.JFrame {
         TFphone.setText("");
         TFAddres.setText("");
         TFage.setText("");
-        TFpassword.setText("");
     
     }
     
