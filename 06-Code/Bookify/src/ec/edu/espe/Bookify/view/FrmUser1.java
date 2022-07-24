@@ -102,31 +102,7 @@ public class FrmUser1 extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setText("Id");
-<<<<<<< HEAD
-
-        jLabel4.setText("Email");
-
-        jLabel5.setText("Phone");
-
-        jLabel6.setText("Addres");
-
-        jLabel7.setText("Age");
-
-        jLabel8.setText("Password");
-
-        TFuserName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TFuserNameActionPerformed(evt);
-            }
-        });
-        TFuserName.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                TFuserNameKeyPressed(evt);
-            }
-        });
-=======
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, -1, -1));
->>>>>>> 00c294ffa36f2ed6ca9209182446338793d5b0ca
 
         TFuserId.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -301,10 +277,6 @@ public class FrmUser1 extends javax.swing.JFrame {
         input.NumberValidation(TFpassword, evt, lblErrorPassword, 9);
     }//GEN-LAST:event_TFpasswordKeyPressed
 
-    private void TFuserNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TFuserNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TFuserNameActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -399,6 +371,7 @@ public class FrmUser1 extends javax.swing.JFrame {
         TFphone.setText("");
         TFAddres.setText("");
         TFage.setText("");
+        TFpassword.setText("");
     
     }
     
