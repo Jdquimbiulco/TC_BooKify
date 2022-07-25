@@ -16,7 +16,7 @@ public class InputValidation {
             LengthValidation(txtField, evt, length);
             lblfield.setText("");
         } else {
-            lblfield.setText("Error");
+            lblfield.setText("Enter Only digits");
             txtField.setEditable(false);
         }
     }
