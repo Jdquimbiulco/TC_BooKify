@@ -4,6 +4,7 @@ package ec.edu.espe.Bookify.view;
 
 
 import ec.edu.espe.Bookify.controller.FormsHandler;
+import ec.edu.espe.Bookify.controller.InputValidation;
 import ec.edu.espe.Bookify.controller.MongoDBManager;
 import ec.edu.espe.Bookify.model.Book;
 import java.awt.Image;
@@ -18,11 +19,13 @@ import javax.swing.JOptionPane;
  */
 public class FrmAddBook extends javax.swing.JFrame {
 
+    InputValidation input;
     /**
      * Creates new form FrmAddBook
      */
     public FrmAddBook() {
         initComponents();
+        input = new InputValidation();
         this.setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         Toolkit miPantalla = Toolkit.getDefaultToolkit();
@@ -52,6 +55,7 @@ public class FrmAddBook extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         cmboBool = new javax.swing.JComboBox<>();
+        lbIsbn = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -89,11 +93,21 @@ public class FrmAddBook extends javax.swing.JFrame {
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 166, -1, -1));
 
         txtIsbn.setToolTipText("Only 13 digits of the product");
+        txtIsbn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIsbnActionPerformed(evt);
+            }
+        });
+        txtIsbn.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtIsbnKeyPressed(evt);
+            }
+        });
         getContentPane().add(txtIsbn, new org.netbeans.lib.awtextra.AbsoluteConstraints(98, 166, 252, -1));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel7.setText("Avaliable:");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 200, -1, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
 
         jButton1.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
         jButton1.setText("Return");
@@ -103,7 +117,7 @@ public class FrmAddBook extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(217, 247, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, -1, -1));
 
         jButton2.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
         jButton2.setText("Add");
@@ -113,13 +127,17 @@ public class FrmAddBook extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(127, 247, -1, -1));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, -1, -1));
 
         cmboBool.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Yes", "No", " " }));
-        getContentPane().add(cmboBool, new org.netbeans.lib.awtextra.AbsoluteConstraints(98, 200, -1, -1));
+        getContentPane().add(cmboBool, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, -1, -1));
+
+        lbIsbn.setForeground(new java.awt.Color(0, 204, 0));
+        lbIsbn.setText("-");
+        getContentPane().add(lbIsbn, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, 250, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Fondo 03.jpg"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 410, 290));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 320));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -152,6 +170,14 @@ public class FrmAddBook extends javax.swing.JFrame {
         saveBook.CreateBook(book);
        JOptionPane.showMessageDialog(null, "Book added succesfull");
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void txtIsbnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIsbnActionPerformed
+
+    }//GEN-LAST:event_txtIsbnActionPerformed
+
+    private void txtIsbnKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtIsbnKeyPressed
+        input.NumberValidation(txtIsbn, evt, lbIsbn, 13);
+    }//GEN-LAST:event_txtIsbnKeyPressed
 
     /**
      * @param args the command line arguments
@@ -200,6 +226,7 @@ public class FrmAddBook extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel lbIsbn;
     private javax.swing.JTextField txtAuthor;
     private javax.swing.JTextField txtIsbn;
     private javax.swing.JTextField txtPublisher;
