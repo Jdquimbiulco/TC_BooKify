@@ -179,7 +179,7 @@ public class FrmUser1 extends javax.swing.JFrame {
                 btnAddUserActionPerformed(evt);
             }
         });
-        jPanel1.add(btnAddUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 380, -1, 20));
+        jPanel1.add(btnAddUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 380, -1, -1));
 
         cmbxEmails.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "@gmail.com", "@yahoo.com", "@hotmail.com", "@outlook.com" }));
         cmbxEmails.addActionListener(new java.awt.event.ActionListener() {
@@ -204,16 +204,16 @@ public class FrmUser1 extends javax.swing.JFrame {
         jPanel1.add(lblErrorId, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 120, -1, -1));
 
         lblErrorPhone.setText("_");
-        jPanel1.add(lblErrorPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(368, 187, -1, -1));
+        jPanel1.add(lblErrorPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, -1, -1));
 
         lblErrorAddres.setText("-");
-        jPanel1.add(lblErrorAddres, new org.netbeans.lib.awtextra.AbsoluteConstraints(368, 227, -1, -1));
+        jPanel1.add(lblErrorAddres, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 250, -1, -1));
 
         lblErrorPassword.setText("-");
-        jPanel1.add(lblErrorPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(368, 267, -1, -1));
+        jPanel1.add(lblErrorPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 290, -1, -1));
 
         lblErrorAge.setText("_");
-        jPanel1.add(lblErrorAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(368, 300, -1, -1));
+        jPanel1.add(lblErrorAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 330, -1, -1));
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/FondoUser.jpg"))); // NOI18N
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 590, 430));

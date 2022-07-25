@@ -1,8 +1,6 @@
 package ec.edu.espe.Bookify.controller;
 
 import ec.edu.espe.Bookify.view.FrmBookifyMainMenu;
-import java.awt.Image;
-import java.awt.Toolkit;
 import javax.swing.JFrame;
 
 
