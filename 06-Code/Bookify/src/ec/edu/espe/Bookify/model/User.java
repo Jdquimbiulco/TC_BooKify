@@ -3,7 +3,7 @@ package ec.edu.espe.Bookify.model;
  *
  * @author QUILUMBAQUIN JAIRO,QUIMBIULCO JUAN,RAUL SILVA,CARLOS RIVERA, DCC0-ESPE: CODEX++
  */
-public class User {
+public class User extends Bills{
     private String UserName;
     private int UserId;
     private String UserEmail;
@@ -101,4 +101,6 @@ public class User {
         return UserAddress;
     }
         
+    
 }
+
