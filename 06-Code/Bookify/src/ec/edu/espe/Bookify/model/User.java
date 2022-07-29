@@ -3,13 +3,9 @@ package ec.edu.espe.Bookify.model;
  *
  * @author QUILUMBAQUIN JAIRO,QUIMBIULCO JUAN,RAUL SILVA,CARLOS RIVERA, DCC0-ESPE: CODEX++
  */
-<<<<<<< HEAD
 public class User {
     private String name;
-=======
-public class User extends Bills{
     private String UserName;
->>>>>>> bb791989d8cd320fdcba174b25095ea9628c990b
     private int UserId;
     private String UserEmail;
     private int UserPhone;
@@ -26,11 +22,9 @@ public class User extends Bills{
     }
 
     public User(String name, int id, String userEmail, int userPhone, String userAddress, int age, int password) {
-<<<<<<< HEAD
+
         this.name = name;
-=======
         this.UserName = name;
->>>>>>> bb791989d8cd320fdcba174b25095ea9628c990b
         this.UserId = id;
         this.UserEmail = userEmail;
         this.UserPhone = userPhone;
@@ -42,21 +36,21 @@ public class User extends Bills{
 
 
 
-<<<<<<< HEAD
-    public String getName() {
+
+    public String getName(){
         return name;
     }
 
     public void setName(String name) {
         this.name = name;
-=======
-    public String getUserName() {
+    }
+    
+    public String getUserName(){
         return UserName;
     }
 
     public void setUserName(String UserName) {
         this.UserName = UserName;
->>>>>>> bb791989d8cd320fdcba174b25095ea9628c990b
     }
 
     public int getUserId() {
@@ -101,11 +95,8 @@ public class User extends Bills{
 
     
     public String UserData() {
-<<<<<<< HEAD
+
         return "User:" + "name=" + getName() + ", id=" + getUserId() + ", userEmail=" + getUserEmail() + ", userPhone=" + getUserPhone() + ", userAddress=" + getUserAddress() + ", age=" + getUserAge() + ", password=" + getUserPassword() + '\n';
-=======
-        return "User:" + "name=" + getUserName() + ", id=" + getUserId() + ", userEmail=" + getUserEmail() + ", userPhone=" + getUserPhone() + ", userAddress=" + getUserAddress() + ", age=" + getUserAge() + ", password=" + getUserPassword() + '\n';
->>>>>>> bb791989d8cd320fdcba174b25095ea9628c990b
     }
 
     
@@ -123,10 +114,5 @@ public class User extends Bills{
         return UserAddress;
     }
         
-<<<<<<< HEAD
-}
-=======
-    
 }
 
->>>>>>> bb791989d8cd320fdcba174b25095ea9628c990b
