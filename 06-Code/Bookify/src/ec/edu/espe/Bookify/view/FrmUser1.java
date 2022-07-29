@@ -356,7 +356,7 @@ public class FrmUser1 extends javax.swing.JFrame {
         MongoDBManager saveUserdata;
         saveUserdata = new MongoDBManager();
         
-        user.setUserName(TFuserName.getText());
+        user.setName(TFuserName.getText());
         user.setUserId(Integer.parseInt(TFuserId.getText()));
         user.setUserEmail(TFemail.getText()+ cmbxEmails.getSelectedItem());
         user.setUserAddress(TFAddres.getText());
@@ -364,7 +364,7 @@ public class FrmUser1 extends javax.swing.JFrame {
         user.setUserAge(Integer.parseInt(TFage.getText()));
         user.setUserPassword(Integer.parseInt(TFpassword.getText()));
         
-        saveUserdata.CreateUser(user);
+        saveUserdata.Create20(user, "Users");
     
     }
     

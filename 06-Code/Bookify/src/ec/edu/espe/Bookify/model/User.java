@@ -4,7 +4,7 @@ package ec.edu.espe.Bookify.model;
  * @author QUILUMBAQUIN JAIRO,QUIMBIULCO JUAN,RAUL SILVA,CARLOS RIVERA, DCC0-ESPE: CODEX++
  */
 public class User {
-    private String UserName;
+    private String name;
     private int UserId;
     private String UserEmail;
     private int UserPhone;
@@ -21,7 +21,7 @@ public class User {
     }
 
     public User(String name, int id, String userEmail, int userPhone, String userAddress, int age, int password) {
-        this.UserName = name;
+        this.name = name;
         this.UserId = id;
         this.UserEmail = userEmail;
         this.UserPhone = userPhone;
@@ -33,12 +33,12 @@ public class User {
 
 
 
-    public String getUserName() {
-        return UserName;
+    public String getName() {
+        return name;
     }
 
-    public void setUserName(String UserName) {
-        this.UserName = UserName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getUserId() {
@@ -83,7 +83,7 @@ public class User {
 
     
     public String UserData() {
-        return "User:" + "name=" + getUserName() + ", id=" + getUserId() + ", userEmail=" + getUserEmail() + ", userPhone=" + getUserPhone() + ", userAddress=" + getUserAddress() + ", age=" + getUserAge() + ", password=" + getUserPassword() + '\n';
+        return "User:" + "name=" + getName() + ", id=" + getUserId() + ", userEmail=" + getUserEmail() + ", userPhone=" + getUserPhone() + ", userAddress=" + getUserAddress() + ", age=" + getUserAge() + ", password=" + getUserPassword() + '\n';
     }
 
     
