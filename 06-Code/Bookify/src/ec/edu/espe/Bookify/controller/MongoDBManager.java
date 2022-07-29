@@ -10,6 +10,7 @@ import ec.edu.espe.Bookify.model.Movie;
 import ec.edu.espe.Bookify.model.Book;
 
 import ec.edu.espe.Bookify.model.User;
+import java.util.ArrayList;
 import java.util.Iterator;
 import org.bson.Document;
 
@@ -41,7 +42,6 @@ public class MongoDBManager {
 
     }
 
-    
     public void CreateMovie(Movie movie) {
 
         bookifyDB = EstablishConnection();
@@ -83,7 +83,7 @@ public class MongoDBManager {
         document = new Document();
 
         document.append("Name", user.getName());
-        document.append("Id", user.getUserId());
+        document.append("Id", user.getId());
         document.append("Bill", bill);
         document.append("Book", book.getTitle());
 
@@ -91,29 +91,35 @@ public class MongoDBManager {
 
     }
 
-    public void ReadBookifyDB() {
+    public ArrayList<Object> ReadBookifyDB(Object bookifyObject,String collection) {
 
         bookifyDB = EstablishConnection();
-        bookifyCollection = bookifyDB.getCollection("Users");
-
+        bookifyCollection = bookifyDB.getCollection(collection);
         FindIterable<Document> iterDoc;
-
+        ArrayList<Object> objects;
+        Gson gson;
+        
         iterDoc = bookifyCollection.find();
-
-        Iterator it = iterDoc.iterator();
-        while (it.hasNext()) {
-            System.out.println(it.next());
+        objects = new ArrayList<>();
+        gson= new Gson();
+        
+        
+        for (Document doc : iterDoc) {
+            objects.add(gson.fromJson(doc.toJson(), bookifyObject.getClass()));
         }
 
-        System.out.println(iterDoc.first().toString());
+        for (Object show : objects) {
+            System.out.println(show.toString());
+        }
+        
+        return objects;
 
     }
 
     public void Create20(Object bookifyObject, String collection) {
         bookifyDB = EstablishConnection();
-        Gson gson = new Gson();
-        
         bookifyCollection = bookifyDB.getCollection(collection);
+        Gson gson = new Gson();
 
         document = Document.parse(gson.toJson(bookifyObject));
         System.out.println("Succesfull convertion");

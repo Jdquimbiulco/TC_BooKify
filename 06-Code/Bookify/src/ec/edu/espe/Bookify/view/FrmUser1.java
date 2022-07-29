@@ -4,6 +4,7 @@
  */
 package ec.edu.espe.Bookify.view;
 
+
 import ec.edu.espe.Bookify.controller.InputValidation;
 import ec.edu.espe.Bookify.controller.MongoDBManager;
 import ec.edu.espe.Bookify.model.User;
@@ -33,13 +34,7 @@ public class FrmUser1 extends javax.swing.JFrame {
         Toolkit miPantalla = Toolkit.getDefaultToolkit();
         Image miIcono = miPantalla.getImage("src/Images/BookIco.png");
         setIconImage(miIcono);
-        
-        
-        
-        
-        
-        
-
+    
     }
 
     /**
@@ -357,12 +352,12 @@ public class FrmUser1 extends javax.swing.JFrame {
         saveUserdata = new MongoDBManager();
         
         user.setName(TFuserName.getText());
-        user.setUserId(Integer.parseInt(TFuserId.getText()));
-        user.setUserEmail(TFemail.getText()+ cmbxEmails.getSelectedItem());
-        user.setUserAddress(TFAddres.getText());
-        user.setUserPhone(Integer.parseInt(TFphone.getText()));
-        user.setUserAge(Integer.parseInt(TFage.getText()));
-        user.setUserPassword(Integer.parseInt(TFpassword.getText()));
+        user.setId(Integer.parseInt(TFuserId.getText()));
+        user.setEmail(TFemail.getText()+ cmbxEmails.getSelectedItem());
+        user.setAddress(TFAddres.getText());
+        user.setPhone(Integer.parseInt(TFphone.getText()));
+        user.setAge(Integer.parseInt(TFage.getText()));
+        user.setPassword(Integer.parseInt(TFpassword.getText()));
         
         saveUserdata.Create20(user, "Users");
     
