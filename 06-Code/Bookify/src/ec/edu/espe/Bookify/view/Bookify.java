@@ -5,8 +5,10 @@
 package ec.edu.espe.Bookify.view;
 
 import com.google.gson.Gson;
+import ec.edu.espe.Bookify.controller.FormsHandler;
 import ec.edu.espe.Bookify.controller.MongoDBManager;
 import ec.edu.espe.Bookify.model.User;
+import java.util.ArrayList;
 
 /**
  *
@@ -20,13 +22,16 @@ public class Bookify {
     public static void main(String[] args) {
         MongoDBManager db= new MongoDBManager();
         User user= new User();
+        ArrayList<User> userlist;
+        FormsHandler frms;
+        frms= new FormsHandler();
         
-        db.ReadBookifyDB(user,"Users");
         
         
-        
+        userlist =db.ReadBookifyDB(user,"Users");
                
         
+        frms.SetDatatoTables(userlist.get(0).atributeNames(),userlist);
         
         
         

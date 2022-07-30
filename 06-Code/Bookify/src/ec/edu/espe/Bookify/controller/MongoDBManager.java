@@ -91,7 +91,7 @@ public class MongoDBManager {
 
     }
 
-    public ArrayList<Object> ReadBookifyDB(Object bookifyObject,String collection) {
+    public ArrayList ReadBookifyDB(Object bookifyObject,String collection) {
 
         bookifyDB = EstablishConnection();
         bookifyCollection = bookifyDB.getCollection(collection);
@@ -108,15 +108,11 @@ public class MongoDBManager {
             objects.add(gson.fromJson(doc.toJson(), bookifyObject.getClass()));
         }
 
-        for (Object show : objects) {
-            System.out.println(show.toString());
-        }
-        
         return objects;
 
     }
 
-    public void Create20(Object bookifyObject, String collection) {
+    public void CreateBookifyObject(Object bookifyObject, String collection) {
         bookifyDB = EstablishConnection();
         bookifyCollection = bookifyDB.getCollection(collection);
         Gson gson = new Gson();
@@ -127,6 +123,22 @@ public class MongoDBManager {
         bookifyCollection.insertOne(document);
         System.out.println("Succesfull added");
 
+    }
+    
+    
+    public void UpdateBookifyObject(){
+    
+        bookifyDB = EstablishConnection();
+        bookifyCollection = bookifyDB.getCollection("Users");
+        
+        
+        
+        
+        
+        
+        bookifyCollection.updateOne(document, document);
+    
+    
     }
 
 }

@@ -359,7 +359,7 @@ public class FrmUser1 extends javax.swing.JFrame {
         user.setAge(Integer.parseInt(TFage.getText()));
         user.setPassword(Integer.parseInt(TFpassword.getText()));
         
-        saveUserdata.Create20(user, "Users");
+        saveUserdata.CreateBookifyObject(user, "Users");
     
     }
     

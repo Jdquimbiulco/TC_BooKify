@@ -11,13 +11,8 @@ public class User {
     private String address; 
     private int age;
     private int password;
-    int Pasuwu;
-    int Password = 1945;
-
-    @Override
-    public String toString() {
-        return "User{" + "name=" + name + ", id=" + id + ", email=" + email + ", phone=" + phone + ", address=" + address + ", age=" + age + ", password=" + password + ", Pasuwu=" + Pasuwu + ", Password=" + Password + '}';
-    }
+    
+   
     
     
    
@@ -86,12 +81,6 @@ public class User {
         this.password = password;
     }
 
-    
-    public String UserData() {
-        return "User:" + "name=" + getName() + ", id=" + getId() + ", userEmail=" + getEmail() + ", userPhone=" + getPhone() + ", userAddress=" + getAddress() + ", age=" + getAge() + ", password=" + getPassword() + '\n';
-    }
-
-    
     /**
      * @param address the address to set
      */
@@ -105,5 +94,22 @@ public class User {
     public String getAddress() {
         return address;
     }
+    
+    public String[] atributeNames() {
+        String[] Names={"Name","Id","Email","Phone","Address","Age", "Password"};
+        return Names;
+    }
+
+    
+    
+    @Override
+    public String toString() {
+        return getName()+","+getId()+","+getEmail()+","+ getPhone() + "," + getAddress() + "," + getAge() + "," + getPassword();
+    }
+    
+    
+    
+    
+    
         
 }
