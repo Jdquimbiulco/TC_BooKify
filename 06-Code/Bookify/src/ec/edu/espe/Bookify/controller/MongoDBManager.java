@@ -9,9 +9,7 @@ import com.mongodb.client.MongoDatabase;
 import ec.edu.espe.Bookify.model.Movie;
 import ec.edu.espe.Bookify.model.Book;
 
-import ec.edu.espe.Bookify.model.User;
 import java.util.ArrayList;
-import java.util.Iterator;
 import org.bson.Document;
 
 /**
@@ -75,22 +73,6 @@ public class MongoDBManager {
 
     }
 
-    public void CreateBill(User user, Book book, int bill) {
-
-        bookifyDB = EstablishConnection();
-        bookifyCollection = bookifyDB.getCollection("Bills");
-
-        document = new Document();
-
-        document.append("Name", user.getName());
-        document.append("Id", user.getId());
-        document.append("Bill", bill);
-        document.append("Book", book.getTitle());
-
-        bookifyCollection.insertOne(document);
-
-    }
-
     public ArrayList ReadBookifyDB(Object bookifyObject,String collection) {
 
         bookifyDB = EstablishConnection();
@@ -107,7 +89,8 @@ public class MongoDBManager {
         for (Document doc : iterDoc) {
             objects.add(gson.fromJson(doc.toJson(), bookifyObject.getClass()));
         }
-
+        
+                
         return objects;
 
     }
@@ -126,19 +109,24 @@ public class MongoDBManager {
     }
     
     
-    public void UpdateBookifyObject(){
+    public void UpdateBookifyObject(String collection,String atributeToFind,Object tofind,String atributetoChange,Object toChange){
     
         bookifyDB = EstablishConnection();
-        bookifyCollection = bookifyDB.getCollection("Users");
+        bookifyCollection = bookifyDB.getCollection(collection);
+        Document found;
+        Document update;
+        Document setUpdate;
+        
+        document= new Document(atributeToFind,tofind);
+        found=(Document) bookifyCollection.find(document).first();
+        
+        if(found!=null){
+            update= new Document(atributetoChange,toChange);
+            setUpdate= new Document("$set",update);
+            bookifyCollection.updateOne(found, setUpdate);
+        }
         
         
-        
-        
-        
-        
-        bookifyCollection.updateOne(document, document);
-    
-    
     }
 
 }

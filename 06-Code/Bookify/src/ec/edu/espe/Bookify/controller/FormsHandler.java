@@ -3,7 +3,6 @@ package ec.edu.espe.Bookify.controller;
 import ec.edu.espe.Bookify.view.FrmBookifyMainMenu;
 import java.util.ArrayList;
 import javax.swing.JFrame;
-import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 public class FormsHandler {
@@ -41,21 +40,24 @@ public class FormsHandler {
             }
         }
 
+        
         setData = new String[rowData.size()][numberOfAtributes];
         int counter = 0;
 
-        for (int i = 0; i < rowData.size(); i++) {
+        for (int i = 0; i <rowData.size(); i++) {
 
             for (int j = 0; j < numberOfAtributes; j++) {
                 setData[i][j] = addData.get(j + counter);
             }
-            counter = +numberOfAtributes;
-
+            counter +=numberOfAtributes;
+            
         }
+        
 
         model = new DefaultTableModel(setData, columHeaders);
         return model;
 
     }
-
+    
+    
 }
