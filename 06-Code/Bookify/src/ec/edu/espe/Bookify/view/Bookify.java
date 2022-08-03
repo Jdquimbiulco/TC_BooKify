@@ -21,8 +21,14 @@ public class Bookify {
         ArrayList<User> users;
         
         user = new User();
+        db.DelteBookifyObject("Users","Name", "sdfasd");
+        
         users=db.ReadBookifyDB(user,"Users");
-        db.UpdateBookifyObject("Users", "id", 1727751420, "name", "Jairo");
+        for(User user1:users){
+            System.out.println(user1.toString());
+        }
+        
+        //db.UpdateBookifyObject("Users", "id", 1727751420, "name", "Jairo");
         
         
         

@@ -6,6 +6,7 @@ import com.mongodb.MongoClientURI;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.model.Filters;
 import ec.edu.espe.Bookify.model.Movie;
 import ec.edu.espe.Bookify.model.Book;
 
@@ -126,7 +127,15 @@ public class MongoDBManager {
             bookifyCollection.updateOne(found, setUpdate);
         }
         
-        
+    }
+    
+    public void DelteBookifyObject(String collection,String atribute,Object findtoDelete){
+        bookifyDB = EstablishConnection();
+        bookifyCollection = bookifyDB.getCollection(collection);
+        bookifyCollection.deleteOne(Filters.eq(atribute.toLowerCase(),findtoDelete));        
+        System.out.println("Succesfully Deleted");
+    
+    
     }
 
 }
