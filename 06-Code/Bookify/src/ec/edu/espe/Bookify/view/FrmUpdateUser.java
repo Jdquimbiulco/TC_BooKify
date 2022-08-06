@@ -62,19 +62,16 @@ public class FrmUpdateUser extends javax.swing.JFrame {
 
         tblDataUpdate.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Name", "Id", "Email", "Phone", "Addres", "Age", "Password"
             }
         ));
         jScrollPane1.setViewportView(tblDataUpdate);
         tblDataUpdate.getAccessibleContext().setAccessibleDescription("");
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 920, 165));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 920, 50));
 
         cbxUpdateValue.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cbxUpdateValue.addActionListener(new java.awt.event.ActionListener() {
@@ -82,14 +79,14 @@ public class FrmUpdateUser extends javax.swing.JFrame {
                 cbxUpdateValueActionPerformed(evt);
             }
         });
-        jPanel1.add(cbxUpdateValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 230, -1, -1));
+        jPanel1.add(cbxUpdateValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 120, -1, -1));
 
         TFToUpdatedata.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 TFToUpdatedataKeyPressed(evt);
             }
         });
-        jPanel1.add(TFToUpdatedata, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, 260, -1));
+        jPanel1.add(TFToUpdatedata, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 120, 260, -1));
 
         btnUpdate.setText("Update");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
@@ -97,13 +94,13 @@ public class FrmUpdateUser extends javax.swing.JFrame {
                 btnUpdateActionPerformed(evt);
             }
         });
-        jPanel1.add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 230, -1, -1));
+        jPanel1.add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 120, -1, -1));
 
         cbxEmail.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(cbxEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 260, -1, -1));
+        jPanel1.add(cbxEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 150, -1, -1));
 
         lblErrorUpdateFill.setText("jLabel2");
-        jPanel1.add(lblErrorUpdateFill, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 260, -1, -1));
+        jPanel1.add(lblErrorUpdateFill, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 160, -1, -1));
 
         TFTofindId.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -138,7 +135,7 @@ public class FrmUpdateUser extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         pack();

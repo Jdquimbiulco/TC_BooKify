@@ -1,8 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package ec.edu.espe.Bookify.view;
+
+import ec.edu.espe.Bookify.controller.FormsHandler;
+import ec.edu.espe.Bookify.controller.InputValidation;
+import ec.edu.espe.Bookify.controller.MongoDBManager;
+import ec.edu.espe.Bookify.model.User;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -13,8 +17,15 @@ public class FrmDeleteUser extends javax.swing.JFrame {
     /**
      * Creates new form FrmDeleteUser
      */
+    User user = new User();
+    InputValidation input = new InputValidation();
+    MongoDBManager bookifydb = new MongoDBManager();
+    
+
     public FrmDeleteUser() {
         initComponents();
+        DeleteBtn.setEnabled(false);
+        tblUserFound.setEnabled(false);
     }
 
     /**
@@ -28,42 +39,59 @@ public class FrmDeleteUser extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tblUserFound = new javax.swing.JTable();
         btnFind = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        TFtoFindId = new javax.swing.JTextField();
         DeleteBtn = new javax.swing.JButton();
+        lblErrorId = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblUserFound.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Name", "Id", "Email", "Phone", "Address", "Age", "Password"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tblUserFound);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 530, 90));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 660, 90));
 
         btnFind.setText("Find");
+        btnFind.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFindActionPerformed(evt);
+            }
+        });
         jPanel1.add(btnFind, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 10, -1, -1));
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 240, -1));
+
+        TFtoFindId.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                TFtoFindIdKeyPressed(evt);
+            }
+        });
+        jPanel1.add(TFtoFindId, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 240, -1));
 
         DeleteBtn.setText("Delete");
-        jPanel1.add(DeleteBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 140, -1, -1));
+        DeleteBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DeleteBtnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(DeleteBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 140, -1, -1));
+
+        lblErrorId.setText("_");
+        jPanel1.add(lblErrorId, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 549, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 676, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -72,6 +100,23 @@ public class FrmDeleteUser extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnFindActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFindActionPerformed
+        if (!TFtoFindId.getText().isBlank()) {
+            setUserFoundTotable();
+        } else {
+            JOptionPane.showMessageDialog(this, "The Field Id is Empty,please fill it with a valid Id");
+        }
+
+    }//GEN-LAST:event_btnFindActionPerformed
+
+    private void DeleteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteBtnActionPerformed
+        DeleteUserBtn();
+    }//GEN-LAST:event_DeleteBtnActionPerformed
+
+    private void TFtoFindIdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFtoFindIdKeyPressed
+        input.NumberValidation(TFtoFindId, evt, lblErrorId, 9);
+    }//GEN-LAST:event_TFtoFindIdKeyPressed
 
     /**
      * @param args the command line arguments
@@ -110,10 +155,73 @@ public class FrmDeleteUser extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton DeleteBtn;
+    private javax.swing.JTextField TFtoFindId;
     private javax.swing.JButton btnFind;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel lblErrorId;
+    private javax.swing.JTable tblUserFound;
     // End of variables declaration//GEN-END:variables
+
+    public ArrayList findUser() {
+
+        ArrayList<User> userToFind;
+        ArrayList<User> userFound;
+
+        userToFind = bookifydb.ReadBookifyDB(user, "Users");
+        userFound = new ArrayList<>();
+
+        for (User user : userToFind) {
+            if (user.getId() == Integer.parseInt(TFtoFindId.getText())) {
+                userFound.add(user);
+                JOptionPane.showMessageDialog(this, "User Found");
+            }
+        }
+        return userFound;
+
+    }
+
+    public void DeleteUserBtn() {
+        ArrayList<User> userFound;
+        DefaultTableModel model;
+        FormsHandler setTable;
+
+        userFound = findUser();
+        setTable= new FormsHandler();
+
+        if (!userFound.isEmpty()) {
+            bookifydb.DelteBookifyObject("Users", "id", Integer.parseInt(TFtoFindId.getText()));
+            model=setTable.SetDatatoTables(user.atributeNames(),null);
+            tblUserFound.setModel(model);
+        } else {
+            JOptionPane.showMessageDialog(this, "User Doesnt exist");
+            
+            
+        }
+
+    }
+    
+    public void setUserFoundTotable(){
+        FormsHandler setTable;
+        User user;
+        ArrayList<User> userToSet;
+        DefaultTableModel model;
+        
+        setTable= new FormsHandler();
+        user= new User();
+        userToSet=findUser();
+        
+        if(userToSet.isEmpty()){
+            JOptionPane.showMessageDialog(this, "User not Found");
+            DeleteBtn.setEnabled(false);
+        }else{
+        model=setTable.SetDatatoTables(user.atributeNames(),userToSet);
+        tblUserFound.setModel(model);
+        tblUserFound.getColumnModel().getColumn(0).setPreferredWidth(100);
+        tblUserFound.getColumnModel().getColumn(2).setPreferredWidth(150);
+        DeleteBtn.setEnabled(true);
+        }
+    }
+    
+
 }
