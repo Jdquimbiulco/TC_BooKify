@@ -23,6 +23,8 @@ public class FrmUsersTable extends javax.swing.JFrame {
     public FrmUsersTable() {
         initComponents();
         SetFrmdata();
+        tblUsers.setEnabled(false);
+        tblUsers.getTableHeader().setResizingAllowed(false);
     }
 
     /**
@@ -43,16 +45,28 @@ public class FrmUsersTable extends javax.swing.JFrame {
 
         tblUsers.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
                 {null, null, null, null}
             },
             new String [] {
                 "Name", "Title 2", "Title 3", "Title 4"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tblUsers.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(tblUsers);
+        if (tblUsers.getColumnModel().getColumnCount() > 0) {
+            tblUsers.getColumnModel().getColumn(0).setResizable(false);
+            tblUsers.getColumnModel().getColumn(1).setResizable(false);
+            tblUsers.getColumnModel().getColumn(2).setResizable(false);
+            tblUsers.getColumnModel().getColumn(3).setResizable(false);
+        }
 
         jButton1.setText("Refresh");
         jButton1.addActionListener(new java.awt.event.ActionListener() {

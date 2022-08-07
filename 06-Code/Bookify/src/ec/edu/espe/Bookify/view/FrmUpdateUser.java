@@ -31,6 +31,7 @@ public class FrmUpdateUser extends javax.swing.JFrame {
         loadComboBox(new String[]{"@gmail.com", "@Outlook.com", "@yahoo.com", "@hotmail.com"}, cbxEmail);
         btnUpdate.setEnabled(false);
         tblDataUpdate.setEnabled(false);
+        tblDataUpdate.getTableHeader().setResizingAllowed(false);
         
     }
 
@@ -68,6 +69,8 @@ public class FrmUpdateUser extends javax.swing.JFrame {
                 "Name", "Id", "Email", "Phone", "Addres", "Age", "Password"
             }
         ));
+        tblDataUpdate.setEnabled(false);
+        tblDataUpdate.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(tblDataUpdate);
         tblDataUpdate.getAccessibleContext().setAccessibleDescription("");
 
@@ -79,7 +82,7 @@ public class FrmUpdateUser extends javax.swing.JFrame {
                 cbxUpdateValueActionPerformed(evt);
             }
         });
-        jPanel1.add(cbxUpdateValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 120, -1, -1));
+        jPanel1.add(cbxUpdateValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 120, -1, -1));
 
         TFToUpdatedata.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -135,7 +138,7 @@ public class FrmUpdateUser extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();

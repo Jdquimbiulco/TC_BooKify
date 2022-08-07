@@ -8,8 +8,10 @@ package ec.edu.espe.Bookify.view;
 import ec.edu.espe.Bookify.controller.InputValidation;
 import ec.edu.espe.Bookify.controller.MongoDBManager;
 import ec.edu.espe.Bookify.model.User;
+import java.awt.Color;
 import java.awt.Image;
 import java.awt.Toolkit;
+import javax.swing.BorderFactory;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -34,6 +36,7 @@ public class FrmUser1 extends javax.swing.JFrame {
         Toolkit miPantalla = Toolkit.getDefaultToolkit();
         Image miIcono = miPantalla.getImage("src/Images/BookIco.png");
         setIconImage(miIcono);
+        //TFuserName.setBorder(BorderFactory.createLineBorder(Color.red));
     
     }
 
@@ -202,7 +205,7 @@ public class FrmUser1 extends javax.swing.JFrame {
         jPanel1.add(lblErrorPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, -1, -1));
 
         lblErrorAddres.setText("-");
-        jPanel1.add(lblErrorAddres, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 250, -1, -1));
+        jPanel1.add(lblErrorAddres, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 240, -1, -1));
 
         lblErrorPassword.setText("-");
         jPanel1.add(lblErrorPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 290, -1, -1));
@@ -210,8 +213,8 @@ public class FrmUser1 extends javax.swing.JFrame {
         lblErrorAge.setText("_");
         jPanel1.add(lblErrorAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 330, -1, -1));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/FondoUser.jpg"))); // NOI18N
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 590, 430));
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/VACA_PROYECTO.jpg"))); // NOI18N
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 430));
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 

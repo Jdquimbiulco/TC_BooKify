@@ -26,6 +26,7 @@ public class FrmDeleteUser extends javax.swing.JFrame {
         initComponents();
         DeleteBtn.setEnabled(false);
         tblUserFound.setEnabled(false);
+        //tblUserFound.getTableHeader().setResizingAllowed(false);
     }
 
     /**
@@ -57,9 +58,10 @@ public class FrmDeleteUser extends javax.swing.JFrame {
                 "Name", "Id", "Email", "Phone", "Address", "Age", "Password"
             }
         ));
+        tblUserFound.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(tblUserFound);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 660, 90));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 800, 90));
 
         btnFind.setText("Find");
         btnFind.addActionListener(new java.awt.event.ActionListener() {
@@ -91,7 +93,7 @@ public class FrmDeleteUser extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 676, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 817, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
