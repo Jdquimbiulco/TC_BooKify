@@ -34,8 +34,11 @@ public class FrmAddMovie extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         Toolkit miPantalla = Toolkit.getDefaultToolkit();
-        Image miIcono = miPantalla.getImage("src/Images/Icon02.png");
+        Image miIcono = miPantalla.getImage("src/Images/BookIco.png");
         setIconImage(miIcono);
+        btnReturn.setOpaque(false);
+        btnReturn.setContentAreaFilled(false);
+        btnReturn.setBorderPainted(false);
     }
 
     /**
@@ -48,7 +51,7 @@ public class FrmAddMovie extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel7 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btnReturn = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -67,11 +70,11 @@ public class FrmAddMovie extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel7.setText("Avaliable:");
 
-        jButton1.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Return.png"))); // NOI18N
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnReturn.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
+        btnReturn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Return.png"))); // NOI18N
+        btnReturn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnReturnActionPerformed(evt);
             }
         });
 
@@ -182,7 +185,7 @@ public class FrmAddMovie extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jButton3)
                         .addGap(48, 48, 48)
-                        .addComponent(jButton1)
+                        .addComponent(btnReturn)
                         .addGap(26, 26, 26))))
         );
         layout.setVerticalGroup(
@@ -220,19 +223,19 @@ public class FrmAddMovie extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton3)
                             .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(btnReturn, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap(10, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
         FrmStaffMain frmStaffMain = new FrmStaffMain();
         frmStaffMain.setVisible(true);
         this.setVisible(false);
 
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnReturnActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         Movie movie;
@@ -330,8 +333,8 @@ public class FrmAddMovie extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnReturn;
     private javax.swing.JComboBox<String> cmbAvailable;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;

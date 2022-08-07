@@ -4,15 +4,15 @@ package ec.edu.espe.Bookify.model;
  * @author QUILUMBAQUIN JAIRO,QUIMBIULCO JUAN,RAUL SILVA,CARLOS RIVERA, DCC0-ESPE: CODEX++
  */
 public class User {
-    private String UserName;
-    private int UserId;
-    private String UserEmail;
-    private int UserPhone;
-    private String UserAddress; 
-    private int UserAge;
-    private int UserPassword;
-    int Pasuwu;
-    int Password = 1945;
+    private String name;
+    private int id;
+    private String email;
+    private int phone;
+    private String address; 
+    private int age;
+    private int password;
+    
+   
     
     
    
@@ -21,84 +21,95 @@ public class User {
     }
 
     public User(String name, int id, String userEmail, int userPhone, String userAddress, int age, int password) {
-        this.UserName = name;
-        this.UserId = id;
-        this.UserEmail = userEmail;
-        this.UserPhone = userPhone;
-        this.UserAddress = userAddress;
-        this.UserAge = age;
-        this.UserPassword = password;
+        this.name = name;
+        this.id = id;
+        this.email = userEmail;
+        this.phone = userPhone;
+        this.address = userAddress;
+        this.age = age;
+        this.password = password;
     }
 
 
 
 
-    public String getUserName() {
-        return UserName;
+    public String getName() {
+        return name;
     }
 
-    public void setUserName(String UserName) {
-        this.UserName = UserName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public int getUserId() {
-        return UserId;
+    public int getId() {
+        return id;
     }
 
-    public void setUserId(int UserId) {
-        this.UserId = UserId;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getUserEmail() {
-        return UserEmail;
+    public String getEmail() {
+        return email;
     }
 
-    public void setUserEmail(String UserEmail) {
-        this.UserEmail = UserEmail;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public int getUserPhone() {
-        return UserPhone;
+    public int getPhone() {
+        return phone;
     }
 
-    public void setUserPhone(int UserPhone) {
-        this.UserPhone = UserPhone;
+    public void setPhone(int phone) {
+        this.phone = phone;
     }
 
-    public int getUserAge() {
-        return UserAge;
+    public int getAge() {
+        return age;
     }
 
-    public void setUserAge(int UserAge) {
-        this.UserAge = UserAge;
+    public void setAge(int age) {
+        this.age = age;
     }
 
-    public int getUserPassword() {
-        return UserPassword;
+    public int getPassword() {
+        return password;
     }
 
-    public void setUserPassword(int UserPassword) {
-        this.UserPassword = UserPassword;
+    public void setPassword(int password) {
+        this.password = password;
     }
 
-    
-    public String UserData() {
-        return "User:" + "name=" + getUserName() + ", id=" + getUserId() + ", userEmail=" + getUserEmail() + ", userPhone=" + getUserPhone() + ", userAddress=" + getUserAddress() + ", age=" + getUserAge() + ", password=" + getUserPassword() + '\n';
-    }
-
-    
     /**
-     * @param UserAddress the UserAddress to set
+     * @param address the address to set
      */
-    public void setUserAddress(String UserAddress) {
-        this.UserAddress = UserAddress;
+    public void setAddress(String address) {
+        this.address = address;
     }
     
     /**
-     * @return the UserAddress
+     * @return the address
      */
-    public String getUserAddress() {
-        return UserAddress;
+    public String getAddress() {
+        return address;
     }
+    
+    public String[] atributeNames() {
+        String[] Names={"Name","Id","Email","Phone","Address","Age", "Password"};
+        return Names;
+    }
+
+    
+    
+    @Override
+    public String toString() {
+        return getName()+","+getId()+","+getEmail()+","+ getPhone() + "," + getAddress() + "," + getAge() + "," + getPassword();
+    }
+    
+    
+    
+    
+    
         
 }

@@ -19,7 +19,7 @@ public class FrmReturnMovie extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         Toolkit miPantalla = Toolkit.getDefaultToolkit();
-        Image miIcono = miPantalla.getImage("src/Images/Icon02.png");
+        Image miIcono = miPantalla.getImage("src/Images/BookIco.png");
         setIconImage(miIcono);
         btnReturn.setOpaque(false);
         btnReturn.setContentAreaFilled(false);
@@ -61,7 +61,7 @@ public class FrmReturnMovie extends javax.swing.JFrame {
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, -1, -1));
 
         jButton1.setFont(new java.awt.Font("Segoe UI Emoji", 1, 14)); // NOI18N
-        jButton1.setText("Return");
+        jButton1.setText("Return Movie");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);

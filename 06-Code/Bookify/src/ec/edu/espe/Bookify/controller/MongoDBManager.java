@@ -1,16 +1,17 @@
 package ec.edu.espe.Bookify.controller;
 
+import com.google.gson.Gson;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
+import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.model.Filters;
 import ec.edu.espe.Bookify.model.Movie;
 import ec.edu.espe.Bookify.model.Book;
 
-import ec.edu.espe.Bookify.model.User;
+import java.util.ArrayList;
 import org.bson.Document;
-
-
 
 /**
  *
@@ -22,12 +23,12 @@ public class MongoDBManager {
     MongoDatabase bookifyDB;
     MongoCollection bookifyCollection;
     Document document;
-    
+
     public MongoDatabase EstablishConnection() {
         MongoClientURI clientURI;
         MongoClient client;
         MongoDatabase userdatabase;
-            
+
         String uri = "mongodb+srv://jdquimbiulco:jdquimbiulco@cluster0.vv6hc.mongodb.net/?retryWrites=true&w=majority";
 
         clientURI = new MongoClientURI(uri);
@@ -40,87 +41,101 @@ public class MongoDBManager {
 
     }
 
-    
-    public void CreateUser(User user) {
+    public void CreateMovie(Movie movie) {
 
-        
         bookifyDB = EstablishConnection();
-        bookifyCollection = bookifyDB.getCollection("Users");
+        bookifyCollection = bookifyDB.getCollection("Movies");
 
         document = new Document();
-        
-        document.append("Name", user.getUserName());
-        document.append("Id", user.getUserId());
-        document.append("Email", user.getUserEmail());
-        document.append("Phone", user.getUserPhone());
-        document.append("Addres", user.getUserAddress());
-        document.append("Age", user.getUserAge());
-        document.append("Password", user.getUserPassword());
+
+        document.append("Title", movie.getTitle());
+        document.append("Genre", movie.getGenre());
+        document.append("Idiom", movie.getIdiom());
+        document.append("Available", movie.isAvailable());
 
         bookifyCollection.insertOne(document);
 
     }
 
-
-      public void CreateMovie(Movie movie) {
-
-        
-        bookifyDB = EstablishConnection();
-        bookifyCollection = bookifyDB.getCollection("Movies");
-
-        document = new Document();
-        
-        document.append("Title", movie.getTitle());
-        document.append("Genre", movie.getGenre());
-        document.append("Idiom", movie.getIdiom());
-        document.append("Available", movie.isAvailable());
-        
-        bookifyCollection.insertOne(document);
-
-
-
-    }  
-
-
-
-
     public void CreateBook(Book book) {
 
-        
         bookifyDB = EstablishConnection();
         bookifyCollection = bookifyDB.getCollection("Books");
 
         document = new Document();
-        
+
         document.append("Title", book.getTitle());
         document.append("Author", book.getAuthor());
         document.append("Publisher", book.getPublisher());
         document.append("ISBN", book.getISBN());
         document.append("Avaliable", book.isAvailable());
 
-
         bookifyCollection.insertOne(document);
 
     }
-    
-       
-    public void CreateBill(User user,Book book, int bill) {
 
-        
+    public ArrayList ReadBookifyDB(Object bookifyObject,String collection) {
+
         bookifyDB = EstablishConnection();
-        bookifyCollection = bookifyDB.getCollection("Bills");
+        bookifyCollection = bookifyDB.getCollection(collection);
+        FindIterable<Document> iterDoc;
+        ArrayList<Object> objects;
+        Gson gson;
+        
+        iterDoc = bookifyCollection.find();
+        objects = new ArrayList<>();
+        gson= new Gson();
+        
+        
+        for (Document doc : iterDoc) {
+            objects.add(gson.fromJson(doc.toJson(), bookifyObject.getClass()));
+        }
+        
+                
+        return objects;
 
-        document = new Document();
-        
-        document.append("Name", user.getUserName());
-        document.append("Id", user.getUserId());
-        document.append("Bill", bill);
-        document.append("Book", book.getTitle());
-        
+    }
+
+    public void CreateBookifyObject(Object bookifyObject, String collection) {
+        bookifyDB = EstablishConnection();
+        bookifyCollection = bookifyDB.getCollection(collection);
+        Gson gson = new Gson();
+
+        document = Document.parse(gson.toJson(bookifyObject));
+        System.out.println("Succesfull convertion");
+
         bookifyCollection.insertOne(document);
+        System.out.println("Succesfull added");
 
     }
     
-      
+    
+    public void UpdateBookifyObject(String collection,String atributeToFind,Object tofind,String atributetoChange,Object toChange){
+    
+        bookifyDB = EstablishConnection();
+        bookifyCollection = bookifyDB.getCollection(collection);
+        Document found;
+        Document update;
+        Document setUpdate;
+        
+        document= new Document(atributeToFind,tofind);
+        found=(Document) bookifyCollection.find(document).first();
+        
+        if(found!=null){
+            update= new Document(atributetoChange,toChange);
+            setUpdate= new Document("$set",update);
+            bookifyCollection.updateOne(found, setUpdate);
+        }
+        
+    }
+    
+    public void DelteBookifyObject(String collection,String atribute,Object findtoDelete){
+        bookifyDB = EstablishConnection();
+        bookifyCollection = bookifyDB.getCollection(collection);
+        bookifyCollection.deleteOne(Filters.eq(atribute.toLowerCase(),findtoDelete));        
+        System.out.println("Succesfully Deleted");
+    
+    
+    }
 
 }

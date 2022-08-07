@@ -19,7 +19,7 @@ public class FrmRentBook extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         Toolkit miPantalla = Toolkit.getDefaultToolkit();
-        Image miIcono = miPantalla.getImage("src/Images/Icon02.png");
+        Image miIcono = miPantalla.getImage("src/Images/BookIco.png");
         setIconImage(miIcono);
         setTitle("Borrow book");
     }

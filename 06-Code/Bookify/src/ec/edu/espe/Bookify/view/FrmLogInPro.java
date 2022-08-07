@@ -24,7 +24,7 @@ public class FrmLogInPro extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         Toolkit miPantalla = Toolkit.getDefaultToolkit();
-        Image miIcono = miPantalla.getImage("src/Images/Icon02.png");
+        Image miIcono = miPantalla.getImage("src/Images/BookIco.png");
         setIconImage(miIcono);
         btnReturn.setOpaque(false);
         btnReturn.setContentAreaFilled(false);

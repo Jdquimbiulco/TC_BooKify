@@ -23,7 +23,7 @@ public class FrmUserMain extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         Toolkit miPantalla = Toolkit.getDefaultToolkit();
-        Image miIcono = miPantalla.getImage("src/Images/Icon02.png");
+        Image miIcono = miPantalla.getImage("src/Images/BookIco.png");
         setIconImage(miIcono);
         btnReturn.setOpaque(false);
         btnReturn.setContentAreaFilled(false);
@@ -66,6 +66,11 @@ public class FrmUserMain extends javax.swing.JFrame {
         jButton2.setFont(new java.awt.Font("Bookman Old Style", 1, 24)); // NOI18N
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Donate.png"))); // NOI18N
         jButton2.setText("Donate");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 340, 300, -1));
 
         jButton3.setBackground(new java.awt.Color(255, 102, 102));
@@ -149,16 +154,22 @@ public class FrmUserMain extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        FrmRentBook frmRentBook = new FrmRentBook();
-        frmRentBook.setVisible(true);
+        FrmSearchBook frmSearchBook = new FrmSearchBook();
+        frmSearchBook.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        FrmRentMovie frmRentMovie = new FrmRentMovie();
-        frmRentMovie.setVisible(true);
+        FrmSearchMovie frmSearchMovie = new FrmSearchMovie();
+        frmSearchMovie.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        FrmDonatePro frmDonatePro = new FrmDonatePro();
+        frmDonatePro.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
