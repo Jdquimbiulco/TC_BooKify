@@ -1,9 +1,5 @@
 package ec.edu.espe.Bookify.view;
 
-<<<<<<< HEAD
-
-=======
->>>>>>> bed99842f75b624771bec27e9badc22d9129996c
 import ec.edu.espe.Bookify.controller.InputValidation;
 import ec.edu.espe.Bookify.controller.MongoDBManager;
 import ec.edu.espe.Bookify.model.User;
@@ -31,15 +27,9 @@ public class FrmUser1 extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         Toolkit miPantalla = Toolkit.getDefaultToolkit();
-<<<<<<< HEAD
-        Image miIcono = miPantalla.getImage("src/Images/Icon02.png");
-        setIconImage(miIcono);
-
-=======
         Image miIcono = miPantalla.getImage("src/Images/BookIco.png");
         setIconImage(miIcono);
     
->>>>>>> bed99842f75b624771bec27e9badc22d9129996c
     }
 
     /**
@@ -55,10 +45,7 @@ public class FrmUser1 extends javax.swing.JFrame {
         jList1 = new javax.swing.JList<>();
         jScrollPane2 = new javax.swing.JScrollPane();
         jList2 = new javax.swing.JList<>();
-<<<<<<< HEAD
-=======
         jInternalFrame1 = new javax.swing.JInternalFrame();
->>>>>>> bed99842f75b624771bec27e9badc22d9129996c
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         TFuserId = new javax.swing.JTextField();
@@ -100,105 +87,33 @@ public class FrmUser1 extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(jList2);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         jInternalFrame1.setVisible(true);
 
->>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
-=======
-        jInternalFrame1.setVisible(true);
-
->>>>>>> bed99842f75b624771bec27e9badc22d9129996c
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        jLabel3.setText("Id");
-<<<<<<< HEAD
-
-        jLabel4.setText("Email");
-
-        jLabel5.setText("Phone");
-
-        jLabel6.setText("Addres");
-
-        jLabel7.setText("Age");
-
-        jLabel8.setText("Password");
-
-        TFuserName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TFuserNameActionPerformed(evt);
-            }
-        });
-        TFuserName.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                TFuserNameKeyPressed(evt);
-            }
-        });
-=======
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, -1, -1));
->>>>>>> 00c294ffa36f2ed6ca9209182446338793d5b0ca
-=======
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/UserIdWhitelbl (1).png"))); // NOI18N
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 60, 30));
->>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
-=======
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/UserIdWhitelbl (1).png"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 60, 30));
->>>>>>> bed99842f75b624771bec27e9badc22d9129996c
 
         TFuserId.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 TFuserIdKeyPressed(evt);
             }
         });
-<<<<<<< HEAD
-<<<<<<< HEAD
-        jPanel1.add(TFuserId, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 104, 190, -1));
-
-        jLabel1.setFont(new java.awt.Font("Wide Latin", 0, 24)); // NOI18N
-        jLabel1.setText("New User");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, -1, -1));
-=======
-=======
->>>>>>> bed99842f75b624771bec27e9badc22d9129996c
         jPanel1.add(TFuserId, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 120, 190, -1));
 
         jLabel1.setFont(new java.awt.Font("Wide Latin", 0, 24)); // NOI18N
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Publicación gráfica cuadrada 800x800 px (2).png"))); // NOI18N
         jLabel1.setText("New User");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 180, 70));
-<<<<<<< HEAD
->>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
-=======
->>>>>>> bed99842f75b624771bec27e9badc22d9129996c
 
         TFuserName.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 TFuserNameKeyPressed(evt);
             }
         });
-<<<<<<< HEAD
-<<<<<<< HEAD
-        jPanel1.add(TFuserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 64, 316, -1));
-
-        jLabel2.setText("Name");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, -1, -1));
-
-        jLabel4.setText("Email");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, -1, -1));
-        jPanel1.add(TFemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 144, 190, -1));
-
-        jLabel5.setText("Phone");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 190, -1, -1));
-=======
-=======
->>>>>>> bed99842f75b624771bec27e9badc22d9129996c
         jPanel1.add(TFuserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 80, 316, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/UserNameWhitelbl (1).png"))); // NOI18N
@@ -210,94 +125,43 @@ public class FrmUser1 extends javax.swing.JFrame {
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/UserPhoneWhite (1).png"))); // NOI18N
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 70, 30));
-<<<<<<< HEAD
->>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
-=======
->>>>>>> bed99842f75b624771bec27e9badc22d9129996c
 
         TFphone.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 TFphoneKeyPressed(evt);
             }
         });
-<<<<<<< HEAD
-<<<<<<< HEAD
-        jPanel1.add(TFphone, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 184, 190, -1));
-
-        jLabel6.setText("Addres");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, -1, -1));
-=======
-=======
->>>>>>> bed99842f75b624771bec27e9badc22d9129996c
         jPanel1.add(TFphone, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 200, 190, -1));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/UserAddressWhitelbl (1).png"))); // NOI18N
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, 90, 40));
-<<<<<<< HEAD
->>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
-=======
->>>>>>> bed99842f75b624771bec27e9badc22d9129996c
 
         TFAddres.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 TFAddresKeyPressed(evt);
             }
         });
-<<<<<<< HEAD
-<<<<<<< HEAD
-        jPanel1.add(TFAddres, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 224, 190, -1));
-
-        jLabel7.setText("Age");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, -1, -1));
-=======
-=======
->>>>>>> bed99842f75b624771bec27e9badc22d9129996c
         jPanel1.add(TFAddres, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 240, 190, -1));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/UserAgeWhitelbl (1).png"))); // NOI18N
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, 60, 30));
-<<<<<<< HEAD
->>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
-=======
->>>>>>> bed99842f75b624771bec27e9badc22d9129996c
 
         TFage.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 TFageKeyPressed(evt);
             }
         });
-<<<<<<< HEAD
-<<<<<<< HEAD
-        jPanel1.add(TFage, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 264, 190, -1));
-
-        jLabel8.setText("Password");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 310, -1, -1));
-=======
-=======
->>>>>>> bed99842f75b624771bec27e9badc22d9129996c
         jPanel1.add(TFage, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, 190, -1));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/UserPasswordWhitelbl (1).png"))); // NOI18N
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 320, 100, 30));
-<<<<<<< HEAD
->>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
-=======
->>>>>>> bed99842f75b624771bec27e9badc22d9129996c
 
         TFpassword.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 TFpasswordKeyPressed(evt);
             }
         });
-<<<<<<< HEAD
-<<<<<<< HEAD
-        jPanel1.add(TFpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 304, 190, -1));
-=======
         jPanel1.add(TFpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, 190, -1));
->>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
-=======
-        jPanel1.add(TFpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, 190, -1));
->>>>>>> bed99842f75b624771bec27e9badc22d9129996c
 
         btnAddUser.setText("Add User");
         btnAddUser.addActionListener(new java.awt.event.ActionListener() {
@@ -305,15 +169,7 @@ public class FrmUser1 extends javax.swing.JFrame {
                 btnAddUserActionPerformed(evt);
             }
         });
-<<<<<<< HEAD
-<<<<<<< HEAD
-        jPanel1.add(btnAddUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 340, -1, -1));
-=======
         jPanel1.add(btnAddUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 380, -1, -1));
->>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
-=======
-        jPanel1.add(btnAddUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 380, -1, -1));
->>>>>>> bed99842f75b624771bec27e9badc22d9129996c
 
         cmbxEmails.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "@gmail.com", "@yahoo.com", "@hotmail.com", "@outlook.com" }));
         cmbxEmails.addActionListener(new java.awt.event.ActionListener() {
@@ -321,15 +177,7 @@ public class FrmUser1 extends javax.swing.JFrame {
                 cmbxEmailsActionPerformed(evt);
             }
         });
-<<<<<<< HEAD
-<<<<<<< HEAD
-        jPanel1.add(cmbxEmails, new org.netbeans.lib.awtextra.AbsoluteConstraints(368, 144, 108, -1));
-=======
         jPanel1.add(cmbxEmails, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 160, 108, -1));
->>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
-=======
-        jPanel1.add(cmbxEmails, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 160, 108, -1));
->>>>>>> bed99842f75b624771bec27e9badc22d9129996c
 
         jToggleButton1.setText("Return");
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -337,33 +185,6 @@ public class FrmUser1 extends javax.swing.JFrame {
                 jToggleButton1ActionPerformed(evt);
             }
         });
-<<<<<<< HEAD
-<<<<<<< HEAD
-        jPanel1.add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 340, -1, -1));
-
-        lblErrorName.setText("_");
-        jPanel1.add(lblErrorName, new org.netbeans.lib.awtextra.AbsoluteConstraints(494, 67, -1, -1));
-
-        lblErrorId.setText("_");
-        jPanel1.add(lblErrorId, new org.netbeans.lib.awtextra.AbsoluteConstraints(368, 107, -1, -1));
-
-        lblErrorPhone.setText("_");
-        jPanel1.add(lblErrorPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(368, 187, -1, -1));
-
-        lblErrorAddres.setText("-");
-        jPanel1.add(lblErrorAddres, new org.netbeans.lib.awtextra.AbsoluteConstraints(368, 227, -1, -1));
-
-        lblErrorPassword.setText("-");
-        jPanel1.add(lblErrorPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(368, 267, -1, -1));
-
-        lblErrorAge.setText("_");
-        jPanel1.add(lblErrorAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(368, 300, -1, -1));
-
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/RegisterBakcgroundImage.jpg"))); // NOI18N
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1, 3, 560, 370));
-=======
-=======
->>>>>>> bed99842f75b624771bec27e9badc22d9129996c
         jPanel1.add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 380, -1, -1));
 
         lblErrorName.setText("_");
@@ -386,10 +207,6 @@ public class FrmUser1 extends javax.swing.JFrame {
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/VACA_PROYECTO.jpg"))); // NOI18N
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 430));
-<<<<<<< HEAD
->>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
-=======
->>>>>>> bed99842f75b624771bec27e9badc22d9129996c
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
@@ -454,20 +271,14 @@ public class FrmUser1 extends javax.swing.JFrame {
         input.NumberValidation(TFpassword, evt, lblErrorPassword, 9);
     }//GEN-LAST:event_TFpasswordKeyPressed
 
-<<<<<<< HEAD
-=======
 
->>>>>>> bed99842f75b624771bec27e9badc22d9129996c
     private void TFuserNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TFuserNameActionPerformed
    
     }//GEN-LAST:event_TFuserNameActionPerformed
 
-<<<<<<< HEAD
-=======
     /**
      * @param args the command line arguments
      */
->>>>>>> bed99842f75b624771bec27e9badc22d9129996c
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -510,14 +321,7 @@ public class FrmUser1 extends javax.swing.JFrame {
     private javax.swing.JTextField TFuserName;
     private javax.swing.JButton btnAddUser;
     private javax.swing.JComboBox<String> cmbxEmails;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     private javax.swing.JInternalFrame jInternalFrame1;
->>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
-=======
-    private javax.swing.JInternalFrame jInternalFrame1;
->>>>>>> bed99842f75b624771bec27e9badc22d9129996c
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -546,10 +350,6 @@ public class FrmUser1 extends javax.swing.JFrame {
         user= new User();
         MongoDBManager saveUserdata;
         saveUserdata = new MongoDBManager();
-<<<<<<< HEAD
-        
-=======
->>>>>>> bed99842f75b624771bec27e9badc22d9129996c
         user.setName(TFuserName.getText());
         user.setId(Integer.parseInt(TFuserId.getText()));
         user.setEmail(TFemail.getText()+ cmbxEmails.getSelectedItem());
