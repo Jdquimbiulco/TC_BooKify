@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package ec.edu.espe.Bookify.view;
 
 import ec.edu.espe.Bookify.controller.InputValidation;
@@ -6,7 +5,7 @@ import ec.edu.espe.Bookify.controller.MongoDBManager;
 import ec.edu.espe.Bookify.model.User;
 import java.awt.Image;
 import java.awt.Toolkit;
-=======
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -21,7 +20,7 @@ import java.awt.Color;
 import java.awt.Image;
 import java.awt.Toolkit;
 import javax.swing.BorderFactory;
->>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
+
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
