@@ -50,49 +50,35 @@ public class FrmAddMovie extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel7 = new javax.swing.JLabel();
-        btnReturn = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        lblAddMovie = new javax.swing.JLabel();
+        lblTitle = new javax.swing.JLabel();
         txtMovieTitle = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
+        lblGender = new javax.swing.JLabel();
         txtMovieGender = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
+        lblIdiom = new javax.swing.JLabel();
         txtMovieIdiom = new javax.swing.JTextField();
+        lblAvailable = new javax.swing.JLabel();
         cmbAvailable = new javax.swing.JComboBox<>();
+        jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        lblIconAddMovie = new javax.swing.JLabel();
-        lblIconAddMovie1 = new javax.swing.JLabel();
+        btnReturn = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+
+        jCheckBox1.setText("jCheckBox1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel7.setText("Avaliable:");
+        lblAddMovie.setFont(new java.awt.Font("Serif", 1, 24)); // NOI18N
+        lblAddMovie.setForeground(new java.awt.Color(255, 255, 255));
+        lblAddMovie.setText("Add Movie");
+        getContentPane().add(lblAddMovie, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, -1, -1));
 
-        btnReturn.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
-        btnReturn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Return.png"))); // NOI18N
-        btnReturn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnReturnActionPerformed(evt);
-            }
-        });
-
-        jButton2.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/AddMovieImage.png"))); // NOI18N
-        jButton2.setText("Add");
-        jButton2.setToolTipText("");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
-        jLabel1.setFont(new java.awt.Font("Serif", 1, 24)); // NOI18N
-        jLabel1.setText("Add Movie");
-
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel2.setText("Title:");
+        lblTitle.setFont(new java.awt.Font("Serif", 1, 18)); // NOI18N
+        lblTitle.setForeground(new java.awt.Color(204, 204, 204));
+        lblTitle.setText("Title:");
+        getContentPane().add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
 
         txtMovieTitle.setToolTipText("Enter the title of the movie");
         txtMovieTitle.addActionListener(new java.awt.event.ActionListener() {
@@ -105,19 +91,30 @@ public class FrmAddMovie extends javax.swing.JFrame {
                 txtMovieTitleKeyTyped(evt);
             }
         });
+        getContentPane().add(txtMovieTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 80, 230, -1));
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel4.setText("Gender:");
+        lblGender.setFont(new java.awt.Font("Serif", 1, 18)); // NOI18N
+        lblGender.setForeground(new java.awt.Color(204, 204, 204));
+        lblGender.setText("Gender:");
+        getContentPane().add(lblGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
 
         txtMovieGender.setToolTipText("-Enter the gender of the movie.");
+        txtMovieGender.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtMovieGenderActionPerformed(evt);
+            }
+        });
         txtMovieGender.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtMovieGenderKeyTyped(evt);
             }
         });
+        getContentPane().add(txtMovieGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, 230, -1));
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel5.setText("Idiom:");
+        lblIdiom.setFont(new java.awt.Font("Serif", 1, 18)); // NOI18N
+        lblIdiom.setForeground(new java.awt.Color(204, 204, 204));
+        lblIdiom.setText("Idiom:");
+        getContentPane().add(lblIdiom, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
 
         txtMovieIdiom.setToolTipText("-Enter the idiom of the movie.");
         txtMovieIdiom.addActionListener(new java.awt.event.ActionListener() {
@@ -130,9 +127,27 @@ public class FrmAddMovie extends javax.swing.JFrame {
                 txtMovieIdiomKeyTyped(evt);
             }
         });
+        getContentPane().add(txtMovieIdiom, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 230, -1));
+
+        lblAvailable.setFont(new java.awt.Font("Serif", 1, 18)); // NOI18N
+        lblAvailable.setForeground(new java.awt.Color(204, 204, 204));
+        lblAvailable.setText("Avaliable:");
+        getContentPane().add(lblAvailable, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, -1));
 
         cmbAvailable.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "YES", "NO" }));
         cmbAvailable.setToolTipText("");
+        getContentPane().add(cmbAvailable, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 200, -1, -1));
+
+        jButton2.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/AddMovieImage.png"))); // NOI18N
+        jButton2.setText("Add");
+        jButton2.setToolTipText("");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, -1, -1));
 
         jButton3.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/DeleteImage.png"))); // NOI18N
@@ -142,161 +157,93 @@ public class FrmAddMovie extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 270, -1, -1));
 
-        lblIconAddMovie.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/IconMovie.png"))); // NOI18N
+        btnReturn.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
+        btnReturn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Return.png"))); // NOI18N
+        btnReturn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReturnActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnReturn, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 260, -1, -1));
 
-        lblIconAddMovie1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/IconMovie_2.png"))); // NOI18N
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jLabel7))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cmbAvailable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtMovieIdiom, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel2))
-                                .addGap(32, 32, 32)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(txtMovieGender, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtMovieTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(lblIconAddMovie)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel1)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(lblIconAddMovie1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addContainerGap(67, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton3)
-                        .addGap(48, 48, 48)
-                        .addComponent(btnReturn)
-                        .addGap(26, 26, 26))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jLabel1))
-                            .addComponent(lblIconAddMovie, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(24, 24, 24))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(lblIconAddMovie1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(txtMovieTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(txtMovieGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
-                            .addComponent(txtMovieIdiom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(30, 30, 30)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel7)
-                            .addComponent(cmbAvailable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(32, 32, 32)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton3)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(btnReturn, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addContainerGap(10, Short.MAX_VALUE))
-        );
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/addMovieFondo.jpg"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 330));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
-        FrmStaffMain frmStaffMain = new FrmStaffMain();
-        frmStaffMain.setVisible(true);
-        this.setVisible(false);
+    private void txtMovieTitleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMovieTitleActionPerformed
 
-    }//GEN-LAST:event_btnReturnActionPerformed
+    }//GEN-LAST:event_txtMovieTitleActionPerformed
+
+    private void txtMovieTitleKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtMovieTitleKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtMovieTitleKeyTyped
+
+    private void txtMovieGenderKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtMovieGenderKeyTyped
+        char validar = evt.getKeyChar();
+        if(Character.isDigit(validar)){
+            getToolkit().beep();
+
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Ingresar solo letras \n Enter only letters");
+
+        }
+    }//GEN-LAST:event_txtMovieGenderKeyTyped
+
+    private void txtMovieIdiomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMovieIdiomActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtMovieIdiomActionPerformed
+
+    private void txtMovieIdiomKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtMovieIdiomKeyTyped
+        // TODO add your handling code here:
+        char validar = evt.getKeyChar();
+        if(Character.isDigit(validar)){
+            getToolkit().beep();
+
+            evt.consume();
+            JOptionPane.showMessageDialog(rootPane, "Ingresar solo letras \n Enter only letters");
+        }
+    }//GEN-LAST:event_txtMovieIdiomKeyTyped
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         Movie movie;
         MongoDBManager addMovie;
-        
+
         addMovie = new MongoDBManager();
         movie = new Movie();
         movie.setTitle(txtMovieTitle.getText());
         movie.setGenre(txtMovieGender.getText());
         movie.setIdiom(txtMovieIdiom.getText());
         movie.setAvailable(AvailableMovie(cmbAvailable.getSelectedItem().toString()));
-        
+
         addMovie.CreateMovie(movie);
-        JOptionPane.showMessageDialog(null, "Movie added succesfull");    
+        JOptionPane.showMessageDialog(null, "Movie added succesfull");
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    
-    
-    private void txtMovieIdiomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMovieIdiomActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtMovieIdiomActionPerformed
-
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-       int i = JOptionPane.showConfirmDialog(this,"Are you sure you want to delete the movie?");
-       if (i == 0){
-           JOptionPane.showMessageDialog(this,"The movie was deleted successfully");
-       } else if (i == 1){
-           JOptionPane.showMessageDialog(this,"The movie was not removed");
-       }
+        int i = JOptionPane.showConfirmDialog(this,"Are you sure you want to delete the movie?");
+        if (i == 0){
+            JOptionPane.showMessageDialog(this,"The movie was deleted successfully");
+        } else if (i == 1){
+            JOptionPane.showMessageDialog(this,"The movie was not removed");
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void txtMovieTitleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMovieTitleActionPerformed
-        
-    }//GEN-LAST:event_txtMovieTitleActionPerformed
+    private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
+        FrmStaffMain frmStaffMain = new FrmStaffMain();
+        frmStaffMain.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnReturnActionPerformed
 
-    private void txtMovieGenderKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtMovieGenderKeyTyped
-        char validar = evt.getKeyChar();
-        if(Character.isDigit(validar)){
-            getToolkit().beep();
-            
-            evt.consume();
-            JOptionPane.showMessageDialog(rootPane, "Ingresar solo letras \n Enter only letters");
-                    
-        }
-    }//GEN-LAST:event_txtMovieGenderKeyTyped
-
-    private void txtMovieTitleKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtMovieTitleKeyTyped
+    private void txtMovieGenderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMovieGenderActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtMovieTitleKeyTyped
+    }//GEN-LAST:event_txtMovieGenderActionPerformed
 
-    private void txtMovieIdiomKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtMovieIdiomKeyTyped
-        // TODO add your handling code here:
-                char validar = evt.getKeyChar();
-        if(Character.isDigit(validar)){
-            getToolkit().beep();
-            
-            evt.consume();
-            JOptionPane.showMessageDialog(rootPane, "Ingresar solo letras \n Enter only letters");            
-        }
-    }//GEN-LAST:event_txtMovieIdiomKeyTyped
-
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -323,6 +270,21 @@ public class FrmAddMovie extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(FrmAddMovie.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -337,13 +299,13 @@ public class FrmAddMovie extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cmbAvailable;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel lblIconAddMovie;
-    private javax.swing.JLabel lblIconAddMovie1;
+    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel lblAddMovie;
+    private javax.swing.JLabel lblAvailable;
+    private javax.swing.JLabel lblGender;
+    private javax.swing.JLabel lblIdiom;
+    private javax.swing.JLabel lblTitle;
     private javax.swing.JTextField txtMovieGender;
     private javax.swing.JTextField txtMovieIdiom;
     private javax.swing.JTextField txtMovieTitle;

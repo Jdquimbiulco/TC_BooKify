@@ -137,6 +137,15 @@ public class FrmAddBook extends javax.swing.JFrame {
         getContentPane().add(lbIsbn, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, 250, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Fondo 03.jpg"))); // NOI18N
+        jLabel3.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jLabel3AncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 320));
 
         pack();
@@ -178,6 +187,10 @@ public class FrmAddBook extends javax.swing.JFrame {
     private void txtIsbnKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtIsbnKeyPressed
         input.NumberValidation(txtIsbn, evt, lbIsbn, 13);
     }//GEN-LAST:event_txtIsbnKeyPressed
+
+    private void jLabel3AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jLabel3AncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel3AncestorAdded
 
     /**
      * @param args the command line arguments

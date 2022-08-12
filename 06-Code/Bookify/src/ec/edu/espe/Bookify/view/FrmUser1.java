@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package ec.edu.espe.Bookify.view;
 
 import ec.edu.espe.Bookify.controller.InputValidation;
@@ -6,7 +5,6 @@ import ec.edu.espe.Bookify.controller.MongoDBManager;
 import ec.edu.espe.Bookify.model.User;
 import java.awt.Image;
 import java.awt.Toolkit;
-=======
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -44,7 +42,6 @@ public class FrmUser1 extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         Toolkit miPantalla = Toolkit.getDefaultToolkit();
-<<<<<<< HEAD
         Image miIcono = miPantalla.getImage("src/Images/Icon02.png");
         setIconImage(miIcono);
         
@@ -54,12 +51,10 @@ public class FrmUser1 extends javax.swing.JFrame {
         
         
 
-=======
         Image miIcono = miPantalla.getImage("src/Images/BookIco.png");
         setIconImage(miIcono);
         //TFuserName.setBorder(BorderFactory.createLineBorder(Color.red));
     
->>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
     }
 
     /**
@@ -416,13 +411,10 @@ public class FrmUser1 extends javax.swing.JFrame {
         input.NumberValidation(TFpassword, evt, lblErrorPassword, 9);
     }//GEN-LAST:event_TFpasswordKeyPressed
 
-<<<<<<< HEAD
     private void TFuserNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TFuserNameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_TFuserNameActionPerformed
 
-=======
->>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
     /**
      * @param args the command line arguments
      */
@@ -501,7 +493,6 @@ public class FrmUser1 extends javax.swing.JFrame {
         MongoDBManager saveUserdata;
         saveUserdata = new MongoDBManager();
         
-<<<<<<< HEAD
         user.setUserName(TFuserName.getText());
         user.setUserId(Integer.parseInt(TFuserId.getText()));
         user.setUserEmail(TFemail.getText()+ cmbxEmails.getSelectedItem());
@@ -511,7 +502,6 @@ public class FrmUser1 extends javax.swing.JFrame {
         user.setUserPassword(Integer.parseInt(TFpassword.getText()));
         
         saveUserdata.CreateUser(user);
-=======
         user.setName(TFuserName.getText());
         user.setId(Integer.parseInt(TFuserId.getText()));
         user.setEmail(TFemail.getText()+ cmbxEmails.getSelectedItem());
@@ -521,8 +511,7 @@ public class FrmUser1 extends javax.swing.JFrame {
         user.setPassword(Integer.parseInt(TFpassword.getText()));
         
         saveUserdata.CreateBookifyObject(user, "Users");
->>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
-    
+
     }
     
     public void CleanTxtFields(){
