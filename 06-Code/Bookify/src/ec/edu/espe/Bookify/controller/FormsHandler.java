@@ -2,6 +2,7 @@ package ec.edu.espe.Bookify.controller;
 
 import ec.edu.espe.Bookify.view.FrmBookifyMainMenu;
 import java.util.ArrayList;
+import java.util.Arrays;
 import javax.swing.JFrame;
 import javax.swing.table.DefaultTableModel;
 
@@ -18,46 +19,82 @@ public class FormsHandler {
         DefaultTableModel model;
         ArrayList<String> addData;
         String[] getData;
-        String[] splitData;
         Object[][] setData;
-        int numberOfAtributes;
+        int[] tableSize;
 
-        addData = new ArrayList<>();
-
-        getData = rowData.get(0).toString().split(",");
-        numberOfAtributes = getData.length;
-        getData = new String[rowData.size()];
-
-        for (int i = 0; i < rowData.size(); i++) {
-            getData[i] = rowData.get(i).toString();
-
-        }
-
-        for (String ar : getData) {
-            splitData = ar.split(",");
-            for (String dat : splitData) {
-                addData.add(dat);
-            }
-        }
-
-        
-        setData = new String[rowData.size()][numberOfAtributes];
-        int counter = 0;
-
-        for (int i = 0; i <rowData.size(); i++) {
-
-            for (int j = 0; j < numberOfAtributes; j++) {
-                setData[i][j] = addData.get(j + counter);
-            }
-            counter +=numberOfAtributes;
-            
-        }
-        
+        tableSize = getTableSize(rowData);
+        getData = createArrayWithData(rowData);
+        addData = rowToArrayList(getData);
+        setData = ConvertDataTosetIntable(addData, tableSize);
 
         model = new DefaultTableModel(setData, columHeaders);
         return model;
 
     }
     
-    
+
+    public String[] createArrayWithData(ArrayList rowData) {
+
+        String[] getData;
+
+        getData = new String[rowData.size()];
+        for (int i = 0; i < rowData.size(); i++) {
+            getData[i] = rowData.get(i).toString();
+
+        }
+
+        return getData;
+    }
+
+    public int[] getTableSize(ArrayList rowData) {
+
+        int[] tableSize = new int[2];
+        String[] getNumberOfColumns;
+        int rows;
+        int columns;
+
+        getNumberOfColumns = rowData.get(0).toString().split(",");
+        columns = getNumberOfColumns.length;
+        rows = rowData.size();
+        
+        tableSize[0] = rows;
+        tableSize[1] = columns;
+
+        return tableSize;
+    }
+
+    public ArrayList rowToArrayList(String[] getData) {
+        ArrayList<String> addData;
+        String[] splitData;
+        addData = new ArrayList<>();
+
+        for (String ar : getData) {
+            splitData = ar.split(",");
+            addData.addAll(Arrays.asList(splitData));
+        }
+
+        return addData;
+    }
+
+    public Object[][] ConvertDataTosetIntable(ArrayList addData, int[] tableSize) {
+
+        int columns;
+        int rows;
+        Object[][] setData;
+
+        rows = tableSize[0];
+        columns = tableSize[1];
+        setData = new String[rows][columns];
+        int counter = 0;
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                setData[i][j] = addData.get(j + counter);
+            }
+            counter += columns;
+        }
+
+        return setData;
+    }
+
 }

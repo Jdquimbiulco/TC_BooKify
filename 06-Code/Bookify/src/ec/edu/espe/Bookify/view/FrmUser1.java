@@ -5,6 +5,11 @@ import ec.edu.espe.Bookify.controller.MongoDBManager;
 import ec.edu.espe.Bookify.model.User;
 import java.awt.Image;
 import java.awt.Toolkit;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+>>>>>>> bec7b06e32b100012ec12c1bb831aaf6bb5acf60
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -19,7 +24,13 @@ import java.awt.Color;
 import java.awt.Image;
 import java.awt.Toolkit;
 import javax.swing.BorderFactory;
+<<<<<<< HEAD
 >>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
+=======
+
+=======
+>>>>>>> 9578ba831e7536bcb9e51b4bd68be453f7e33010
+>>>>>>> bec7b06e32b100012ec12c1bb831aaf6bb5acf60
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -42,6 +53,11 @@ public class FrmUser1 extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         Toolkit miPantalla = Toolkit.getDefaultToolkit();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> bec7b06e32b100012ec12c1bb831aaf6bb5acf60
         Image miIcono = miPantalla.getImage("src/Images/Icon02.png");
         setIconImage(miIcono);
         
@@ -51,10 +67,22 @@ public class FrmUser1 extends javax.swing.JFrame {
         
         
 
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 9578ba831e7536bcb9e51b4bd68be453f7e33010
+>>>>>>> bec7b06e32b100012ec12c1bb831aaf6bb5acf60
         Image miIcono = miPantalla.getImage("src/Images/BookIco.png");
         setIconImage(miIcono);
-        //TFuserName.setBorder(BorderFactory.createLineBorder(Color.red));
     
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
+=======
+>>>>>>> 9578ba831e7536bcb9e51b4bd68be453f7e33010
+>>>>>>> bec7b06e32b100012ec12c1bb831aaf6bb5acf60
     }
 
     /**
@@ -71,9 +99,20 @@ public class FrmUser1 extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jList2 = new javax.swing.JList<>();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         jInternalFrame1 = new javax.swing.JInternalFrame();
 >>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        jInternalFrame1 = new javax.swing.JInternalFrame();
+>>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
+=======
+        jInternalFrame1 = new javax.swing.JInternalFrame();
+>>>>>>> 9578ba831e7536bcb9e51b4bd68be453f7e33010
+>>>>>>> bec7b06e32b100012ec12c1bb831aaf6bb5acf60
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         TFuserId = new javax.swing.JTextField();
@@ -116,15 +155,32 @@ public class FrmUser1 extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jList2);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         jInternalFrame1.setVisible(true);
 
 >>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        jInternalFrame1.setVisible(true);
+
+>>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
+=======
+        jInternalFrame1.setVisible(true);
+
+>>>>>>> 9578ba831e7536bcb9e51b4bd68be453f7e33010
+>>>>>>> bec7b06e32b100012ec12c1bb831aaf6bb5acf60
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> bec7b06e32b100012ec12c1bb831aaf6bb5acf60
 <<<<<<< HEAD
         jLabel3.setText("Id");
 <<<<<<< HEAD
@@ -153,9 +209,19 @@ public class FrmUser1 extends javax.swing.JFrame {
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, -1, -1));
 >>>>>>> 00c294ffa36f2ed6ca9209182446338793d5b0ca
 =======
+<<<<<<< HEAD
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/UserIdWhitelbl (1).png"))); // NOI18N
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 60, 30));
 >>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
+=======
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/UserIdWhitelbl (1).png"))); // NOI18N
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 60, 30));
+>>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
+=======
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/UserIdWhitelbl (1).png"))); // NOI18N
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 60, 30));
+>>>>>>> 9578ba831e7536bcb9e51b4bd68be453f7e33010
+>>>>>>> bec7b06e32b100012ec12c1bb831aaf6bb5acf60
 
         TFuserId.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -163,25 +229,45 @@ public class FrmUser1 extends javax.swing.JFrame {
             }
         });
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> bec7b06e32b100012ec12c1bb831aaf6bb5acf60
+<<<<<<< HEAD
         jPanel1.add(TFuserId, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 104, 190, -1));
 
         jLabel1.setFont(new java.awt.Font("Wide Latin", 0, 24)); // NOI18N
         jLabel1.setText("New User");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, -1, -1));
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 9578ba831e7536bcb9e51b4bd68be453f7e33010
+>>>>>>> bec7b06e32b100012ec12c1bb831aaf6bb5acf60
         jPanel1.add(TFuserId, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 120, 190, -1));
 
         jLabel1.setFont(new java.awt.Font("Wide Latin", 0, 24)); // NOI18N
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Publicación gráfica cuadrada 800x800 px (2).png"))); // NOI18N
         jLabel1.setText("New User");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 180, 70));
+<<<<<<< HEAD
 >>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
+=======
+<<<<<<< HEAD
+>>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
+=======
+>>>>>>> 9578ba831e7536bcb9e51b4bd68be453f7e33010
+>>>>>>> bec7b06e32b100012ec12c1bb831aaf6bb5acf60
 
         TFuserName.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 TFuserNameKeyPressed(evt);
             }
         });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> bec7b06e32b100012ec12c1bb831aaf6bb5acf60
 <<<<<<< HEAD
         jPanel1.add(TFuserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 64, 316, -1));
 
@@ -195,6 +281,11 @@ public class FrmUser1 extends javax.swing.JFrame {
         jLabel5.setText("Phone");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 190, -1, -1));
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 9578ba831e7536bcb9e51b4bd68be453f7e33010
+>>>>>>> bec7b06e32b100012ec12c1bb831aaf6bb5acf60
         jPanel1.add(TFuserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 80, 316, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/UserNameWhitelbl (1).png"))); // NOI18N
@@ -206,7 +297,14 @@ public class FrmUser1 extends javax.swing.JFrame {
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/UserPhoneWhite (1).png"))); // NOI18N
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 70, 30));
+<<<<<<< HEAD
 >>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
+=======
+<<<<<<< HEAD
+>>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
+=======
+>>>>>>> 9578ba831e7536bcb9e51b4bd68be453f7e33010
+>>>>>>> bec7b06e32b100012ec12c1bb831aaf6bb5acf60
 
         TFphone.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -214,16 +312,32 @@ public class FrmUser1 extends javax.swing.JFrame {
             }
         });
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> bec7b06e32b100012ec12c1bb831aaf6bb5acf60
+<<<<<<< HEAD
         jPanel1.add(TFphone, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 184, 190, -1));
 
         jLabel6.setText("Addres");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, -1, -1));
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 9578ba831e7536bcb9e51b4bd68be453f7e33010
+>>>>>>> bec7b06e32b100012ec12c1bb831aaf6bb5acf60
         jPanel1.add(TFphone, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 200, 190, -1));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/UserAddressWhitelbl (1).png"))); // NOI18N
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, 90, 40));
+<<<<<<< HEAD
 >>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
+=======
+<<<<<<< HEAD
+>>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
+=======
+>>>>>>> 9578ba831e7536bcb9e51b4bd68be453f7e33010
+>>>>>>> bec7b06e32b100012ec12c1bb831aaf6bb5acf60
 
         TFAddres.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -231,16 +345,32 @@ public class FrmUser1 extends javax.swing.JFrame {
             }
         });
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> bec7b06e32b100012ec12c1bb831aaf6bb5acf60
+<<<<<<< HEAD
         jPanel1.add(TFAddres, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 224, 190, -1));
 
         jLabel7.setText("Age");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, -1, -1));
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 9578ba831e7536bcb9e51b4bd68be453f7e33010
+>>>>>>> bec7b06e32b100012ec12c1bb831aaf6bb5acf60
         jPanel1.add(TFAddres, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 240, 190, -1));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/UserAgeWhitelbl (1).png"))); // NOI18N
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, 60, 30));
+<<<<<<< HEAD
 >>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
+=======
+<<<<<<< HEAD
+>>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
+=======
+>>>>>>> 9578ba831e7536bcb9e51b4bd68be453f7e33010
+>>>>>>> bec7b06e32b100012ec12c1bb831aaf6bb5acf60
 
         TFage.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -248,16 +378,32 @@ public class FrmUser1 extends javax.swing.JFrame {
             }
         });
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> bec7b06e32b100012ec12c1bb831aaf6bb5acf60
+<<<<<<< HEAD
         jPanel1.add(TFage, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 264, 190, -1));
 
         jLabel8.setText("Password");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 310, -1, -1));
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 9578ba831e7536bcb9e51b4bd68be453f7e33010
+>>>>>>> bec7b06e32b100012ec12c1bb831aaf6bb5acf60
         jPanel1.add(TFage, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, 190, -1));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/UserPasswordWhitelbl (1).png"))); // NOI18N
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 320, 100, 30));
+<<<<<<< HEAD
 >>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
+=======
+<<<<<<< HEAD
+>>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
+=======
+>>>>>>> 9578ba831e7536bcb9e51b4bd68be453f7e33010
+>>>>>>> bec7b06e32b100012ec12c1bb831aaf6bb5acf60
 
         TFpassword.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -265,10 +411,22 @@ public class FrmUser1 extends javax.swing.JFrame {
             }
         });
 <<<<<<< HEAD
+<<<<<<< HEAD
         jPanel1.add(TFpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 304, 190, -1));
 =======
         jPanel1.add(TFpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, 190, -1));
 >>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        jPanel1.add(TFpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 304, 190, -1));
+=======
+        jPanel1.add(TFpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, 190, -1));
+>>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
+=======
+        jPanel1.add(TFpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, 190, -1));
+>>>>>>> 9578ba831e7536bcb9e51b4bd68be453f7e33010
+>>>>>>> bec7b06e32b100012ec12c1bb831aaf6bb5acf60
 
         btnAddUser.setText("Add User");
         btnAddUser.addActionListener(new java.awt.event.ActionListener() {
@@ -277,10 +435,22 @@ public class FrmUser1 extends javax.swing.JFrame {
             }
         });
 <<<<<<< HEAD
+<<<<<<< HEAD
         jPanel1.add(btnAddUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 340, -1, -1));
 =======
         jPanel1.add(btnAddUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 380, -1, -1));
 >>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        jPanel1.add(btnAddUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 340, -1, -1));
+=======
+        jPanel1.add(btnAddUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 380, -1, -1));
+>>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
+=======
+        jPanel1.add(btnAddUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 380, -1, -1));
+>>>>>>> 9578ba831e7536bcb9e51b4bd68be453f7e33010
+>>>>>>> bec7b06e32b100012ec12c1bb831aaf6bb5acf60
 
         cmbxEmails.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "@gmail.com", "@yahoo.com", "@hotmail.com", "@outlook.com" }));
         cmbxEmails.addActionListener(new java.awt.event.ActionListener() {
@@ -289,10 +459,22 @@ public class FrmUser1 extends javax.swing.JFrame {
             }
         });
 <<<<<<< HEAD
+<<<<<<< HEAD
         jPanel1.add(cmbxEmails, new org.netbeans.lib.awtextra.AbsoluteConstraints(368, 144, 108, -1));
 =======
         jPanel1.add(cmbxEmails, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 160, 108, -1));
 >>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        jPanel1.add(cmbxEmails, new org.netbeans.lib.awtextra.AbsoluteConstraints(368, 144, 108, -1));
+=======
+        jPanel1.add(cmbxEmails, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 160, 108, -1));
+>>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
+=======
+        jPanel1.add(cmbxEmails, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 160, 108, -1));
+>>>>>>> 9578ba831e7536bcb9e51b4bd68be453f7e33010
+>>>>>>> bec7b06e32b100012ec12c1bb831aaf6bb5acf60
 
         jToggleButton1.setText("Return");
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -300,6 +482,10 @@ public class FrmUser1 extends javax.swing.JFrame {
                 jToggleButton1ActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> bec7b06e32b100012ec12c1bb831aaf6bb5acf60
 <<<<<<< HEAD
         jPanel1.add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 340, -1, -1));
 
@@ -324,6 +510,11 @@ public class FrmUser1 extends javax.swing.JFrame {
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/RegisterBakcgroundImage.jpg"))); // NOI18N
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1, 3, 560, 370));
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 9578ba831e7536bcb9e51b4bd68be453f7e33010
+>>>>>>> bec7b06e32b100012ec12c1bb831aaf6bb5acf60
         jPanel1.add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 380, -1, -1));
 
         lblErrorName.setText("_");
@@ -346,7 +537,14 @@ public class FrmUser1 extends javax.swing.JFrame {
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/VACA_PROYECTO.jpg"))); // NOI18N
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 430));
+<<<<<<< HEAD
 >>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
+=======
+<<<<<<< HEAD
+>>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
+=======
+>>>>>>> 9578ba831e7536bcb9e51b4bd68be453f7e33010
+>>>>>>> bec7b06e32b100012ec12c1bb831aaf6bb5acf60
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
@@ -411,10 +609,26 @@ public class FrmUser1 extends javax.swing.JFrame {
         input.NumberValidation(TFpassword, evt, lblErrorPassword, 9);
     }//GEN-LAST:event_TFpasswordKeyPressed
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9578ba831e7536bcb9e51b4bd68be453f7e33010
+>>>>>>> bec7b06e32b100012ec12c1bb831aaf6bb5acf60
     private void TFuserNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TFuserNameActionPerformed
-        // TODO add your handling code here:
+   
     }//GEN-LAST:event_TFuserNameActionPerformed
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
+=======
+>>>>>>> 9578ba831e7536bcb9e51b4bd68be453f7e33010
+>>>>>>> bec7b06e32b100012ec12c1bb831aaf6bb5acf60
     /**
      * @param args the command line arguments
      */
@@ -461,9 +675,20 @@ public class FrmUser1 extends javax.swing.JFrame {
     private javax.swing.JButton btnAddUser;
     private javax.swing.JComboBox<String> cmbxEmails;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     private javax.swing.JInternalFrame jInternalFrame1;
 >>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    private javax.swing.JInternalFrame jInternalFrame1;
+>>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
+=======
+    private javax.swing.JInternalFrame jInternalFrame1;
+>>>>>>> 9578ba831e7536bcb9e51b4bd68be453f7e33010
+>>>>>>> bec7b06e32b100012ec12c1bb831aaf6bb5acf60
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -492,7 +717,13 @@ public class FrmUser1 extends javax.swing.JFrame {
         user= new User();
         MongoDBManager saveUserdata;
         saveUserdata = new MongoDBManager();
+<<<<<<< HEAD
         
+=======
+<<<<<<< HEAD
+        
+<<<<<<< HEAD
+>>>>>>> bec7b06e32b100012ec12c1bb831aaf6bb5acf60
         user.setUserName(TFuserName.getText());
         user.setUserId(Integer.parseInt(TFuserId.getText()));
         user.setUserEmail(TFemail.getText()+ cmbxEmails.getSelectedItem());
@@ -502,6 +733,12 @@ public class FrmUser1 extends javax.swing.JFrame {
         user.setUserPassword(Integer.parseInt(TFpassword.getText()));
         
         saveUserdata.CreateUser(user);
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 9578ba831e7536bcb9e51b4bd68be453f7e33010
+>>>>>>> bec7b06e32b100012ec12c1bb831aaf6bb5acf60
         user.setName(TFuserName.getText());
         user.setId(Integer.parseInt(TFuserId.getText()));
         user.setEmail(TFemail.getText()+ cmbxEmails.getSelectedItem());
@@ -511,7 +748,15 @@ public class FrmUser1 extends javax.swing.JFrame {
         user.setPassword(Integer.parseInt(TFpassword.getText()));
         
         saveUserdata.CreateBookifyObject(user, "Users");
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> cbab0857b7a4c366bf6fdde2144899c6644e7c2f
+=======
+>>>>>>> 9578ba831e7536bcb9e51b4bd68be453f7e33010
+    
+>>>>>>> bec7b06e32b100012ec12c1bb831aaf6bb5acf60
     }
     
     public void CleanTxtFields(){
