@@ -22,6 +22,9 @@ public class FrmRentBook extends javax.swing.JFrame {
         Image miIcono = miPantalla.getImage("src/Images/BookIco.png");
         setIconImage(miIcono);
         setTitle("Borrow book");
+        btnReturn.setOpaque(false);
+        btnReturn.setContentAreaFilled(false);
+        btnReturn.setBorderPainted(false);
     }
 
     /**
@@ -42,7 +45,7 @@ public class FrmRentBook extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabelBook.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/BookScott.jpg"))); // NOI18N
-        getContentPane().add(jLabelBook, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 40, -1, -1));
+        getContentPane().add(jLabelBook, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, -1, -1));
 
         btnRentBook.setText("Rent Book");
         btnRentBook.addActionListener(new java.awt.event.ActionListener() {
@@ -50,18 +53,18 @@ public class FrmRentBook extends javax.swing.JFrame {
                 btnRentBookActionPerformed(evt);
             }
         });
-        getContentPane().add(btnRentBook, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, -1, -1));
+        getContentPane().add(btnRentBook, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 260, -1, -1));
 
-        btnReturn.setText("Return");
+        btnReturn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Return.png"))); // NOI18N
         btnReturn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnReturnActionPerformed(evt);
             }
         });
-        getContentPane().add(btnReturn, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, -1, -1));
+        getContentPane().add(btnReturn, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 260, -1, -1));
 
         jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Fondo 01.jpg"))); // NOI18N
-        getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, 310));
+        getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, 340));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

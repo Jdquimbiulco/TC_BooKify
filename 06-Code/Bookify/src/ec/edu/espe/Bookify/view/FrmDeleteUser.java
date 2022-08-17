@@ -4,7 +4,10 @@ import ec.edu.espe.Bookify.controller.FormsHandler;
 import ec.edu.espe.Bookify.controller.InputValidation;
 import ec.edu.espe.Bookify.controller.MongoDBManager;
 import ec.edu.espe.Bookify.model.User;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.util.ArrayList;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -24,6 +27,14 @@ public class FrmDeleteUser extends javax.swing.JFrame {
 
     public FrmDeleteUser() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        Toolkit miPantalla = Toolkit.getDefaultToolkit();
+        Image miIcono = miPantalla.getImage("src/Images/BookIco.png");
+        setIconImage(miIcono);
+        btnReturn.setOpaque(false);
+        btnReturn.setContentAreaFilled(false);
+        btnReturn.setBorderPainted(false);
         DeleteBtn.setEnabled(false);
         tblUserFound.setEnabled(false);
         //tblUserFound.getTableHeader().setResizingAllowed(false);
@@ -45,11 +56,14 @@ public class FrmDeleteUser extends javax.swing.JFrame {
         TFtoFindId = new javax.swing.JTextField();
         DeleteBtn = new javax.swing.JButton();
         lblErrorId = new javax.swing.JLabel();
+        btnReturn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(204, 255, 204));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        tblUserFound.setBackground(new java.awt.Color(153, 255, 153));
         tblUserFound.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null}
@@ -84,10 +98,18 @@ public class FrmDeleteUser extends javax.swing.JFrame {
                 DeleteBtnActionPerformed(evt);
             }
         });
-        jPanel1.add(DeleteBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 140, -1, -1));
+        jPanel1.add(DeleteBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 140, -1, -1));
 
         lblErrorId.setText("_");
         jPanel1.add(lblErrorId, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, -1));
+
+        btnReturn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Return.png"))); // NOI18N
+        btnReturn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReturnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnReturn, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 150, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -97,7 +119,9 @@ public class FrmDeleteUser extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -119,6 +143,12 @@ public class FrmDeleteUser extends javax.swing.JFrame {
     private void TFtoFindIdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFtoFindIdKeyPressed
         input.NumberValidation(TFtoFindId, evt, lblErrorId, 9);
     }//GEN-LAST:event_TFtoFindIdKeyPressed
+
+    private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
+        FrmUser1 frmUser1 = new FrmUser1();
+        frmUser1.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnReturnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -159,6 +189,7 @@ public class FrmDeleteUser extends javax.swing.JFrame {
     private javax.swing.JButton DeleteBtn;
     private javax.swing.JTextField TFtoFindId;
     private javax.swing.JButton btnFind;
+    private javax.swing.JButton btnReturn;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblErrorId;

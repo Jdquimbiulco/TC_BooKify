@@ -29,6 +29,10 @@ public class FrmUser1 extends javax.swing.JFrame {
         Toolkit miPantalla = Toolkit.getDefaultToolkit();
         Image miIcono = miPantalla.getImage("src/Images/BookIco.png");
         setIconImage(miIcono);
+        btnReturn.setOpaque(false);
+        btnReturn.setContentAreaFilled(false);
+        btnReturn.setBorderPainted(false);
+        
     
     }
 
@@ -64,13 +68,16 @@ public class FrmUser1 extends javax.swing.JFrame {
         TFpassword = new javax.swing.JTextField();
         btnAddUser = new javax.swing.JButton();
         cmbxEmails = new javax.swing.JComboBox<>();
-        jToggleButton1 = new javax.swing.JToggleButton();
+        btnReturn = new javax.swing.JToggleButton();
         lblErrorName = new javax.swing.JLabel();
         lblErrorId = new javax.swing.JLabel();
         lblErrorPhone = new javax.swing.JLabel();
         lblErrorAddres = new javax.swing.JLabel();
         lblErrorPassword = new javax.swing.JLabel();
         lblErrorAge = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
 
         jList1.setModel(new javax.swing.AbstractListModel<String>() {
@@ -179,13 +186,13 @@ public class FrmUser1 extends javax.swing.JFrame {
         });
         jPanel1.add(cmbxEmails, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 160, 108, -1));
 
-        jToggleButton1.setText("Return");
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnReturn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Return.png"))); // NOI18N
+        btnReturn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
+                btnReturnActionPerformed(evt);
             }
         });
-        jPanel1.add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 380, -1, -1));
+        jPanel1.add(btnReturn, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 360, -1, -1));
 
         lblErrorName.setText("_");
         jPanel1.add(lblErrorName, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 80, -1, -1));
@@ -205,6 +212,30 @@ public class FrmUser1 extends javax.swing.JFrame {
         lblErrorAge.setText("_");
         jPanel1.add(lblErrorAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 330, -1, -1));
 
+        jButton1.setText("Update User");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 380, -1, -1));
+
+        jButton2.setText("Show Users");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 380, -1, -1));
+
+        jButton3.setText("Delete User");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 380, -1, -1));
+
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/VACA_PROYECTO.jpg"))); // NOI18N
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 430));
 
@@ -213,11 +244,11 @@ public class FrmUser1 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+    private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
         FrmStaffMain frmStaffMain = new FrmStaffMain();
         frmStaffMain.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jToggleButton1ActionPerformed
+    }//GEN-LAST:event_btnReturnActionPerformed
 
     private void TFuserNameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFuserNameKeyPressed
         input.StringValidation(TFuserName, evt, lblErrorName,30);
@@ -276,6 +307,24 @@ public class FrmUser1 extends javax.swing.JFrame {
    
     }//GEN-LAST:event_TFuserNameActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        FrmUpdateUser frmUpdateUser = new FrmUpdateUser();
+        frmUpdateUser.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        FrmUsersTable frmUsersTable = new FrmUsersTable();
+        frmUsersTable.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        FrmDeleteUser frmDeleteUser = new FrmDeleteUser();
+        frmDeleteUser.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -320,7 +369,11 @@ public class FrmUser1 extends javax.swing.JFrame {
     private javax.swing.JTextField TFuserId;
     private javax.swing.JTextField TFuserName;
     private javax.swing.JButton btnAddUser;
+    private javax.swing.JToggleButton btnReturn;
     private javax.swing.JComboBox<String> cmbxEmails;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -336,7 +389,6 @@ public class FrmUser1 extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JLabel lblErrorAddres;
     private javax.swing.JLabel lblErrorAge;
     private javax.swing.JLabel lblErrorId;
