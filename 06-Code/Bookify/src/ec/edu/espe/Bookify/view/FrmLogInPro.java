@@ -5,8 +5,12 @@
 package ec.edu.espe.Bookify.view;
 
 import ec.edu.espe.Bookify.controller.FormsHandler;
+import ec.edu.espe.Bookify.controller.InputValidation;
+import ec.edu.espe.Bookify.controller.MongoDBManager;
+import ec.edu.espe.Bookify.model.User;
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.util.ArrayList;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -19,6 +23,12 @@ public class FrmLogInPro extends javax.swing.JFrame {
     /**
      * Creates new form FrmLogInPro
      */
+    User user = new User();
+    InputValidation input = new InputValidation();
+    MongoDBManager bookifydb = new MongoDBManager();
+
+    
+    
     public FrmLogInPro() {
         initComponents();
         this.setLocationRelativeTo(null);
@@ -196,4 +206,24 @@ public class FrmLogInPro extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JTextField txtUsername;
     // End of variables declaration//GEN-END:variables
+public ArrayList findUser() {
+
+        ArrayList<User> userToFind;
+        ArrayList<User> userFound;
+
+        userToFind = bookifydb.ReadBookifyDB(user, "Users");
+        userFound = new ArrayList<>();
+
+        for (User user : userToFind) {
+            if (user.getId() == Integer.parseInt(TFtoFindId.getText())) {
+                userFound.add(user);
+                JOptionPane.showMessageDialog(this, "User Found");
+            }
+        }
+        return userFound;
+
+    }
+
+    
+    
 }
