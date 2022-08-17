@@ -180,7 +180,10 @@ public class FrmAddBook extends javax.swing.JFrame {
         book.setAvailable(AvailableBook(cmboBool.getSelectedItem().toString()));
         
         saveBook.CreateBook(book);
+               
        JOptionPane.showMessageDialog(null, "Book added succesfull");
+       CleanTxtFields();
+       
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void txtIsbnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIsbnActionPerformed
@@ -255,6 +258,14 @@ public boolean AvailableBook(String option){
 
 
 }
+ public void CleanTxtFields(){
+    
+        txtAuthor.setText("");
+        txtIsbn.setText("");
+        txtPublisher.setText("");
+        txtTitle.setText("");
+        
+    }
 
 
 }

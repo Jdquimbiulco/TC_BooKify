@@ -221,6 +221,7 @@ public class FrmAddMovie extends javax.swing.JFrame {
 
         addMovie.CreateMovie(movie);
         JOptionPane.showMessageDialog(null, "Movie added succesfull");
+        CleanTxtFields();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -317,6 +318,14 @@ public boolean AvailableMovie(String option){
 
 
 }
+
+public void CleanTxtFields(){
+    
+        txtMovieGender.setText("");
+        txtMovieIdiom.setText("");
+        txtMovieTitle.setText("");
+                
+    }
 
 
 }
