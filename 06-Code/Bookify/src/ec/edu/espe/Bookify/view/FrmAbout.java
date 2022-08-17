@@ -21,6 +21,9 @@ public class FrmAbout extends javax.swing.JFrame {
         Toolkit miPantalla = Toolkit.getDefaultToolkit();
         Image miIcono = miPantalla.getImage("src/Images/BookIco.png");
         setIconImage(miIcono);
+        btnReturn.setOpaque(false);
+        btnReturn.setContentAreaFilled(false);
+        btnReturn.setBorderPainted(false);
         
     }
 
@@ -42,13 +45,15 @@ public class FrmAbout extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel1.setBackground(new java.awt.Color(204, 255, 204));
+
         jLabel1.setText("Bookify");
 
         jLabel2.setText("By: CODEX++");
 
         jLabel3.setText("Version 2.0.2");
 
-        btnReturn.setText("Return");
+        btnReturn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Return.png"))); // NOI18N
         btnReturn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnReturnActionPerformed(evt);
@@ -64,14 +69,12 @@ public class FrmAbout extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 119, Short.MAX_VALUE)
+                .addGap(0, 125, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnReturn)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jLabel3)
-                        .addComponent(jLabel2))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnReturn)
-                        .addGap(7, 7, 7)))
+                        .addComponent(jLabel2)))
                 .addGap(112, 112, 112))
         );
         jPanel1Layout.setVerticalGroup(
@@ -83,12 +86,12 @@ public class FrmAbout extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(btnReturn)
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 310, 150));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 310, 170));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

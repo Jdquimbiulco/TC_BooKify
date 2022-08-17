@@ -36,6 +36,9 @@ public class FrmBills extends javax.swing.JFrame {
         Toolkit miPantalla = Toolkit.getDefaultToolkit();
         Image miIcono = miPantalla.getImage("src/Images/BookIco.png");
         setIconImage(miIcono);
+        btnReturn.setOpaque(false);
+        btnReturn.setContentAreaFilled(false);
+        btnReturn.setBorderPainted(false);
         
         
         
@@ -54,14 +57,17 @@ public class FrmBills extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblBills = new javax.swing.JTable();
-        jButton2 = new javax.swing.JButton();
+        btnReturn = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(153, 255, 153));
 
         jLabel1.setText("PayBills");
 
+        tblBills.setBackground(new java.awt.Color(204, 255, 204));
         tblBills.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -72,12 +78,14 @@ public class FrmBills extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tblBills);
 
-        jButton2.setText("Return");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnReturn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Return.png"))); // NOI18N
+        btnReturn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnReturnActionPerformed(evt);
             }
         });
+
+        jButton1.setText("Pay Fines");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -89,8 +97,10 @@ public class FrmBills extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton2)
-                .addGap(223, 223, 223))
+                .addComponent(jButton1)
+                .addGap(145, 145, 145)
+                .addComponent(btnReturn)
+                .addGap(25, 25, 25))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
@@ -103,19 +113,21 @@ public class FrmBills extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton2)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnReturn)
+                    .addComponent(jButton1))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
         FrmUserMain frmUserMain = new FrmUserMain();
         frmUserMain.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnReturnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -154,7 +166,8 @@ public class FrmBills extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btnReturn;
+    private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;

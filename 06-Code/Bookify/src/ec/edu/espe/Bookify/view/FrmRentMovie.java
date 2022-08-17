@@ -22,6 +22,9 @@ public class FrmRentMovie extends javax.swing.JFrame {
         Image miIcono = miPantalla.getImage("src/Images/BookIco.png");
         setIconImage(miIcono);
         setTitle("Borrow movie");
+        btnReturn.setOpaque(false);
+        btnReturn.setContentAreaFilled(false);
+        btnReturn.setBorderPainted(false);
     }
 
     /**
@@ -35,7 +38,7 @@ public class FrmRentMovie extends javax.swing.JFrame {
 
         jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        btnReturn = new javax.swing.JButton();
         jLabelFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -52,13 +55,13 @@ public class FrmRentMovie extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/MovieRent.jpg"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, -1, -1));
 
-        jButton2.setText("Return");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnReturn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Return.png"))); // NOI18N
+        btnReturn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnReturnActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 390, -1, -1));
+        getContentPane().add(btnReturn, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 390, -1, -1));
 
         jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Fondo 08.jpg"))); // NOI18N
         getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, -1));
@@ -70,11 +73,11 @@ public class FrmRentMovie extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this,"Successfully movie rented");
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
         FrmUserMain frmUserMain = new FrmUserMain();
         frmUserMain.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnReturnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -112,8 +115,8 @@ public class FrmRentMovie extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnReturn;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabelFondo;
     // End of variables declaration//GEN-END:variables

@@ -113,7 +113,7 @@ public class FrmDonatePro extends javax.swing.JFrame {
         
         bills = new Bills() {};
         bills.setCustomerNames(txtCustomName.getText());
-        bills.setPrice(Integer.parseInt(txtAmount.getText()));
+        bills.setPrice(Float.parseFloat(txtAmount.getText()));
         
         bills.total(txtTotal);
         

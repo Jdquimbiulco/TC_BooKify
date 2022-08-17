@@ -8,9 +8,12 @@ import ec.edu.espe.Bookify.controller.FormsHandler;
 import ec.edu.espe.Bookify.controller.InputValidation;
 import ec.edu.espe.Bookify.controller.MongoDBManager;
 import ec.edu.espe.Bookify.model.User;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JComboBox;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -26,6 +29,14 @@ public class FrmUpdateUser extends javax.swing.JFrame {
 
     public FrmUpdateUser() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        Toolkit miPantalla = Toolkit.getDefaultToolkit();
+        Image miIcono = miPantalla.getImage("src/Images/BookIco.png");
+        setIconImage(miIcono);
+        btnReturn.setOpaque(false);
+        btnReturn.setContentAreaFilled(false);
+        btnReturn.setBorderPainted(false);
         cbxEmail.setVisible(false);
         loadComboBox(user.atributeNames(), cbxUpdateValue);
         loadComboBox(new String[]{"@gmail.com", "@Outlook.com", "@yahoo.com", "@hotmail.com"}, cbxEmail);
@@ -56,11 +67,14 @@ public class FrmUpdateUser extends javax.swing.JFrame {
         btnFind = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         lblErrorId = new javax.swing.JLabel();
+        btnReturn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(204, 255, 204));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        tblDataUpdate.setBackground(new java.awt.Color(153, 255, 153));
         tblDataUpdate.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null}
@@ -102,7 +116,7 @@ public class FrmUpdateUser extends javax.swing.JFrame {
         cbxEmail.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jPanel1.add(cbxEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 150, -1, -1));
 
-        lblErrorUpdateFill.setText("jLabel2");
+        lblErrorUpdateFill.setText(".");
         jPanel1.add(lblErrorUpdateFill, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 160, -1, -1));
 
         TFTofindId.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -126,19 +140,23 @@ public class FrmUpdateUser extends javax.swing.JFrame {
         lblErrorId.setText("_");
         jPanel1.add(lblErrorId, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 20, -1, -1));
 
+        btnReturn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Return.png"))); // NOI18N
+        btnReturn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReturnActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnReturn, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 120, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 946, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 968, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
         );
 
         pack();
@@ -207,6 +225,12 @@ public class FrmUpdateUser extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnFindActionPerformed
 
+    private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
+        FrmUser1 frmUser1 = new FrmUser1();
+        frmUser1.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnReturnActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -248,6 +272,7 @@ public class FrmUpdateUser extends javax.swing.JFrame {
     private javax.swing.JTextField TFToUpdatedata;
     private javax.swing.JTextField TFTofindId;
     private javax.swing.JButton btnFind;
+    private javax.swing.JButton btnReturn;
     private javax.swing.JButton btnUpdate;
     private javax.swing.JComboBox<String> cbxEmail;
     private javax.swing.JComboBox<String> cbxUpdateValue;

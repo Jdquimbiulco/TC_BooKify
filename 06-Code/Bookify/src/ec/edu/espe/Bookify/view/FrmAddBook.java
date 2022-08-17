@@ -31,6 +31,9 @@ public class FrmAddBook extends javax.swing.JFrame {
         Toolkit miPantalla = Toolkit.getDefaultToolkit();
         Image miIcono = miPantalla.getImage("src/Images/BookIco.png");
         setIconImage(miIcono);
+        btnReturn.setOpaque(false);
+        btnReturn.setContentAreaFilled(false);
+        btnReturn.setBorderPainted(false);
     }
 
     /**
@@ -52,7 +55,7 @@ public class FrmAddBook extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         txtIsbn = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btnReturn = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         cmboBool = new javax.swing.JComboBox<>();
         lbIsbn = new javax.swing.JLabel();
@@ -109,25 +112,25 @@ public class FrmAddBook extends javax.swing.JFrame {
         jLabel7.setText("Avaliable:");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
 
-        jButton1.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
-        jButton1.setText("Return");
-        jButton1.setToolTipText("Return to main menu");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnReturn.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
+        btnReturn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Return.png"))); // NOI18N
+        btnReturn.setToolTipText("Return to main menu");
+        btnReturn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnReturnActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, -1, -1));
+        getContentPane().add(btnReturn, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 250, -1, -1));
 
         jButton2.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
-        jButton2.setText("Add");
+        jButton2.setText("Add Book");
         jButton2.setToolTipText("Click to add product");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, -1, -1));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, -1, -1));
 
         cmboBool.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Yes", "No", " " }));
         getContentPane().add(cmboBool, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, -1, -1));
@@ -155,12 +158,12 @@ public class FrmAddBook extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPublisherActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
         FrmStaffMain frmStaffMain = new FrmStaffMain();
         frmStaffMain.setVisible(true);
         this.setVisible(false);
 
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnReturnActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         
@@ -229,8 +232,8 @@ public class FrmAddBook extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnReturn;
     private javax.swing.JComboBox<String> cmboBool;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

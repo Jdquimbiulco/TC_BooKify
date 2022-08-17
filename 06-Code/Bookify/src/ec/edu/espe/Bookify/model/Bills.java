@@ -89,7 +89,7 @@ public abstract class Bills {
     }
     
    public void total(JTextField txtField){
-       total = price*12; 
+       total = (float) (price*0.12+price); 
        txtField.setText("$"+total);
    } 
 }
