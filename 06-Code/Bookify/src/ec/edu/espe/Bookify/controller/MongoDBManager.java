@@ -132,6 +132,7 @@ public class MongoDBManager {
         bookifyCollection.deleteOne(Filters.eq(atribute.toLowerCase(), findtoDelete));
         System.out.println("Succesfully Deleted");
     }
+    
 
     public Document findDocument(String atributeToFind, Object tofind, String collection) {
 

@@ -44,6 +44,11 @@ public class FrmUpdateUser extends javax.swing.JFrame {
         tblDataUpdate.setEnabled(false);
         tblDataUpdate.getTableHeader().setResizingAllowed(false);
         
+        btnUpdate.setEnabled(false);
+        TFToUpdatedata.setText("");
+        TFToUpdatedata.setEnabled(false);
+        cbxUpdateValue.setEnabled(false);
+
     }
 
     /**
@@ -63,7 +68,7 @@ public class FrmUpdateUser extends javax.swing.JFrame {
         btnUpdate = new javax.swing.JButton();
         cbxEmail = new javax.swing.JComboBox<>();
         lblErrorUpdateFill = new javax.swing.JLabel();
-        TFTofindId = new javax.swing.JTextField();
+        TFtofindId = new javax.swing.JTextField();
         btnFind = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         lblErrorId = new javax.swing.JLabel();
@@ -119,12 +124,12 @@ public class FrmUpdateUser extends javax.swing.JFrame {
         lblErrorUpdateFill.setText(".");
         jPanel1.add(lblErrorUpdateFill, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 160, -1, -1));
 
-        TFTofindId.addKeyListener(new java.awt.event.KeyAdapter() {
+        TFtofindId.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                TFTofindIdKeyPressed(evt);
+                TFtofindIdKeyPressed(evt);
             }
         });
-        jPanel1.add(TFTofindId, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, 171, -1));
+        jPanel1.add(TFtofindId, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, 171, -1));
 
         btnFind.setText("Find");
         btnFind.addActionListener(new java.awt.event.ActionListener() {
@@ -163,20 +168,20 @@ public class FrmUpdateUser extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
-        if (!TFTofindId.getText().isBlank()) {
+        if (!TFtofindId.getText().isBlank()) {
             UpdateUserData();
             JOptionPane.showMessageDialog(this, "User updated");
-            setUserFoundTotable();
+
         } else {
             JOptionPane.showMessageDialog(this, "The Field Id is Empty,please fill it with a valid Id");
         }
-        
+
 
     }//GEN-LAST:event_btnUpdateActionPerformed
 
-    private void TFTofindIdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFTofindIdKeyPressed
-        input.NumberValidation(TFTofindId, evt, lblErrorId, 9);
-    }//GEN-LAST:event_TFTofindIdKeyPressed
+    private void TFtofindIdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFtofindIdKeyPressed
+        input.NumberValidation(TFtofindId, evt, lblErrorId, 9);
+    }//GEN-LAST:event_TFtofindIdKeyPressed
 
     private void TFToUpdatedataKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFToUpdatedataKeyPressed
 
@@ -218,8 +223,8 @@ public class FrmUpdateUser extends javax.swing.JFrame {
     }//GEN-LAST:event_cbxUpdateValueActionPerformed
 
     private void btnFindActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFindActionPerformed
-        if (!TFTofindId.getText().isBlank()) {
-            setUserFoundTotable();
+        if (!TFtofindId.getText().isBlank()) {
+            findUser();
         } else {
             JOptionPane.showMessageDialog(this, "The Field Id is Empty,please fill it with a valid Id");
         }
@@ -270,7 +275,7 @@ public class FrmUpdateUser extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField TFToUpdatedata;
-    private javax.swing.JTextField TFTofindId;
+    private javax.swing.JTextField TFtofindId;
     private javax.swing.JButton btnFind;
     private javax.swing.JButton btnReturn;
     private javax.swing.JButton btnUpdate;
@@ -291,15 +296,23 @@ public class FrmUpdateUser extends javax.swing.JFrame {
         String toChange;
 
         atribute = cbxUpdateValue.getSelectedItem().toString().toLowerCase();
-        idtofind = TFTofindId.getText();
+        idtofind = TFtofindId.getText();
         toChange = TFToUpdatedata.getText();
 
-        if (cbxUpdateValue.getSelectedIndex() == 2) {
-            bookifydb.UpdateBookifyObject("Users", "id", Integer.parseInt(idtofind), atribute, toChange + cbxEmail.getSelectedItem());
-        } else {
-            bookifydb.UpdateBookifyObject("Users", "id", Integer.parseInt(idtofind), atribute, toChange);
+        switch (cbxUpdateValue.getSelectedIndex()) {
+
+            case 0,4 ->
+                bookifydb.UpdateBookifyObject("Users", "id", Integer.parseInt(idtofind), atribute, toChange);
+            case 1,3,5,6 ->
+                bookifydb.UpdateBookifyObject("Users", "id", Integer.parseInt(idtofind), atribute, Integer.parseInt(toChange));
+            case 2 ->
+                bookifydb.UpdateBookifyObject("Users", "id", Integer.parseInt(idtofind), atribute, toChange + cbxEmail.getSelectedItem());
+
         }
-        
+
+        findUser();
+        TFtofindId.setText("");
+
     }
 
     public void loadComboBox(String[] datacmbbox, JComboBox<String> cbxToSet) {
@@ -315,47 +328,57 @@ public class FrmUpdateUser extends javax.swing.JFrame {
 
     }
 
-    public ArrayList findUser() {
+    public User findUser() {
 
-        ArrayList<User> userToFind;
-        ArrayList<User> userFound;
-        
-        userToFind = bookifydb.ReadBookifyDB(user, "Users");
-        userFound= new ArrayList<>();
-        
-        for(User user:userToFind){
-            if(user.getId()==Integer.parseInt(TFTofindId.getText())){
-                userFound.add(user);
-                JOptionPane.showMessageDialog(this, "User Found");
-            }
+        User userFound;
+        FormsHandler frms;
+
+        frms = new FormsHandler();
+        userFound = (User) frms.findBookifyObject(new User(), "Users", "id", Integer.parseInt(TFtofindId.getText()));
+
+        if (userFound != null) {
+            setUserFoundTotable(userFound);
+            btnUpdate.setEnabled(true);
+            TFToUpdatedata.setEnabled(true);
+            cbxUpdateValue.setEnabled(true);
+            
+        } else {
+            JOptionPane.showMessageDialog(this, "User doesnt exist");
+            ClearTable();
+            btnUpdate.setEnabled(false);
+            TFToUpdatedata.setText("");
+            TFToUpdatedata.setEnabled(false);
+            cbxUpdateValue.setEnabled(false);
         }
+
         return userFound;
-        
+
     }
-    
-    public void setUserFoundTotable(){
+
+    public void setUserFoundTotable(User userfound) {
         FormsHandler setTable;
-        User user;
         ArrayList<User> userToSet;
         DefaultTableModel model;
-        
-        setTable= new FormsHandler();
-        user= new User();
-        userToSet=findUser();
-        
-        if(userToSet.isEmpty()){
-            JOptionPane.showMessageDialog(this, "User not Found");
-            btnUpdate.setEnabled(false);
-        }else{
-        model=setTable.SetDatatoTables(user.atributeNames(),userToSet);
-        tblDataUpdate.setModel(model);
-        tblDataUpdate.getColumnModel().getColumn(0).setPreferredWidth(100);
-        tblDataUpdate.getColumnModel().getColumn(2).setPreferredWidth(150);
-        btnUpdate.setEnabled(true);
+
+        setTable = new FormsHandler();
+        userToSet = new ArrayList<>();
+
+        if (userfound != null) {
+            userToSet.add(userfound);
+            model = setTable.SetDatatoTables(user.atributeNames(), userToSet);
+            tblDataUpdate.setModel(model);
+            tblDataUpdate.getColumnModel().getColumn(0).setPreferredWidth(100);
+            tblDataUpdate.getColumnModel().getColumn(2).setPreferredWidth(150);
         }
-        
-        
+
     }
-    
+
+    public void ClearTable() {
+
+        DefaultTableModel model;
+        model = new DefaultTableModel(null, user.atributeNames());
+        tblDataUpdate.setModel(model);
+
+    }
 
 }
