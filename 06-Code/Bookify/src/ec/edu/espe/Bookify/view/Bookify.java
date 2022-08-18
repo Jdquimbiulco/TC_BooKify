@@ -2,9 +2,9 @@ package ec.edu.espe.Bookify.view;
 
 import ec.edu.espe.Bookify.controller.FormsHandler;
 import ec.edu.espe.Bookify.controller.MongoDBManager;
+import ec.edu.espe.Bookify.model.Staff;
 import ec.edu.espe.Bookify.model.User;
 import java.util.ArrayList;
-import java.util.Iterator;
 
 
 /**
@@ -17,20 +17,15 @@ public class Bookify {
         
         MongoDBManager db= new MongoDBManager();
         FormsHandler frms= new FormsHandler();
-        User user;
+        User user = new User();
+        Staff staff;
         ArrayList<User> users;
         
-        user = new User();
+        staff = (Staff) frms.findBookifyObject(new Staff(), "Staffs", "name", "Angela Castro");
         
-        users=db.ReadBookifyDB(user, "Users");
+        System.out.println(staff.toString());
         
-        
-        for(User user1:users){
-        
-            System.out.println(user1.toString());
-        
-        }
-        
+               
         //db.UpdateBookifyObject("Users", "id", 1727751420, "name", "Jairo");
         
         

@@ -23,7 +23,6 @@ public class FrmDeleteUser extends javax.swing.JFrame {
     User user = new User();
     InputValidation input = new InputValidation();
     MongoDBManager bookifydb = new MongoDBManager();
-    
 
     public FrmDeleteUser() {
         initComponents();
@@ -129,7 +128,7 @@ public class FrmDeleteUser extends javax.swing.JFrame {
 
     private void btnFindActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFindActionPerformed
         if (!TFtoFindId.getText().isBlank()) {
-            setUserFoundTotable();
+            findUser();
         } else {
             JOptionPane.showMessageDialog(this, "The Field Id is Empty,please fill it with a valid Id");
         }
@@ -137,7 +136,12 @@ public class FrmDeleteUser extends javax.swing.JFrame {
     }//GEN-LAST:event_btnFindActionPerformed
 
     private void DeleteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteBtnActionPerformed
-        DeleteUserBtn();
+        if (!TFtoFindId.getText().isBlank()) {
+            DeleteUserBtn();
+        } else {
+            JOptionPane.showMessageDialog(this, "The Field Id is Empty,please fill it with a valid Id");
+        }
+        
     }//GEN-LAST:event_DeleteBtnActionPerformed
 
     private void TFtoFindIdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFtoFindIdKeyPressed
@@ -196,65 +200,66 @@ public class FrmDeleteUser extends javax.swing.JFrame {
     private javax.swing.JTable tblUserFound;
     // End of variables declaration//GEN-END:variables
 
-    public ArrayList findUser() {
+    public User findUser() {
 
-        ArrayList<User> userToFind;
-        ArrayList<User> userFound;
+        User userFound;
+        FormsHandler frms;
 
-        userToFind = bookifydb.ReadBookifyDB(user, "Users");
-        userFound = new ArrayList<>();
+        frms = new FormsHandler();
+        userFound = (User) frms.findBookifyObject(new User(), "Users", "id", Integer.parseInt(TFtoFindId.getText()));
 
-        for (User user : userToFind) {
-            if (user.getId() == Integer.parseInt(TFtoFindId.getText())) {
-                userFound.add(user);
-                JOptionPane.showMessageDialog(this, "User Found");
-            }
+        if (userFound != null) {
+            JOptionPane.showMessageDialog(this, "User Found");
+            setUserFoundTotable(userFound);
+            DeleteBtn.setEnabled(true);
+        }else{
+            JOptionPane.showMessageDialog(this, "User doesnt exist");
+            DeleteBtn.setEnabled(false);
+            ClearTable();
         }
+
         return userFound;
 
     }
 
     public void DeleteUserBtn() {
-        ArrayList<User> userFound;
-        DefaultTableModel model;
-        FormsHandler setTable;
-
-        userFound = findUser();
-        setTable= new FormsHandler();
-
-        if (!userFound.isEmpty()) {
+        User userToDelete;
+        userToDelete = findUser();
+        
+        if (userToDelete!=null) {
             bookifydb.DelteBookifyObject("Users", "id", Integer.parseInt(TFtoFindId.getText()));
-            model=setTable.SetDatatoTables(user.atributeNames(),null);
-            tblUserFound.setModel(model);
-        } else {
-            JOptionPane.showMessageDialog(this, "User Doesnt exist");
-            
-            
-        }
-
+            DeleteBtn.setEnabled(false);
+            ClearTable();
+             TFtoFindId.setText("");
+        } 
     }
-    
-    public void setUserFoundTotable(){
+
+    public void setUserFoundTotable(User userfound) {
         FormsHandler setTable;
-        User user;
         ArrayList<User> userToSet;
         DefaultTableModel model;
         
-        setTable= new FormsHandler();
-        user= new User();
-        userToSet=findUser();
+        setTable = new FormsHandler();
+        userToSet= new ArrayList<>();
         
-        if(userToSet.isEmpty()){
-            JOptionPane.showMessageDialog(this, "User not Found");
-            DeleteBtn.setEnabled(false);
-        }else{
-        model=setTable.SetDatatoTables(user.atributeNames(),userToSet);
-        tblUserFound.setModel(model);
-        tblUserFound.getColumnModel().getColumn(0).setPreferredWidth(100);
-        tblUserFound.getColumnModel().getColumn(2).setPreferredWidth(150);
-        DeleteBtn.setEnabled(true);
-        }
+        if (userfound!=null) {
+            userToSet.add(userfound);
+            model = setTable.SetDatatoTables(user.atributeNames(), userToSet);
+            tblUserFound.setModel(model);
+            tblUserFound.getColumnModel().getColumn(0).setPreferredWidth(100);
+            tblUserFound.getColumnModel().getColumn(2).setPreferredWidth(150);
+        } 
+        
+        
+            
     }
     
-
+    public void ClearTable(){
+    
+        DefaultTableModel model;
+        model=new DefaultTableModel(null,user.atributeNames());
+        tblUserFound.setModel(model);
+    
+    }
+    
 }

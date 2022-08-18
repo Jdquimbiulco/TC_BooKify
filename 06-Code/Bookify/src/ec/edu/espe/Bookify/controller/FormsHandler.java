@@ -1,17 +1,22 @@
 package ec.edu.espe.Bookify.controller;
 
+import com.google.gson.Gson;
+import ec.edu.espe.Bookify.model.User;
 import ec.edu.espe.Bookify.view.FrmBookifyMainMenu;
 import java.util.ArrayList;
 import java.util.Arrays;
 import javax.swing.JFrame;
 import javax.swing.table.DefaultTableModel;
+import org.bson.Document;
 
 public class FormsHandler {
 
     public static void goToMainScreen(JFrame jFrameToClose) {
+
         FrmBookifyMainMenu frmBookifyMainMenu = new FrmBookifyMainMenu();
         jFrameToClose.setVisible(false);
         frmBookifyMainMenu.setVisible(true);
+
     }
 
     public DefaultTableModel SetDatatoTables(String[] columHeaders, ArrayList rowData) {
@@ -31,7 +36,6 @@ public class FormsHandler {
         return model;
 
     }
-    
 
     public String[] createArrayWithData(ArrayList rowData) {
 
@@ -56,7 +60,7 @@ public class FormsHandler {
         getNumberOfColumns = rowData.get(0).toString().split(",");
         columns = getNumberOfColumns.length;
         rows = rowData.size();
-        
+
         tableSize[0] = rows;
         tableSize[1] = columns;
 
@@ -96,5 +100,29 @@ public class FormsHandler {
 
         return setData;
     }
+
+    public Object findBookifyObject(Object bookifyObject, String collection, String atributeToFind, Object tofind) {
+
+        MongoDBManager db;
+        Object bookifyfound = null;
+        Gson gson;
+        Document found;
+
+        db = new MongoDBManager();
+        gson = new Gson();
+        found = db.findDocument(atributeToFind, tofind, collection);
+ 
+        if (found != null) {
+            bookifyfound = gson.fromJson(found.toJson(), bookifyObject.getClass());
+        } else {
+            System.out.println("Not found");
+        }
+
+        return bookifyfound;
+
+    }
+    
+    
+    
 
 }

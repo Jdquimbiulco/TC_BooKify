@@ -33,7 +33,7 @@ public class MongoDBManager {
 
         clientURI = new MongoClientURI(uri);
         client = new MongoClient(clientURI);
-        System.out.println("Conexion Exitosa");
+        System.out.println("succesfull conection");
 
         userdatabase = client.getDatabase("BooKiFi");
 
@@ -74,24 +74,22 @@ public class MongoDBManager {
 
     }
 
-    public ArrayList ReadBookifyDB(Object bookifyObject,String collection) {
+    public ArrayList ReadBookifyDB(Object bookifyObject, String collection) {
 
         bookifyDB = EstablishConnection();
         bookifyCollection = bookifyDB.getCollection(collection);
         FindIterable<Document> iterDoc;
         ArrayList<Object> objects;
         Gson gson;
-        
+
         iterDoc = bookifyCollection.find();
         objects = new ArrayList<>();
-        gson= new Gson();
-        
-        
+        gson = new Gson();
+
         for (Document doc : iterDoc) {
             objects.add(gson.fromJson(doc.toJson(), bookifyObject.getClass()));
         }
-        
-                
+
         return objects;
 
     }
@@ -108,34 +106,53 @@ public class MongoDBManager {
         System.out.println("Succesfull added");
 
     }
-    
-    
-    public void UpdateBookifyObject(String collection,String atributeToFind,Object tofind,String atributetoChange,Object toChange){
-    
+
+    public void UpdateBookifyObject(String collection, String atributeToFind, Object tofind, String atributetoChange, Object toChange) {
+
         bookifyDB = EstablishConnection();
         bookifyCollection = bookifyDB.getCollection(collection);
         Document found;
         Document update;
         Document setUpdate;
-        
-        document= new Document(atributeToFind,tofind);
-        found=(Document) bookifyCollection.find(document).first();
-        
-        if(found!=null){
-            update= new Document(atributetoChange,toChange);
-            setUpdate= new Document("$set",update);
+
+        document = new Document(atributeToFind, tofind);
+        found = (Document) bookifyCollection.find(document).first();
+
+        if (found != null) {
+            update = new Document(atributetoChange, toChange);
+            setUpdate = new Document("$set", update);
             bookifyCollection.updateOne(found, setUpdate);
         }
-        
+
     }
-    
-    public void DelteBookifyObject(String collection,String atribute,Object findtoDelete){
+
+    public void DelteBookifyObject(String collection, String atribute, Object findtoDelete) {
         bookifyDB = EstablishConnection();
         bookifyCollection = bookifyDB.getCollection(collection);
-        bookifyCollection.deleteOne(Filters.eq(atribute.toLowerCase(),findtoDelete));        
+        bookifyCollection.deleteOne(Filters.eq(atribute.toLowerCase(), findtoDelete));
         System.out.println("Succesfully Deleted");
+    }
     
-    
+
+    public Document findDocument(String atributeToFind, Object tofind, String collection) {
+
+        bookifyDB = EstablishConnection();
+        bookifyCollection = bookifyDB.getCollection(collection);
+        Document found;
+        Document foundtoReturn = null;
+
+        document = new Document(atributeToFind, tofind);
+        found = (Document) bookifyCollection.find(document).first();
+
+        if (found != null) {
+            foundtoReturn = found;
+        } else {
+            System.out.println("Document not found");
+
+        }
+
+        return foundtoReturn;
+
     }
 
 }
