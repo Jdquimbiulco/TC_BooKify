@@ -5,24 +5,22 @@ package ec.edu.espe.Bookify.model;
  * @author Carlos Rivera, DCCO-ESPE, CODEX++
  */
 public class Movie {
+
     private String title;
     private String genre;
     private String idiom;
     private boolean available;
 
     public Movie() {
-      
+
     }
-    
-    
+
     public Movie(String title, String genre, String idiom, boolean available) {
         this.title = title;
         this.genre = genre;
         this.idiom = idiom;
         this.available = available;
     }
-
-    
 
     /**
      * @return the title
@@ -82,6 +80,16 @@ public class Movie {
 
     @Override
     public String toString() {
-        return "Movie{" + "title=" + getTitle() + ", genre=" + getGenre() + ", idiom=" + getIdiom() + ", available=" + isAvailable() + '}';
-    }    
+        return getTitle() + "," + getGenre() + "," + getIdiom() + "," + isAvailable();
+    }
+
+    public String[] atributeNames() {
+        String[] Names = {"Movie", "Genre", "Idiom", "Available"};
+        return Names;
+    }
+
+      
+    
+    
+
 }

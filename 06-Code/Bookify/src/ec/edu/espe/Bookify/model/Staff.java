@@ -5,136 +5,126 @@ package ec.edu.espe.Bookify.model;
  * @author Raul Silva, DCCO-ESPE, CODEX++
  */
 public class Staff {
-    private String StaffName;
-    private int StaffId;
-    private int StaffAge;
-    private int StaffPhone;
-    private String StaffAddress;
-    private int StaffPasword;
-    private boolean StaffBlackList;
+    private String name;
+    private int id;
+    private int age;
+    private int phone;
+    private String address;
+    private int password;
 
-    
-    public Staff(String StaffName, int StaffId, int StaffAge, int StaffPhone, String StaffAddress, int StaffPasword, boolean StaffBlackList) {
-        this.StaffName = StaffName;
-        this.StaffId = StaffId;
-        this.StaffAge = StaffAge;
-        this.StaffPhone = StaffPhone;
-        this.StaffAddress = StaffAddress;
-        this.StaffPasword = StaffPasword;
-        this.StaffBlackList = StaffBlackList;
+    public Staff(String name, int id, int age, int phone, String address, int password) {
+        this.name = name;
+        this.id = id;
+        this.age = age;
+        this.phone = phone;
+        this.address = address;
+        this.password = password;
     }
 
+    
+    
     public Staff() {
         
     }
     
-    public String StaffData() {
-        
-        return "Staff:" + "StaffName=" + StaffName + ", Staffid=" + StaffId + ", Staffage=" + StaffAge + ", StaffPhone=" + StaffPhone + ", StaffAddress=" + StaffAddress + ", StaffPasword=" + StaffPasword + ", StaffBlackList=" + StaffBlackList + '\n';
-    }
-    
-    
     @Override
     public String toString() {
-        return "Staff{" + "StaffName=" + StaffName + ", StaffId=" + StaffId + ", StaffAge=" + StaffAge + ", StaffPhone=" + StaffPhone + ", StaffAddress=" + StaffAddress + ", StaffPasword=" + StaffPasword + ", StaffBlackList=" + StaffBlackList + '}';
+        return getName() + "," + getId() + "," + getAge() + "," + getPhone() + "," + getAddress() + "," + getPassword();
+    }
+    
+    public String[] atributeNames() {
+        String[] Names={"Name","Id","Email","Phone","Address","Age", "Password"};
+        return Names;
     }
 
     /**
-     * @return the StaffName
+     * @return the name
      */
-    public String getStaffName() {
-        return StaffName;
+    public String getName() {
+        return name;
     }
 
     /**
-     * @param StaffName the StaffName to set
+     * @param name the name to set
      */
-    public void setStaffName(String StaffName) {
-        this.StaffName = StaffName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     /**
-     * @return the StaffId
+     * @return the id
      */
-    public int getStaffId() {
-        return StaffId;
+    public int getId() {
+        return id;
     }
 
     /**
-     * @param StaffId the StaffId to set
+     * @param id the id to set
      */
-    public void setStaffId(int StaffId) {
-        this.StaffId = StaffId;
+    public void setId(int id) {
+        this.id = id;
     }
 
     /**
-     * @return the StaffAge
+     * @return the age
      */
-    public int getStaffAge() {
-        return StaffAge;
+    public int getAge() {
+        return age;
     }
 
     /**
-     * @param StaffAge the StaffAge to set
+     * @param age the age to set
      */
-    public void setStaffAge(int StaffAge) {
-        this.StaffAge = StaffAge;
+    public void setAge(int age) {
+        this.age = age;
     }
 
     /**
-     * @return the StaffPhone
+     * @return the phone
      */
-    public int getStaffPhone() {
-        return StaffPhone;
+    public int getPhone() {
+        return phone;
     }
 
     /**
-     * @param StaffPhone the StaffPhone to set
+     * @param phone the phone to set
      */
-    public void setStaffPhone(int StaffPhone) {
-        this.StaffPhone = StaffPhone;
+    public void setPhone(int phone) {
+        this.phone = phone;
     }
 
     /**
-     * @return the StaffAddress
+     * @return the address
      */
-    public String getStaffAddress() {
-        return StaffAddress;
+    public String getAddress() {
+        return address;
     }
 
     /**
-     * @param StaffAddress the StaffAddress to set
+     * @param address the address to set
      */
-    public void setStaffAddress(String StaffAddress) {
-        this.StaffAddress = StaffAddress;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     /**
-     * @return the StaffPasword
+     * @return the password
      */
-    public int getStaffPasword() {
-        return StaffPasword;
+    public int getPassword() {
+        return password;
     }
 
     /**
-     * @param StaffPasword the StaffPasword to set
+     * @param password the password to set
      */
-    public void setStaffPasword(int StaffPasword) {
-        this.StaffPasword = StaffPasword;
+    public void setPassword(int password) {
+        this.password = password;
     }
-
-    /**
-     * @return the StaffBlackList
-     */
-    public boolean isStaffBlackList() {
-        return StaffBlackList;
-    }
-
-    /**
-     * @param StaffBlackList the StaffBlackList to set
-     */
-    public void setStaffBlackList(boolean StaffBlackList) {
-        this.StaffBlackList = StaffBlackList;
-    }
-
+    
+    
+        
+    
+    
+    
+    
 }

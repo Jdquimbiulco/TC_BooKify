@@ -10,7 +10,6 @@ import ec.edu.espe.Bookify.controller.MongoDBManager;
 import ec.edu.espe.Bookify.model.User;
 import java.awt.Image;
 import java.awt.Toolkit;
-import java.util.ArrayList;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -27,8 +26,6 @@ public class FrmLogInPro extends javax.swing.JFrame {
     InputValidation input = new InputValidation();
     MongoDBManager bookifydb = new MongoDBManager();
 
-    
-    
     public FrmLogInPro() {
         initComponents();
         this.setLocationRelativeTo(null);
@@ -56,7 +53,7 @@ public class FrmLogInPro extends javax.swing.JFrame {
         txtUsername = new javax.swing.JTextField();
         btnUser = new javax.swing.JToggleButton();
         btnStaff = new javax.swing.JToggleButton();
-        Password = new javax.swing.JPasswordField();
+        txtPassword = new javax.swing.JPasswordField();
         btnReturn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
@@ -98,7 +95,7 @@ public class FrmLogInPro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnStaff, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 250, -1, 60));
-        getContentPane().add(Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 192, 220, 30));
+        getContentPane().add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 192, 220, 30));
 
         btnReturn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Return.png"))); // NOI18N
         btnReturn.addActionListener(new java.awt.event.ActionListener() {
@@ -115,49 +112,34 @@ public class FrmLogInPro extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUserActionPerformed
-      String Username="user";
-      String Password="1106";
+        boolean userlog = validateLogin("Users");
 
-      String Pass=new String(this.Password.getPassword());
-      
-      if(txtUsername.getText().equals(Username)&&Pass.equals(Password)){
-          
-      FrmUserMain EP=new FrmUserMain();
-      EP.setVisible(true);
-      dispose();
-      
-    
-  
-      }
-      else{
-          JOptionPane.showMessageDialog(this,"Incorrect Username / Password");
-      }
-      
+        if (userlog == true) {
+            FrmUserMain EP = new FrmUserMain();
+            EP.setVisible(true);
+            dispose();
+
+        } else {
+            JOptionPane.showMessageDialog(this, "Incorrect Username / Password");
+        }
+
     }//GEN-LAST:event_btnUserActionPerformed
 
     private void btnStaffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStaffActionPerformed
-      String Username="staff";
-      String Password="1106";
+        boolean stafflog = validateLogin("Staffs");
 
-      String Pass=new String(this.Password.getPassword());
-      
-      if(txtUsername.getText().equals(Username)&&Pass.equals(Password)){
-          
-      FrmStaffMain EP=new FrmStaffMain();
-      EP.setVisible(true);
-      dispose();
-      
-    
-  
-      }
-      else{
-          JOptionPane.showMessageDialog(this,"Incorrect Username / Password");
-      }
-      
+        if (stafflog == true) {
+            FrmStaffMain EP = new FrmStaffMain();
+            EP.setVisible(true);
+            dispose();
+        } else {
+            JOptionPane.showMessageDialog(this, "Incorrect Username / Password");
+        }
+
     }//GEN-LAST:event_btnStaffActionPerformed
 
     private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
-    FormsHandler.goToMainScreen(this);
+        FormsHandler.goToMainScreen(this);
     }//GEN-LAST:event_btnReturnActionPerformed
 
     /**
@@ -196,7 +178,6 @@ public class FrmLogInPro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPasswordField Password;
     private javax.swing.JButton btnReturn;
     private javax.swing.JToggleButton btnStaff;
     private javax.swing.JToggleButton btnUser;
@@ -204,26 +185,34 @@ public class FrmLogInPro extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JPasswordField txtPassword;
     private javax.swing.JTextField txtUsername;
     // End of variables declaration//GEN-END:variables
-public ArrayList findUser() {
+<<<<<<< HEAD
+}
+=======
 
-        ArrayList<User> userToFind;
-        ArrayList<User> userFound;
+    public boolean validateLogin(String collection) {
 
-        userToFind = bookifydb.ReadBookifyDB(user, "Users");
-        userFound = new ArrayList<>();
+        FormsHandler frms;
+        User user;
+        boolean log;
+        String pasword;
 
-        for (User user : userToFind) {
-            if (user.getId() == Integer.parseInt(TFtoFindId.getText())) {
-                userFound.add(user);
-                JOptionPane.showMessageDialog(this, "User Found");
+        log = false;
+        frms = new FormsHandler();
+        user = (User) frms.findBookifyObject(new User(), collection, "name", txtUsername.getText());
+        pasword = new String(txtPassword.getPassword());
+
+        if (user != null) {
+            if (user.getName().equals(txtUsername.getText()) && pasword.equals(Integer.toString(user.getPassword()))) {
+                log = true;
             }
         }
-        return userFound;
+
+        return log;
 
     }
 
-    
-    
 }
+>>>>>>> a737b5276ef9fb81fc672a5b19fa9b806bda1012
