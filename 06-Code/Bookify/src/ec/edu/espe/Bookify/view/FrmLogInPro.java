@@ -206,24 +206,4 @@ public class FrmLogInPro extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JTextField txtUsername;
     // End of variables declaration//GEN-END:variables
-public ArrayList findUser() {
-
-        ArrayList<User> userToFind;
-        ArrayList<User> userFound;
-
-        userToFind = bookifydb.ReadBookifyDB(user, "Users");
-        userFound = new ArrayList<>();
-
-        for (User user : userToFind) {
-            if (user.getId() == Integer.parseInt(TFtoFindId.getText())) {
-                userFound.add(user);
-                JOptionPane.showMessageDialog(this, "User Found");
-            }
-        }
-        return userFound;
-
-    }
-
-    
-    
 }
