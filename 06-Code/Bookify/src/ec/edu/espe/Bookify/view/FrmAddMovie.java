@@ -80,7 +80,7 @@ public class FrmAddMovie extends javax.swing.JFrame {
         lblTitle.setText("Title:");
         getContentPane().add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
 
-        txtMovieTitle.setToolTipText("Enter the title of the movie");
+        txtMovieTitle.setToolTipText("Ingrese el titulo de la pelicula");
         txtMovieTitle.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtMovieTitleActionPerformed(evt);
@@ -98,7 +98,7 @@ public class FrmAddMovie extends javax.swing.JFrame {
         lblGender.setText("Gender:");
         getContentPane().add(lblGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
 
-        txtMovieGender.setToolTipText("-Enter the gender of the movie.");
+        txtMovieGender.setToolTipText("Ingrese el genero de la pelicula.");
         txtMovieGender.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtMovieGenderActionPerformed(evt);
@@ -116,7 +116,7 @@ public class FrmAddMovie extends javax.swing.JFrame {
         lblIdiom.setText("Idiom:");
         getContentPane().add(lblIdiom, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
 
-        txtMovieIdiom.setToolTipText("-Enter the idiom of the movie.");
+        txtMovieIdiom.setToolTipText("Ingrese el idioma de la pelicula.");
         txtMovieIdiom.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtMovieIdiomActionPerformed(evt);
@@ -220,16 +220,16 @@ public class FrmAddMovie extends javax.swing.JFrame {
         movie.setAvailable(AvailableMovie(cmbAvailable.getSelectedItem().toString()));
 
         addMovie.CreateMovie(movie);
-        JOptionPane.showMessageDialog(null, "Movie added succesfull");
+        JOptionPane.showMessageDialog(null, " Movie added succesfull \n La pelicula ha sido añadida exitosamente");
         CleanTxtFields();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        int i = JOptionPane.showConfirmDialog(this,"Are you sure you want to delete the movie?");
+        int i = JOptionPane.showConfirmDialog(this," Are you sure you want to delete the movie? \n ¿Esta segur@ que quiere eliminar esta pelicula?");
         if (i == 0){
-            JOptionPane.showMessageDialog(this,"The movie was deleted successfully");
+            JOptionPane.showMessageDialog(this," The movie was deleted successfully \nLa pelicula ha sido eliminada exitosamente");
         } else if (i == 1){
-            JOptionPane.showMessageDialog(this,"The movie was not removed");
+            JOptionPane.showMessageDialog(this," The movie was not removed \n La pelicula no fue removida");
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
