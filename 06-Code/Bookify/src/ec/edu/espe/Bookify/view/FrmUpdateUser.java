@@ -110,7 +110,7 @@ public class FrmUpdateUser extends javax.swing.JFrame {
         });
         jPanel1.add(TFToUpdatedata, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 120, 260, -1));
 
-        btnUpdate.setText("Update");
+        btnUpdate.setText("Actualizar");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateActionPerformed(evt);
@@ -131,19 +131,19 @@ public class FrmUpdateUser extends javax.swing.JFrame {
         });
         jPanel1.add(TFtofindId, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, 171, -1));
 
-        btnFind.setText("Find");
+        btnFind.setText("Buscar");
         btnFind.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnFindActionPerformed(evt);
             }
         });
-        jPanel1.add(btnFind, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, 60, -1));
+        jPanel1.add(btnFind, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, 80, -1));
 
         jLabel1.setText("Id");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 23, -1, -1));
 
         lblErrorId.setText("_");
-        jPanel1.add(lblErrorId, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 20, -1, -1));
+        jPanel1.add(lblErrorId, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 20, -1, -1));
 
         btnReturn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Return.png"))); // NOI18N
         btnReturn.addActionListener(new java.awt.event.ActionListener() {
