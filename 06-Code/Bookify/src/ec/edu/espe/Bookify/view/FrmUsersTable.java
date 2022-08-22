@@ -79,7 +79,7 @@ public class FrmUsersTable extends javax.swing.JFrame {
             tblUsers.getColumnModel().getColumn(3).setResizable(false);
         }
 
-        jButton1.setText("Refresh");
+        jButton1.setText("Actualizar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);

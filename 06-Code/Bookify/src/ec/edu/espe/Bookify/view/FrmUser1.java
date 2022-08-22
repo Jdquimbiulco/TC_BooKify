@@ -53,9 +53,9 @@ public class FrmUser1 extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         TFuserId = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         TFuserName = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         TFemail = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
@@ -101,8 +101,8 @@ public class FrmUser1 extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/UserIdWhitelbl (1).png"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 60, 30));
+        jLabel3.setText("Id");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, 30, 30));
 
         TFuserId.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -110,6 +110,9 @@ public class FrmUser1 extends javax.swing.JFrame {
             }
         });
         jPanel1.add(TFuserId, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 120, 190, -1));
+
+        jLabel10.setText("Nombre");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Wide Latin", 0, 24)); // NOI18N
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Publicación gráfica cuadrada 800x800 px (2).png"))); // NOI18N
@@ -123,15 +126,12 @@ public class FrmUser1 extends javax.swing.JFrame {
         });
         jPanel1.add(TFuserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 80, 316, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/UserNameWhitelbl (1).png"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 80, 30));
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/UserEmailWhitelbl (1).png"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 80, 30));
+        jLabel4.setText("Correo");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 40, 30));
         jPanel1.add(TFemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, 190, -1));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/UserPhoneWhite (1).png"))); // NOI18N
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 70, 30));
+        jLabel5.setText("Telefono");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, 50, 30));
 
         TFphone.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -140,8 +140,8 @@ public class FrmUser1 extends javax.swing.JFrame {
         });
         jPanel1.add(TFphone, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 200, 190, -1));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/UserAddressWhitelbl (1).png"))); // NOI18N
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, 90, 40));
+        jLabel6.setText("Direccion");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 230, 50, 40));
 
         TFAddres.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -150,8 +150,8 @@ public class FrmUser1 extends javax.swing.JFrame {
         });
         jPanel1.add(TFAddres, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 240, 190, -1));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/UserAgeWhitelbl (1).png"))); // NOI18N
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, 60, 30));
+        jLabel7.setText("Edad");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, 60, 30));
 
         TFage.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -160,8 +160,8 @@ public class FrmUser1 extends javax.swing.JFrame {
         });
         jPanel1.add(TFage, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, 190, -1));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/UserPasswordWhitelbl (1).png"))); // NOI18N
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 320, 100, 30));
+        jLabel8.setText("Contraseña");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 320, 70, 30));
 
         TFpassword.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -170,13 +170,13 @@ public class FrmUser1 extends javax.swing.JFrame {
         });
         jPanel1.add(TFpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, 190, -1));
 
-        btnAddUser.setText("Add User");
+        btnAddUser.setText("Agregar Usuario");
         btnAddUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddUserActionPerformed(evt);
             }
         });
-        jPanel1.add(btnAddUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 380, -1, -1));
+        jPanel1.add(btnAddUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 380, -1, -1));
 
         cmbxEmails.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "@gmail.com", "@yahoo.com", "@hotmail.com", "@outlook.com" }));
         cmbxEmails.addActionListener(new java.awt.event.ActionListener() {
@@ -212,7 +212,7 @@ public class FrmUser1 extends javax.swing.JFrame {
         lblErrorAge.setText("_");
         jPanel1.add(lblErrorAge, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 330, -1, -1));
 
-        jButton1.setText("Update User");
+        jButton1.setText("Actualizar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -220,21 +220,21 @@ public class FrmUser1 extends javax.swing.JFrame {
         });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 380, -1, -1));
 
-        jButton2.setText("Show Users");
+        jButton2.setText("Lista de Usuarios");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 380, -1, -1));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 380, -1, -1));
 
-        jButton3.setText("Delete User");
+        jButton3.setText("Borrar Usuario");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 380, -1, -1));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 380, -1, -1));
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/VACA_PROYECTO.jpg"))); // NOI18N
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 430));
@@ -376,7 +376,7 @@ public class FrmUser1 extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

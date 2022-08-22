@@ -68,7 +68,7 @@ public class FrmDeleteUser extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null}
             },
             new String [] {
-                "Name", "Id", "Email", "Phone", "Address", "Age", "Password"
+                "Nombre", "Id", "Correo", "Telefono", "Direccion", "Edad", "Contraseña"
             }
         ));
         tblUserFound.getTableHeader().setReorderingAllowed(false);
@@ -76,7 +76,7 @@ public class FrmDeleteUser extends javax.swing.JFrame {
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 800, 90));
 
-        btnFind.setText("Find");
+        btnFind.setText("Buscar");
         btnFind.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnFindActionPerformed(evt);
@@ -91,7 +91,7 @@ public class FrmDeleteUser extends javax.swing.JFrame {
         });
         jPanel1.add(TFtoFindId, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 240, -1));
 
-        DeleteBtn.setText("Delete");
+        DeleteBtn.setText("Eliminar");
         DeleteBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DeleteBtnActionPerformed(evt);
