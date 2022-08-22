@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package ec.edu.espe.Bookify.view;
 
 import ec.edu.espe.Bookify.controller.FormsHandler;
@@ -188,7 +184,10 @@ public class FrmLogInPro extends javax.swing.JFrame {
     private javax.swing.JPasswordField txtPassword;
     private javax.swing.JTextField txtUsername;
     // End of variables declaration//GEN-END:variables
+<<<<<<< HEAD
 
+=======
+>>>>>>> 40e36069a838246350160d8b9edfd46ba43ede1f
 
     public boolean validateLogin(String collection) {
 
@@ -210,6 +209,8 @@ public class FrmLogInPro extends javax.swing.JFrame {
 
         return log;
 
-    }
-
 }
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 40e36069a838246350160d8b9edfd46ba43ede1f
