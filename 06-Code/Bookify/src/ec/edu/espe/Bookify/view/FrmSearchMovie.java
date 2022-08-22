@@ -48,7 +48,7 @@ public class FrmSearchMovie extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Yu Gothic Medium", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Search Movie");
+        jLabel2.setText("Buscar Pelicula");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
 
         jTextField1.setFont(new java.awt.Font("Yu Gothic Medium", 1, 18)); // NOI18N

@@ -72,12 +72,12 @@ public class FrmAddMovie extends javax.swing.JFrame {
 
         lblAddMovie.setFont(new java.awt.Font("Serif", 1, 24)); // NOI18N
         lblAddMovie.setForeground(new java.awt.Color(255, 255, 255));
-        lblAddMovie.setText("Add Movie");
-        getContentPane().add(lblAddMovie, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, -1, -1));
+        lblAddMovie.setText("Añadir Pelicula");
+        getContentPane().add(lblAddMovie, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 10, -1, -1));
 
         lblTitle.setFont(new java.awt.Font("Serif", 1, 18)); // NOI18N
         lblTitle.setForeground(new java.awt.Color(204, 204, 204));
-        lblTitle.setText("Title:");
+        lblTitle.setText("Titulo:");
         getContentPane().add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
 
         txtMovieTitle.setToolTipText("Ingrese el titulo de la pelicula");
@@ -95,7 +95,7 @@ public class FrmAddMovie extends javax.swing.JFrame {
 
         lblGender.setFont(new java.awt.Font("Serif", 1, 18)); // NOI18N
         lblGender.setForeground(new java.awt.Color(204, 204, 204));
-        lblGender.setText("Gender:");
+        lblGender.setText("Genero:");
         getContentPane().add(lblGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
 
         txtMovieGender.setToolTipText("Ingrese el genero de la pelicula.");
@@ -113,7 +113,7 @@ public class FrmAddMovie extends javax.swing.JFrame {
 
         lblIdiom.setFont(new java.awt.Font("Serif", 1, 18)); // NOI18N
         lblIdiom.setForeground(new java.awt.Color(204, 204, 204));
-        lblIdiom.setText("Idiom:");
+        lblIdiom.setText("Idioma:");
         getContentPane().add(lblIdiom, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
 
         txtMovieIdiom.setToolTipText("Ingrese el idioma de la pelicula.");
@@ -131,16 +131,16 @@ public class FrmAddMovie extends javax.swing.JFrame {
 
         lblAvailable.setFont(new java.awt.Font("Serif", 1, 18)); // NOI18N
         lblAvailable.setForeground(new java.awt.Color(204, 204, 204));
-        lblAvailable.setText("Avaliable:");
+        lblAvailable.setText("Disponible:");
         getContentPane().add(lblAvailable, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, -1));
 
         cmbAvailable.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "YES", "NO" }));
         cmbAvailable.setToolTipText("");
-        getContentPane().add(cmbAvailable, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 200, -1, -1));
+        getContentPane().add(cmbAvailable, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, -1, -1));
 
         jButton2.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/AddMovieImage.png"))); // NOI18N
-        jButton2.setText("Add");
+        jButton2.setText("Añadir");
         jButton2.setToolTipText("");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -151,7 +151,7 @@ public class FrmAddMovie extends javax.swing.JFrame {
 
         jButton3.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/DeleteImage.png"))); // NOI18N
-        jButton3.setText("Delete");
+        jButton3.setText("Eliminar");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);

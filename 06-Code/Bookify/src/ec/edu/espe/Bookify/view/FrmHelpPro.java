@@ -48,17 +48,17 @@ public class FrmHelpPro extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 153, 153));
-        jLabel1.setText("HELP AND SUPPORT");
+        jLabel1.setText("AYUDA Y SOPORTE");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 10, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(102, 102, 255));
-        jLabel2.setText("Feel free to contact the developers if you ");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 30, -1, 50));
+        jLabel2.setText("Sientase libre de contactar al equipo si");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 30, -1, 50));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(102, 102, 255));
-        jLabel6.setText("are having problems with the program at");
+        jLabel6.setText("esta teniendo problemas con el softare en");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 70, -1, 30));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N

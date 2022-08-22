@@ -36,14 +36,14 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/Images/BookReturn.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Return Book"/>
+        <Property name="text" type="java.lang.String" value="Devolver Libro"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="370" y="40" width="300" height="-1"/>
+          <AbsoluteConstraints x="380" y="40" width="340" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -58,14 +58,14 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/Images/Donate.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Donate"/>
+        <Property name="text" type="java.lang.String" value="Donar"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="370" y="340" width="300" height="-1"/>
+          <AbsoluteConstraints x="370" y="350" width="300" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -80,14 +80,14 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/Images/RetrunMovie.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Return Movie"/>
+        <Property name="text" type="java.lang.String" value="Devolver Pelicula"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="370" y="190" width="-1" height="-1"/>
+          <AbsoluteConstraints x="370" y="200" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -102,14 +102,14 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/Images/PayFine.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Pay Fines"/>
+        <Property name="text" type="java.lang.String" value="Pagar Multas"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="30" y="340" width="310" height="-1"/>
+          <AbsoluteConstraints x="30" y="350" width="310" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -139,14 +139,14 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/Images/BookBorrow (1).png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Borrow Book"/>
+        <Property name="text" type="java.lang.String" value="Rentar Libro"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton5ActionPerformed"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="30" y="40" width="310" height="-1"/>
+          <AbsoluteConstraints x="30" y="40" width="330" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -161,14 +161,14 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/Images/BorrowMovie_1.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Borrow Movie"/>
+        <Property name="text" type="java.lang.String" value="Rentar Pelicula"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton6ActionPerformed"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="30" y="190" width="-1" height="-1"/>
+          <AbsoluteConstraints x="30" y="200" width="330" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>

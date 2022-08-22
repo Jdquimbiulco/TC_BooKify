@@ -48,37 +48,37 @@ public class FrmStaffMain extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Yu Gothic Medium", 1, 24)); // NOI18N
         jButton1.setForeground(new java.awt.Color(0, 102, 102));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/addUser.png"))); // NOI18N
-        jButton1.setText("Add User");
+        jButton1.setText("Añadir Usuario");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 270, 240, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 270, 300, 80));
 
         jButton2.setBackground(new java.awt.Color(204, 51, 0));
         jButton2.setFont(new java.awt.Font("Yu Gothic Medium", 1, 24)); // NOI18N
         jButton2.setForeground(new java.awt.Color(0, 102, 102));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/addBook.png"))); // NOI18N
-        jButton2.setText("Add Book");
+        jButton2.setText("Añadir Libro");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, 240, -1));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, 300, 80));
 
         jButton3.setBackground(new java.awt.Color(204, 51, 0));
         jButton3.setFont(new java.awt.Font("Yu Gothic Medium", 1, 24)); // NOI18N
         jButton3.setForeground(new java.awt.Color(0, 102, 102));
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/addMovie.png"))); // NOI18N
-        jButton3.setText("Add Movie");
+        jButton3.setText("Añadir Pelicula");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 160, 240, -1));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 170, 300, 80));
 
         btnReturn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Return.png"))); // NOI18N
         btnReturn.addActionListener(new java.awt.event.ActionListener() {
