@@ -47,7 +47,7 @@ public class FrmRentBook extends javax.swing.JFrame {
         jLabelBook.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/BookScott.jpg"))); // NOI18N
         getContentPane().add(jLabelBook, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, -1, -1));
 
-        btnRentBook.setText("Rent Book");
+        btnRentBook.setText("Rantar libro");
         btnRentBook.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRentBookActionPerformed(evt);
