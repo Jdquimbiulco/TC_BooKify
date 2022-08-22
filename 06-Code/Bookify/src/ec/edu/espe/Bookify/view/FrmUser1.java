@@ -101,16 +101,18 @@ public class FrmUser1 extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("Id");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, 30, 30));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 120, 20, 30));
 
         TFuserId.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 TFuserIdKeyPressed(evt);
             }
         });
-        jPanel1.add(TFuserId, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 120, 190, -1));
+        jPanel1.add(TFuserId, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, 190, -1));
 
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel10.setText("Nombre");
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, -1, -1));
 
@@ -124,51 +126,56 @@ public class FrmUser1 extends javax.swing.JFrame {
                 TFuserNameKeyPressed(evt);
             }
         });
-        jPanel1.add(TFuserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 80, 316, -1));
+        jPanel1.add(TFuserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, 316, -1));
 
+        jLabel4.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel4.setText("Correo");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 40, 30));
-        jPanel1.add(TFemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, 190, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 60, 30));
+        jPanel1.add(TFemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 160, 190, -1));
 
-        jLabel5.setText("Telefono");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, 50, 30));
+        jLabel5.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabel5.setText("Teléfono");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, 70, 30));
 
         TFphone.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 TFphoneKeyPressed(evt);
             }
         });
-        jPanel1.add(TFphone, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 200, 190, -1));
+        jPanel1.add(TFphone, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 200, 190, -1));
 
-        jLabel6.setText("Direccion");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 230, 50, 40));
+        jLabel6.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabel6.setText("Dirección");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 230, 70, 40));
 
         TFAddres.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 TFAddresKeyPressed(evt);
             }
         });
-        jPanel1.add(TFAddres, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 240, 190, -1));
+        jPanel1.add(TFAddres, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 240, 190, -1));
 
+        jLabel7.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel7.setText("Edad");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, 60, 30));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, 50, 30));
 
         TFage.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 TFageKeyPressed(evt);
             }
         });
-        jPanel1.add(TFage, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, 190, -1));
+        jPanel1.add(TFage, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 280, 190, -1));
 
+        jLabel8.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel8.setText("Contraseña");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 320, 70, 30));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 310, 90, 30));
 
         TFpassword.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 TFpasswordKeyPressed(evt);
             }
         });
-        jPanel1.add(TFpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, 190, -1));
+        jPanel1.add(TFpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 320, 190, -1));
 
         btnAddUser.setText("Agregar Usuario");
         btnAddUser.addActionListener(new java.awt.event.ActionListener() {
@@ -184,7 +191,7 @@ public class FrmUser1 extends javax.swing.JFrame {
                 cmbxEmailsActionPerformed(evt);
             }
         });
-        jPanel1.add(cmbxEmails, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 160, 108, -1));
+        jPanel1.add(cmbxEmails, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 160, 108, -1));
 
         btnReturn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Return.png"))); // NOI18N
         btnReturn.addActionListener(new java.awt.event.ActionListener() {

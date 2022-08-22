@@ -68,7 +68,7 @@ public class FrmDeleteUser extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null}
             },
             new String [] {
-                "Nombre", "Id", "Correo", "Telefono", "Direccion", "Edad", "Contraseña"
+                "Nombre", "Id", "Correo", "Teléfono", "Dirección", "Edad", "Contraseña"
             }
         ));
         tblUserFound.getTableHeader().setReorderingAllowed(false);

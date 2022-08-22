@@ -69,8 +69,8 @@
                     <Column editable="true" title="Nombre" type="java.lang.Object"/>
                     <Column editable="true" title="Id" type="java.lang.Object"/>
                     <Column editable="true" title="Correo" type="java.lang.Object"/>
-                    <Column editable="true" title="Telefono" type="java.lang.Object"/>
-                    <Column editable="true" title="Direccion" type="java.lang.Object"/>
+                    <Column editable="true" title="Tel&#xe9;fono" type="java.lang.Object"/>
+                    <Column editable="true" title="Direcci&#xf3;n" type="java.lang.Object"/>
                     <Column editable="true" title="Edad" type="java.lang.Object"/>
                     <Column editable="true" title="Contrase&#xf1;a" type="java.lang.Object"/>
                   </Table>
