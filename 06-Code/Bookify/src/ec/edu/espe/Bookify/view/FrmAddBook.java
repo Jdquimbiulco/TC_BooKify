@@ -65,23 +65,23 @@ public class FrmAddBook extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Serif", 1, 24)); // NOI18N
-        jLabel1.setText("Add Book");
+        jLabel1.setText("Añadir Libro");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(164, 6, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel2.setText("Title:");
+        jLabel2.setText("Titulo");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 64, -1, -1));
 
         txtTitle.setToolTipText("Enter the title of the book");
         getContentPane().add(txtTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(98, 64, 252, -1));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel4.setText("Author:");
+        jLabel4.setText("Autor");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 98, -1, -1));
         getContentPane().add(txtAuthor, new org.netbeans.lib.awtextra.AbsoluteConstraints(98, 98, 252, -1));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel5.setText("Publisher:");
+        jLabel5.setText("Editorial");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(25, 132, -1, -1));
 
         txtPublisher.addActionListener(new java.awt.event.ActionListener() {
@@ -109,7 +109,7 @@ public class FrmAddBook extends javax.swing.JFrame {
         getContentPane().add(txtIsbn, new org.netbeans.lib.awtextra.AbsoluteConstraints(98, 166, 252, -1));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel7.setText("Avaliable:");
+        jLabel7.setText("Disponible");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
 
         btnReturn.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
@@ -123,7 +123,7 @@ public class FrmAddBook extends javax.swing.JFrame {
         getContentPane().add(btnReturn, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 250, -1, -1));
 
         jButton2.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
-        jButton2.setText("Add Book");
+        jButton2.setText("Añadir Libro");
         jButton2.setToolTipText("Click to add product");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,8 +132,8 @@ public class FrmAddBook extends javax.swing.JFrame {
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, -1, -1));
 
-        cmboBool.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Yes", "No", " " }));
-        getContentPane().add(cmboBool, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, -1, -1));
+        cmboBool.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Si", "No", " " }));
+        getContentPane().add(cmboBool, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 220, -1, -1));
 
         lbIsbn.setForeground(new java.awt.Color(0, 204, 0));
         lbIsbn.setText("-");

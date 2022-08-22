@@ -57,27 +57,27 @@ public class FrmDonatePro extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 0, 51));
-        jLabel3.setText("Donate");
+        jLabel3.setText("Donar");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 10, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel2.setText("Name:");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, -1, -1));
+        jLabel2.setText("Nombre:");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel4.setText("Amount:");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, -1, -1));
+        jLabel4.setText("Cantidad:");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(204, 0, 204));
-        jLabel5.setText("Total + Taxes:");
+        jLabel5.setText("Total + Impuestos:");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, -1, -1));
         getContentPane().add(txtCustomName, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 60, 300, 40));
         getContentPane().add(txtAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, 300, 40));
-        getContentPane().add(txtTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, 210, 40));
+        getContentPane().add(txtTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 240, 210, 40));
 
         btnTotal.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        btnTotal.setText("Calculate Total");
+        btnTotal.setText("Calcular el Total");
         btnTotal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnTotalActionPerformed(evt);
@@ -86,7 +86,7 @@ public class FrmDonatePro extends javax.swing.JFrame {
         getContentPane().add(btnTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, -1, -1));
 
         jButton1.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
-        jButton1.setText("Donate");
+        jButton1.setText("Donar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);

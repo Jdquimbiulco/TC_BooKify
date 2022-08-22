@@ -48,7 +48,7 @@ public class FrmSearchBook extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Yu Gothic", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 51, 255));
-        jLabel2.setText("Search Book");
+        jLabel2.setText("Buscar Libro");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 10, -1, -1));
 
         jTextField1.setFont(new java.awt.Font("MS Reference Sans Serif", 1, 18)); // NOI18N

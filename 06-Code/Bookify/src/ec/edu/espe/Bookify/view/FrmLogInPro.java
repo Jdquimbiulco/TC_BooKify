@@ -63,13 +63,13 @@ public class FrmLogInPro extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(102, 255, 102));
-        jLabel3.setText("Username:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, -1, -1));
+        jLabel3.setText("Usuario:");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(102, 255, 102));
-        jLabel6.setText("Pasword:");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, -1, -1));
+        jLabel6.setText("Contraseña:");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, -1, -1));
         getContentPane().add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 122, 220, 30));
 
         btnUser.setBackground(new java.awt.Color(102, 204, 255));
