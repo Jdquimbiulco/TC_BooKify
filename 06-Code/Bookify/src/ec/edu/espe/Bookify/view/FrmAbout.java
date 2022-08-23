@@ -16,6 +16,11 @@ public class FrmAbout extends javax.swing.JFrame {
      */
     public FrmAbout() {
         initComponents();
+        startComponents();
+        
+    }
+
+    public void startComponents() {
         this.setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         Toolkit miPantalla = Toolkit.getDefaultToolkit();
@@ -24,7 +29,6 @@ public class FrmAbout extends javax.swing.JFrame {
         btnReturn.setOpaque(false);
         btnReturn.setContentAreaFilled(false);
         btnReturn.setBorderPainted(false);
-        
     }
 
     /**

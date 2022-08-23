@@ -25,6 +25,10 @@ public class FrmAddBook extends javax.swing.JFrame {
      */
     public FrmAddBook() {
         initComponents();
+        StartComponents();
+    }
+
+    public void StartComponents() {
         input = new InputValidation();
         this.setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);

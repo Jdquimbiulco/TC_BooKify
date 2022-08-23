@@ -207,10 +207,3 @@ public class FrmLogInPro extends javax.swing.JFrame {
 
     }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-}
->>>>>>> 436af577c0e3f5076edac998b64b0f96908be4db
->>>>>>> cfa23501cc29d63bf60973846c5098929de14f9b
