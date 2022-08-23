@@ -77,7 +77,7 @@ public class FrmAddMovie extends javax.swing.JFrame {
 
         lblTitle.setFont(new java.awt.Font("Serif", 1, 18)); // NOI18N
         lblTitle.setForeground(new java.awt.Color(204, 204, 204));
-        lblTitle.setText("Titulo:");
+        lblTitle.setText("Título:");
         getContentPane().add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
 
         txtMovieTitle.setToolTipText("Ingrese el titulo de la pelicula");

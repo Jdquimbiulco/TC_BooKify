@@ -58,8 +58,8 @@ public class FrmHelpPro extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(102, 102, 255));
-        jLabel6.setText("esta teniendo problemas con el softare en");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 70, -1, 30));
+        jLabel6.setText("está teniendo problemas con el software en");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, -1, 30));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(102, 102, 255));
