@@ -184,10 +184,6 @@ public class FrmLogInPro extends javax.swing.JFrame {
     private javax.swing.JPasswordField txtPassword;
     private javax.swing.JTextField txtUsername;
     // End of variables declaration//GEN-END:variables
-<<<<<<< HEAD
-
-=======
->>>>>>> 40e36069a838246350160d8b9edfd46ba43ede1f
 
     public boolean validateLogin(String collection) {
 
@@ -209,8 +205,5 @@ public class FrmLogInPro extends javax.swing.JFrame {
 
         return log;
 
+    }
 }
-<<<<<<< HEAD
-=======
-}
->>>>>>> 40e36069a838246350160d8b9edfd46ba43ede1f
